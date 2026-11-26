@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Serverless / 托管推理 · 云算力 · 硬件算力</title>
-  <meta name="description" content="Serverless / 托管推理 GPU 服务商，共 5 家：Modal、Baseten、Together AI、Fireworks AI 等。写清计费、区域、存储出网与合规；按需、包月与整机起租的差别写在单卡页。" />
-  <link rel="canonical" href="https://hardware.specul.com/cloud/serverless.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Serverless / 托管推理 · 云算力 · 硬件算力" />
-  <meta property="og:url" content="https://hardware.specul.com/cloud/serverless.html" />
-  <meta property="og:title" content="Serverless / 托管推理 · 云算力 · 硬件算力" />
-  <meta property="og:description" content="Serverless / 托管推理 GPU 服务商，共 5 家：Modal、Baseten、Together AI、Fireworks AI 等。写清计费、区域、存储出网与合规；按需、包月与整机起租的差别写在单卡页。" />
-  <meta property="og:locale" content="zh_CN" />
-  <meta property="og:locale:alternate" content="en_US" />
-  <link rel="alternate" hreflang="zh-CN" href="https://hardware.specul.com/cloud/serverless.html" />
-  <link rel="alternate" hreflang="en" href="https://hardware.specul.com/cloud/serverless.html?lang=en" />
-  <link rel="alternate" hreflang="x-default" href="https://hardware.specul.com/cloud/serverless.html" />
-  <meta name="theme-color" content="#16121f" />
-  <link rel="icon" type="image/png" href="../assets/brand/dandelion-favicon-site.png" />
-  <link rel="apple-touch-icon" href="../assets/brand/dandelion-apple-touch-site.png" />
-  <script src="../brand.js?v=37d1072be69b"></script>
-  <link rel="stylesheet" href="../brand.css?v=37d1072be69b" />
-  <link rel="stylesheet" href="../site.css" />
-  <style>:root { --accent: #f59e0b; }</style>
-  <link rel="stylesheet" href="../sections.css" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Serverless / 托管推理 · 云算力 · 硬件算力","description":"Serverless / 托管推理 GPU 服务商，共 5 家：Modal、Baseten、Together AI、Fireworks AI 等。写清计费、区域、存储出网与合规；按需、包月与整机起租的差别写在单卡页。","url":"https://hardware.specul.com/cloud/serverless.html","inLanguage":["zh-CN","en"],"isPartOf":{"@type":"WebSite","url":"https://specul.com/"}}</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Serverless / 托管推理 · 云算力 · 硬件算力</title>
+<meta content="Serverless / 托管推理 GPU 服务商，共 5 家：Modal、Baseten、Together AI、Fireworks AI 等。写清计费、区域、存储出网与合规；按需、包月与整机起租的差别写在单卡页。" name="description"/>
+<link href="https://hardware.specul.com/cloud/serverless.html" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Serverless / 托管推理 · 云算力 · 硬件算力" property="og:site_name"/>
+<meta content="https://hardware.specul.com/cloud/serverless.html" property="og:url"/>
+<meta content="Serverless / 托管推理 · 云算力 · 硬件算力" property="og:title"/>
+<meta content="Serverless / 托管推理 GPU 服务商，共 5 家：Modal、Baseten、Together AI、Fireworks AI 等。写清计费、区域、存储出网与合规；按需、包月与整机起租的差别写在单卡页。" property="og:description"/>
+<meta content="zh_CN" property="og:locale"/>
+<meta content="en_US" property="og:locale:alternate"/>
+<meta content="#16121f" name="theme-color"/>
+<link href="../assets/brand/dandelion-favicon-site.png" rel="icon" type="image/png"/>
+<link href="../assets/brand/dandelion-apple-touch-site.png" rel="apple-touch-icon"/>
+<script src="../brand.js?v=37d1072be69b"></script>
+<link href="../brand.css?v=37d1072be69b" rel="stylesheet"/>
+<link href="../site.css" rel="stylesheet"/>
+<style>:root { --accent: #f59e0b; }</style>
+<link href="../sections.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Serverless / 托管推理 · 云算力 · 硬件算力","description":"Serverless / 托管推理 GPU 服务商，共 5 家：Modal、Baseten、Together AI、Fireworks AI 等。写清计费、区域、存储出网与合规；按需、包月与整机起租的差别写在单卡页。","url":"https://hardware.specul.com/cloud/serverless.html","inLanguage":["zh-CN","en"],"isPartOf":{"@type":"WebSite","url":"https://specul.com/"}}</script>
 </head>
 <!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
      同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
@@ -34,180 +31,180 @@
      ⚠ 这段注释里**不能出现反引号**：它在模板字符串内部，反引号会提前结束模板
      （写这段时踩了第 4 次；pitfalls 里早有记录）。 -->
 <body class="brand-ambient has-tabbar has-tabbar-1row">
-  <a class="t-skip" href="#main"><span data-zh>跳到主要内容</span><span data-en>Skip to main content</span></a>
-  <header class="site-header">
-    <div class="container site-bar">
-      <a class="brand" href="https://specul.com/" title="投机取巧">
-        <span class="brand-dot" aria-hidden="true"></span>
-        <span class="brand-text">
-          <span class="brand-name" id="markName" data-zh-name="投机取巧" data-en-name="Speculative Speculation">投机取巧</span>
-          <span class="brand-sub" id="markSub" data-zh-sub="Speculative Speculation" data-en-sub="">Speculative Speculation</span>
-        </span>
-      </a>
-      <nav class="nav-links" aria-label="站点导航">
-        <a href="https://specul.com/"><span data-zh>首页</span><span data-en>Home</span></a>
-        <a href="https://learn.specul.com/"><span data-zh>学 AI</span><span data-en>Learn</span></a>
-        <a href="https://tools.specul.com/"><span data-zh>工具</span><span data-en>Tools</span></a>
-        <a href="https://models.specul.com/"><span data-zh>模型</span><span data-en>Models</span></a>
-        <a href="https://demos.specul.com/"><span data-zh>作品演示</span><span data-en>Playground</span></a>
-        <a href="https://oss.specul.com/"><span data-zh>开源库</span><span data-en>OSS</span></a>
-        <a href="https://hardware.specul.com/" aria-current="page"><span data-zh>硬件算力</span><span data-en>Compute</span></a>
-        <a href="https://papers.specul.com/"><span data-zh>AI 论文</span><span data-en>AI Papers</span></a>
-        <a href="https://chain.specul.com/"><span data-zh>链</span><span data-en>Chain</span></a>
-        <a href="https://nav.specul.com/"><span data-zh>AI 导航</span><span data-en>AI Directory</span></a>
-      </nav>
-      <!-- 2026-10-10：.nav-tools 从 nav 元素**内部**移到外面，与 .nav-links 平级。
+<a class="t-skip" href="#main"><span data-zh="">跳到主要内容</span><span data-en="">Skip to main content</span></a>
+<header class="site-header">
+<div class="container site-bar">
+<a class="brand" href="https://specul.com/" title="投机取巧">
+<span aria-hidden="true" class="brand-dot"></span>
+<span class="brand-text">
+<span class="brand-name" data-en-name="Speculative Speculation" data-zh-name="投机取巧" id="markName">投机取巧</span>
+<span class="brand-sub" data-en-sub="" data-zh-sub="Speculative Speculation" id="markSub">Speculative Speculation</span>
+</span>
+</a>
+<nav aria-label="站点导航" class="nav-links">
+<a href="https://specul.com/"><span data-zh="">首页</span><span data-en="">Home</span></a>
+<a href="https://learn.specul.com/"><span data-zh="">学 AI</span><span data-en="">Learn</span></a>
+<a href="https://tools.specul.com/"><span data-zh="">工具</span><span data-en="">Tools</span></a>
+<a href="https://models.specul.com/"><span data-zh="">模型</span><span data-en="">Models</span></a>
+<a href="https://demos.specul.com/"><span data-zh="">作品演示</span><span data-en="">Playground</span></a>
+<a href="https://oss.specul.com/"><span data-zh="">开源库</span><span data-en="">OSS</span></a>
+<a aria-current="page" href="https://hardware.specul.com/"><span data-zh="">硬件算力</span><span data-en="">Compute</span></a>
+<a href="https://papers.specul.com/"><span data-zh="">AI 论文</span><span data-en="">AI Papers</span></a>
+<a href="https://chain.specul.com/"><span data-zh="">链</span><span data-en="">Chain</span></a>
+<a href="https://nav.specul.com/"><span data-zh="">AI 导航</span><span data-en="">AI Directory</span></a>
+</nav>
+<!-- 2026-10-10：.nav-tools 从 nav 元素**内部**移到外面，与 .nav-links 平级。
            放里面时窄屏下它会跟着链接一起换行：链接占满整行 → 按钮被挤到第三条
            （实测顶栏 134px、按钮组孤零零一行）。移出来后它与品牌同行，
            链接独占第二行居中 —— 这才是下面注释里方案 B 想要的样子。 -->
-      <span class="nav-tools">
-        <a class="icon-btn" href="https://specul.com/search.html" aria-label="搜索" data-ui-aria-label-zh="搜索" data-ui-aria-label-en="Search" title="搜索全站" data-ui-title-zh="搜索全站" data-ui-title-en="Search all sites"><span aria-hidden="true">⌕</span></a>
-        <button class="icon-btn" id="themeBtn" type="button" aria-label="切换明暗主题" title="切换明暗主题">☾</button>
-        <button class="icon-btn" id="langBtn" type="button" aria-label="Switch language" title="Switch language">EN</button>
-      </span>
-      <!-- B6（2026-10-09）：窄屏（≤900px）下 .nav-links 会隐藏，这个汉堡是替代入口。
+<span class="nav-tools">
+<a aria-label="搜索" class="icon-btn" data-ui-aria-label-en="Search" data-ui-aria-label-zh="搜索" data-ui-title-en="Search all sites" data-ui-title-zh="搜索全站" href="https://specul.com/search.html" title="搜索全站"><span aria-hidden="true">⌕</span></a>
+<button aria-label="切换明暗主题" class="icon-btn" id="themeBtn" title="切换明暗主题" type="button">☾</button>
+<a aria-label="Switch to English" class="icon-btn" href="/en/cloud/serverless.html" hreflang="en" id="langBtn" lang="en" title="Switch to English">EN</a>
+</span>
+<!-- B6（2026-10-09）：窄屏（≤900px）下 .nav-links 会隐藏，这个汉堡是替代入口。
            行为在共享 brand.js 里（一处实现、十站共用），样式在共享 brand.css。
            无脚本时 CSS 不会显示它，而是把 .nav-links 在窄屏放出来 —— 不会出现
            「导航被藏进一个点了没反应的按钮」。 -->
-      <button class="nav-burger" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navDrawer">
-        <i></i><i></i><i></i>
-      </button>
-    </div>
-  </header>
-  <div class="nav-scrim"></div>
-  <aside class="nav-drawer" id="navDrawer" aria-hidden="true" aria-label="站点导航">
-    <div class="nav-drawer-h">
-      <span class="brand-name"><span data-zh>投机取巧</span><span data-en>Speculative Speculation</span></span>
-      <span class="brand-sub" data-zh-sub="Speculative Speculation" data-en-sub="">Speculative Speculation</span>
-      <button class="nav-dclose" type="button" aria-label="关闭">×</button>
-    </div>
-    <nav class="nav-drawer-list">
-      <a href="https://specul.com/"><span><span data-zh>首页</span><span data-en>Home</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://learn.specul.com/"><span><span data-zh>学 AI</span><span data-en>Learn</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://tools.specul.com/"><span><span data-zh>工具</span><span data-en>Tools</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://models.specul.com/"><span><span data-zh>模型</span><span data-en>Models</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://demos.specul.com/"><span><span data-zh>作品演示</span><span data-en>Playground</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://oss.specul.com/"><span><span data-zh>开源库</span><span data-en>OSS</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://hardware.specul.com/" aria-current="page" class="nav-group-start"><span><span data-zh>硬件算力</span><span data-en>Compute</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://papers.specul.com/"><span><span data-zh>AI 论文</span><span data-en>AI Papers</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://chain.specul.com/"><span><span data-zh>链</span><span data-en>Chain</span></span><span class="ar" aria-hidden="true">→</span></a>
-      <a href="https://nav.specul.com/" class="nav-group-start" data-nav-group="external"><span><span data-zh>AI 导航</span><span data-en>AI Directory</span></span><span class="ar" aria-hidden="true">↗</span></a>
-    </nav>
-    <div class="nav-drawer-foot">
-      <p><span data-zh>内容站覆盖学、用、选、跑；AI 导航是站外的 AI 网站目录，点出去看。</span><span data-en>Content sites cover learn, use, choose and run; AI Directory is a catalogue of off-site AI sites.</span></p>
-      <nav><a href="https://specul.com/legal.html"><span data-zh>法律条款</span><span data-en>Legal terms</span></a></nav>
-    </div>
-  </aside>
-  <main id="main">
+<button aria-controls="navDrawer" aria-expanded="false" aria-label="打开菜单" class="nav-burger" type="button">
+<i></i><i></i><i></i>
+</button>
+</div>
+</header>
+<div class="nav-scrim"></div>
+<aside aria-hidden="true" aria-label="站点导航" class="nav-drawer" id="navDrawer">
+<div class="nav-drawer-h">
+<span class="brand-name"><span data-zh="">投机取巧</span><span data-en="">Speculative Speculation</span></span>
+<span class="brand-sub" data-en-sub="" data-zh-sub="Speculative Speculation">Speculative Speculation</span>
+<button aria-label="关闭" class="nav-dclose" type="button">×</button>
+</div>
+<nav class="nav-drawer-list">
+<a href="https://specul.com/"><span><span data-zh="">首页</span><span data-en="">Home</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://learn.specul.com/"><span><span data-zh="">学 AI</span><span data-en="">Learn</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://tools.specul.com/"><span><span data-zh="">工具</span><span data-en="">Tools</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://models.specul.com/"><span><span data-zh="">模型</span><span data-en="">Models</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://demos.specul.com/"><span><span data-zh="">作品演示</span><span data-en="">Playground</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://oss.specul.com/"><span><span data-zh="">开源库</span><span data-en="">OSS</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a aria-current="page" class="nav-group-start" href="https://hardware.specul.com/"><span><span data-zh="">硬件算力</span><span data-en="">Compute</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://papers.specul.com/"><span><span data-zh="">AI 论文</span><span data-en="">AI Papers</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://chain.specul.com/"><span><span data-zh="">链</span><span data-en="">Chain</span></span><span aria-hidden="true" class="ar">→</span></a>
+<a class="nav-group-start" data-nav-group="external" href="https://nav.specul.com/"><span><span data-zh="">AI 导航</span><span data-en="">AI Directory</span></span><span aria-hidden="true" class="ar">↗</span></a>
+</nav>
+<div class="nav-drawer-foot">
+<p><span data-zh="">内容站覆盖学、用、选、跑；AI 导航是站外的 AI 网站目录，点出去看。</span><span data-en="">Content sites cover learn, use, choose and run; AI Directory is a catalogue of off-site AI sites.</span></p>
+<nav><a href="https://specul.com/legal.html"><span data-zh="">法律条款</span><span data-en="">Legal terms</span></a></nav>
+</div>
+</aside>
+<main id="main">
 <div class="container">
 <header class="sec-head">
-  <p class="eyebrow">Compute · Cloud · Serverless &amp; hosted inference</p>
-  <h1><span data-zh>Serverless / 托管推理</span><span data-en>Serverless & hosted inference</span></h1>
-  <p class="lede">按秒或按 token 计费，冷启动与并发要实测；适合突发与 API 化。 这一页收 5 家；点进单卡看计费、区域、存储出网、合规与核验入口。</p>
+<p class="eyebrow">Compute · Cloud · Serverless &amp; hosted inference</p>
+<h1><span data-zh="">Serverless / 托管推理</span><span data-en="">Serverless &amp; hosted inference</span></h1>
+<p class="lede">按秒或按 token 计费，冷启动与并发要实测；适合突发与 API 化。 这一页收 5 家；点进单卡看计费、区域、存储出网、合规与核验入口。</p>
 </header>
 <div class="sec-nav"><a href="index.html">← 全部云算力</a><a href="../index.html">硬件站</a></div>
 <div class="sec-grid"><article class="sec-card">
-  <div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
-  <h3><a href="modal.html">Modal</a></h3>
-  <p>H100 / A100 / L40S / T4</p>
-  <dl class="sec-facts">
-    <div><dt>计费</dt><dd>按秒计费</dd></div>
-    <div><dt>区域</dt><dd>美国、欧洲</dd></div>
-    <div><dt>最低消费</dt><dd>无最低消费，按用量</dd></div>
-    <div><dt>核验</dt><dd>2026-11-19</dd></div>
-  </dl>
-  <p class="sec-caveat">按秒计费，含冷启动；GPU 与 CPU/内存分开计。以官网价格页为准（2026-11-19 核验入口）。</p>
-  <a class="sec-link" href="modal.html">看服务商卡 →</a>
+<div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
+<h3><a href="modal.html">Modal</a></h3>
+<p>H100 / A100 / L40S / T4</p>
+<dl class="sec-facts">
+<div><dt>计费</dt><dd>按秒计费</dd></div>
+<div><dt>区域</dt><dd>美国、欧洲</dd></div>
+<div><dt>最低消费</dt><dd>无最低消费，按用量</dd></div>
+<div><dt>核验</dt><dd>2026-11-19</dd></div>
+</dl>
+<p class="sec-caveat">按秒计费，含冷启动；GPU 与 CPU/内存分开计。以官网价格页为准（2026-11-19 核验入口）。</p>
+<a class="sec-link" href="modal.html">看服务商卡 →</a>
 </article><article class="sec-card">
-  <div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
-  <h3><a href="baseten.html">Baseten</a></h3>
-  <p>H100 / A100 / L40S / 多卡</p>
-  <dl class="sec-facts">
-    <div><dt>计费</dt><dd>按分钟/按月</dd></div>
-    <div><dt>区域</dt><dd>美国为主</dd></div>
-    <div><dt>最低消费</dt><dd>托管方案有月费</dd></div>
-    <div><dt>核验</dt><dd>2026-11-19</dd></div>
-  </dl>
-  <p class="sec-caveat">按分钟/月度托管；模型托管与专用部署两档。以官网价格页为准（2026-11-19 核验入口）。</p>
-  <a class="sec-link" href="baseten.html">看服务商卡 →</a>
+<div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
+<h3><a href="baseten.html">Baseten</a></h3>
+<p>H100 / A100 / L40S / 多卡</p>
+<dl class="sec-facts">
+<div><dt>计费</dt><dd>按分钟/按月</dd></div>
+<div><dt>区域</dt><dd>美国为主</dd></div>
+<div><dt>最低消费</dt><dd>托管方案有月费</dd></div>
+<div><dt>核验</dt><dd>2026-11-19</dd></div>
+</dl>
+<p class="sec-caveat">按分钟/月度托管；模型托管与专用部署两档。以官网价格页为准（2026-11-19 核验入口）。</p>
+<a class="sec-link" href="baseten.html">看服务商卡 →</a>
 </article><article class="sec-card">
-  <div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
-  <h3><a href="together.html">Together AI</a></h3>
-  <p>H100 / H200 / A100 / GPU 集群</p>
-  <dl class="sec-facts">
-    <div><dt>计费</dt><dd>按 token / 按小时</dd></div>
-    <div><dt>区域</dt><dd>美国为主</dd></div>
-    <div><dt>最低消费</dt><dd>按用量，无最低消费（企业合同另算）</dd></div>
-    <div><dt>核验</dt><dd>2026-11-19</dd></div>
-  </dl>
-  <p class="sec-caveat">按 token 或 GPU 小时；不同模型与上下文长度价格不同。以官网价格页为准（2026-11-19 核验入口）。</p>
-  <a class="sec-link" href="together.html">看服务商卡 →</a>
+<div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
+<h3><a href="together.html">Together AI</a></h3>
+<p>H100 / H200 / A100 / GPU 集群</p>
+<dl class="sec-facts">
+<div><dt>计费</dt><dd>按 token / 按小时</dd></div>
+<div><dt>区域</dt><dd>美国为主</dd></div>
+<div><dt>最低消费</dt><dd>按用量，无最低消费（企业合同另算）</dd></div>
+<div><dt>核验</dt><dd>2026-11-19</dd></div>
+</dl>
+<p class="sec-caveat">按 token 或 GPU 小时；不同模型与上下文长度价格不同。以官网价格页为准（2026-11-19 核验入口）。</p>
+<a class="sec-link" href="together.html">看服务商卡 →</a>
 </article><article class="sec-card">
-  <div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
-  <h3><a href="fireworks.html">Fireworks AI</a></h3>
-  <p>H100 / H200 / A100 / 专用推理集群</p>
-  <dl class="sec-facts">
-    <div><dt>计费</dt><dd>按 token / 按小时</dd></div>
-    <div><dt>区域</dt><dd>美国为主</dd></div>
-    <div><dt>最低消费</dt><dd>按用量，无最低消费（企业合同另算）</dd></div>
-    <div><dt>核验</dt><dd>2026-11-19</dd></div>
-  </dl>
-  <p class="sec-caveat">按 token 或按 GPU 小时；模型与精度不同价格不同。以官网价格页为准（2026-11-19 核验入口）。</p>
-  <a class="sec-link" href="fireworks.html">看服务商卡 →</a>
+<div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
+<h3><a href="fireworks.html">Fireworks AI</a></h3>
+<p>H100 / H200 / A100 / 专用推理集群</p>
+<dl class="sec-facts">
+<div><dt>计费</dt><dd>按 token / 按小时</dd></div>
+<div><dt>区域</dt><dd>美国为主</dd></div>
+<div><dt>最低消费</dt><dd>按用量，无最低消费（企业合同另算）</dd></div>
+<div><dt>核验</dt><dd>2026-11-19</dd></div>
+</dl>
+<p class="sec-caveat">按 token 或按 GPU 小时；模型与精度不同价格不同。以官网价格页为准（2026-11-19 核验入口）。</p>
+<a class="sec-link" href="fireworks.html">看服务商卡 →</a>
 </article><article class="sec-card">
-  <div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
-  <h3><a href="replicate.html">Replicate</a></h3>
-  <p>H100 / A100 / L40S / T4（按模型分配）</p>
-  <dl class="sec-facts">
-    <div><dt>计费</dt><dd>按秒计费</dd></div>
-    <div><dt>区域</dt><dd>美国为主</dd></div>
-    <div><dt>最低消费</dt><dd>按用量，无最低消费</dd></div>
-    <div><dt>核验</dt><dd>2026-11-19</dd></div>
-  </dl>
-  <p class="sec-caveat">按秒计费，按硬件档位；冷启动与排队另计。以官网价格页为准（2026-11-19 核验入口）。</p>
-  <a class="sec-link" href="replicate.html">看服务商卡 →</a>
+<div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
+<h3><a href="replicate.html">Replicate</a></h3>
+<p>H100 / A100 / L40S / T4（按模型分配）</p>
+<dl class="sec-facts">
+<div><dt>计费</dt><dd>按秒计费</dd></div>
+<div><dt>区域</dt><dd>美国为主</dd></div>
+<div><dt>最低消费</dt><dd>按用量，无最低消费</dd></div>
+<div><dt>核验</dt><dd>2026-11-19</dd></div>
+</dl>
+<p class="sec-caveat">按秒计费，按硬件档位；冷启动与排队另计。以官网价格页为准（2026-11-19 核验入口）。</p>
+<a class="sec-link" href="replicate.html">看服务商卡 →</a>
 </article></div>
 </div>
-  </main>
-      <footer class="site-footer foot-single">
-    <div class="container foot-line">
-      <div class="foot-brand">
-        <span class="foot-brand-main">
-          <span class="brand-dot" aria-hidden="true"></span>
-          <span class="foot-copy"><span data-zh>投机取巧 · specul.com</span><span data-en>Specul · specul.com</span></span>
-        </span>
-        <span class="foot-license"><a href="https://specul.com/LICENSE-CONTENT.txt"><span data-zh>内容 CC BY 4.0</span><span data-en>Content CC BY 4.0</span></a><span class="sep" aria-hidden="true">·</span><a href="https://specul.com/LICENSE.txt"><span data-zh>代码 MIT</span><span data-en>Code MIT</span></a><span class="sep" aria-hidden="true">·</span><a class="foot-source" href="https://github.com/speculcom/ai-handbook" target="_blank" rel="noopener"><span data-zh>源码</span><span data-en>Source</span></a></span>
-      </div>
-      <nav class="foot-sites" aria-label="Footer site links">
-        <a class="site-link" href="https://specul.com/"><span data-zh>首页</span><span data-en>Home</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://learn.specul.com/"><span data-zh>学 AI</span><span data-en>Learn</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://tools.specul.com/"><span data-zh>工具</span><span data-en>Tools</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://models.specul.com/"><span data-zh>模型</span><span data-en>Models</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://demos.specul.com/"><span data-zh>演示</span><span data-en>Demos</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://oss.specul.com/"><span data-zh>开源</span><span data-en>OSS</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://hardware.specul.com/"><span data-zh>算力</span><span data-en>Compute</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://papers.specul.com/"><span data-zh>论文</span><span data-en>Papers</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://chain.specul.com/"><span data-zh>链</span><span data-en>Chain</span></a><span class="sep site-sep" aria-hidden="true">·</span>
-        <a class="site-link" href="https://nav.specul.com/"><span data-zh>导航</span><span data-en>Directory</span></a>
-      </nav>
-      <nav class="foot-legal" aria-label="Legal and corrections">
-        <a href="https://specul.com/legal.html"><span data-zh>法律</span><span data-en>Legal</span></a><span class="sep" aria-hidden="true">·</span>
-        <a href="https://specul.com/legal.html#s8"><span data-zh>隐私</span><span data-en>Privacy</span></a><span class="sep" aria-hidden="true">·</span>
-        <a href="https://specul.com/correct.html"><span data-zh>纠错</span><span data-en>Corrections</span></a>
-      </nav>
-    </div>
-  </footer>
-<nav class="nav-tabbar nav-tabbar-1row" aria-label="快捷导航">
-    <a href="https://specul.com/"><span class="ti" aria-hidden="true">◎</span><span data-zh>首页</span><span data-en>Home</span></a>
-    <a href="https://learn.specul.com/"><span class="ti" aria-hidden="true">▤</span><span data-zh>学AI</span><span data-en>Learn</span></a>
-    <a href="https://tools.specul.com/"><span class="ti" aria-hidden="true">◈</span><span data-zh>工具</span><span data-en>Tools</span></a>
-    <a href="https://models.specul.com/"><span class="ti" aria-hidden="true">▦</span><span data-zh>模型</span><span data-en>Models</span></a>
-    <a href="https://demos.specul.com/"><span class="ti" aria-hidden="true">▷</span><span data-zh>演示</span><span data-en>Demos</span></a>
-    <a href="https://oss.specul.com/"><span class="ti" aria-hidden="true">▧</span><span data-zh>开源</span><span data-en>OSS</span></a>
-    <a href="https://hardware.specul.com/" aria-current="page"><span class="ti" aria-hidden="true">▣</span><span data-zh>算力</span><span data-en>Chips</span></a>
-    <a href="https://papers.specul.com/"><span class="ti" aria-hidden="true">▥</span><span data-zh>论文</span><span data-en>Papers</span></a>
-    <a href="https://chain.specul.com/"><span class="ti" aria-hidden="true">◇</span><span data-zh>链</span><span data-en>Chain</span></a>
-    <a href="https://nav.specul.com/" data-nav-group="external"><span class="ti" aria-hidden="true">↗</span><span data-zh>导航</span><span data-en>Nav</span></a>
+</main>
+<footer class="site-footer foot-single">
+<div class="container foot-line">
+<div class="foot-brand">
+<span class="foot-brand-main">
+<span aria-hidden="true" class="brand-dot"></span>
+<span class="foot-copy"><span data-zh="">投机取巧 · specul.com</span><span data-en="">Specul · specul.com</span></span>
+</span>
+<span class="foot-license"><a href="https://specul.com/LICENSE-CONTENT.txt"><span data-zh="">内容 CC BY 4.0</span><span data-en="">Content CC BY 4.0</span></a><span aria-hidden="true" class="sep">·</span><a href="https://specul.com/LICENSE.txt"><span data-zh="">代码 MIT</span><span data-en="">Code MIT</span></a><span aria-hidden="true" class="sep">·</span><a class="foot-source" href="https://github.com/speculcom/ai-handbook" rel="noopener" target="_blank"><span data-zh="">源码</span><span data-en="">Source</span></a></span>
+</div>
+<nav aria-label="Footer site links" class="foot-sites">
+<a class="site-link" href="https://specul.com/"><span data-zh="">首页</span><span data-en="">Home</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://learn.specul.com/"><span data-zh="">学 AI</span><span data-en="">Learn</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://tools.specul.com/"><span data-zh="">工具</span><span data-en="">Tools</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://models.specul.com/"><span data-zh="">模型</span><span data-en="">Models</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://demos.specul.com/"><span data-zh="">演示</span><span data-en="">Demos</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://oss.specul.com/"><span data-zh="">开源</span><span data-en="">OSS</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://hardware.specul.com/"><span data-zh="">算力</span><span data-en="">Compute</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://papers.specul.com/"><span data-zh="">论文</span><span data-en="">Papers</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://chain.specul.com/"><span data-zh="">链</span><span data-en="">Chain</span></a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://nav.specul.com/"><span data-zh="">导航</span><span data-en="">Directory</span></a>
+</nav>
+<nav aria-label="Legal and corrections" class="foot-legal">
+<a href="https://specul.com/legal.html"><span data-zh="">法律</span><span data-en="">Legal</span></a><span aria-hidden="true" class="sep">·</span>
+<a href="https://specul.com/legal.html#s8"><span data-zh="">隐私</span><span data-en="">Privacy</span></a><span aria-hidden="true" class="sep">·</span>
+<a href="https://specul.com/correct.html"><span data-zh="">纠错</span><span data-en="">Corrections</span></a>
+</nav>
+</div>
+</footer>
+<nav aria-label="快捷导航" class="nav-tabbar nav-tabbar-1row">
+<a href="https://specul.com/"><span aria-hidden="true" class="ti">◎</span><span data-zh="">首页</span><span data-en="">Home</span></a>
+<a href="https://learn.specul.com/"><span aria-hidden="true" class="ti">▤</span><span data-zh="">学AI</span><span data-en="">Learn</span></a>
+<a href="https://tools.specul.com/"><span aria-hidden="true" class="ti">◈</span><span data-zh="">工具</span><span data-en="">Tools</span></a>
+<a href="https://models.specul.com/"><span aria-hidden="true" class="ti">▦</span><span data-zh="">模型</span><span data-en="">Models</span></a>
+<a href="https://demos.specul.com/"><span aria-hidden="true" class="ti">▷</span><span data-zh="">演示</span><span data-en="">Demos</span></a>
+<a href="https://oss.specul.com/"><span aria-hidden="true" class="ti">▧</span><span data-zh="">开源</span><span data-en="">OSS</span></a>
+<a aria-current="page" href="https://hardware.specul.com/"><span aria-hidden="true" class="ti">▣</span><span data-zh="">算力</span><span data-en="">Chips</span></a>
+<a href="https://papers.specul.com/"><span aria-hidden="true" class="ti">▥</span><span data-zh="">论文</span><span data-en="">Papers</span></a>
+<a href="https://chain.specul.com/"><span aria-hidden="true" class="ti">◇</span><span data-zh="">链</span><span data-en="">Chain</span></a>
+<a data-nav-group="external" href="https://nav.specul.com/"><span aria-hidden="true" class="ti">↗</span><span data-zh="">导航</span><span data-en="">Nav</span></a>
 </nav>
 </body>
 </html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html data-lang="en" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Eight 2026 specs, with capacity, bandwidth and…</title>
+<meta content="MN-Core L2000, Titania, Rubin, B300, MI455X, MI450X, TPU7x and Helios. They are often flattened into “how many TOPS”; this page separates per-GPU…" name="description"/>
+<link href="https://hardware.specul.com/en/2026.html" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Compute" property="og:site_name"/>
+<meta content="https://hardware.specul.com/en/2026.html" property="og:url"/>
+<meta content="Eight 2026 specs, with capacity, bandwidth and…" property="og:title"/>
+<meta content="MN-Core L2000, Titania, Rubin, B300, MI455X, MI450X, TPU7x and Helios. They are often flattened into “how many TOPS”; this page separates per-GPU…" property="og:description"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="zh_CN" property="og:locale:alternate"/>
+<meta content="#16121f" name="theme-color"/>
+<link href="/assets/brand/dandelion-favicon-site.png" rel="icon" type="image/png"/>
+<link href="/assets/brand/dandelion-apple-touch-site.png" rel="apple-touch-icon"/>
+<script src="/brand.js"></script>
+<link href="/brand.css" rel="stylesheet"/>
+<link href="/site.css" rel="stylesheet"/>
+<style>
+.u26-hero{padding:24px 0 14px}
+.u26-kicker{margin:0 0 8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);font-weight:650}
+.u26-h1{margin:0;max-width:20ch;font-size:clamp(30px,4.3vw,52px);line-height:1.1;letter-spacing:-.03em;color:var(--ink)}
+.u26-lede{margin:12px 0 0;max-width:70ch;font-size:15px;line-height:1.62;color:var(--ink-mid)}
+.u26-note{margin:12px 0 0;max-width:72ch;padding:10px 12px;border-left:2px solid var(--cyan);background:var(--brand-soft);font-size:13px;line-height:1.6;color:var(--ink-mid)}
+.u26-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.u26-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--ink-mid);background:var(--bg-panel)}
+.u26-chip b{color:var(--cyan);font-variant-numeric:tabular-nums}
+.u26-section{padding:24px 0;border-top:1px solid var(--line)}
+.u26-h2{margin:0 0 6px;font-size:clamp(22px,2.8vw,32px);line-height:1.2;color:var(--ink)}
+.u26-sub{margin:0 0 12px;font-size:13px;line-height:1.6;color:var(--ink-faint);max-width:68ch}
+.u26-figure{margin:0 0 14px;padding:12px 12px 8px;border:1px solid var(--line);border-radius:14px;background:var(--bg-panel)}
+.u26-figure figcaption{margin-top:6px;font-size:11px;line-height:1.5;color:var(--ink-faint)}
+.u26-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:10px}
+.u26-card{grid-column:span 6;min-width:0;padding:14px 14px 12px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,var(--bg-panel),var(--bg-inset))}
+.u26-card.wide{grid-column:span 12}
+.u26-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px}
+.u26-badge{display:inline-flex;align-items:center;padding:3px 8px;border-radius:6px;border:1px solid var(--brand-line);background:var(--brand-soft);color:var(--cyan);font-size:11px;font-variant-numeric:tabular-nums}
+.u26-tag{font-size:11px;color:var(--ink-faint)}
+.u26-card h2{margin:0 0 6px;font-size:17px;line-height:1.3;color:var(--ink)}
+.u26-card .u26-p{margin:0;font-size:13px;line-height:1.62;color:var(--ink-mid)}
+.u26-dl{display:grid;grid-template-columns:auto 1fr;gap:5px 10px;margin:10px 0 0;padding:8px 0 2px;border-top:1px dashed var(--line);font-size:12px;line-height:1.5}
+.u26-dl dt{color:var(--ink-faint)}
+.u26-dl dd{margin:0;color:var(--ink)}
+.u26-block{margin-top:9px;padding-top:7px;border-top:1px dashed var(--line)}
+.u26-block b{display:block;margin-bottom:3px;font-size:11px;letter-spacing:.04em;color:var(--cyan)}
+.u26-block p{margin:0;font-size:12px;line-height:1.6;color:var(--ink-mid)}
+.u26-boundary{border-left:2px solid var(--warn);padding-left:9px}
+.u26-src{margin:10px 0 0;font-size:11px;line-height:1.6;color:var(--ink-faint);overflow-wrap:anywhere}
+.u26-src a{color:var(--ink-mid);text-decoration:none;border-bottom:1px solid var(--line)}
+.u26-brief{display:grid;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg-panel)}
+.u26-row{display:grid;grid-template-columns:82px 1fr auto;gap:10px;align-items:start;padding:10px 12px;border-bottom:1px solid var(--line)}
+.u26-row:last-child{border-bottom:0}
+.u26-row time{font-size:11px;color:var(--cyan);font-variant-numeric:tabular-nums;padding-top:2px}
+.u26-row b{display:block;font-size:14px;line-height:1.4;color:var(--ink)}
+.u26-row p{margin:3px 0 0;font-size:12px;line-height:1.55;color:var(--ink-mid)}
+.u26-row a{font-size:11px;color:var(--ink-faint);text-decoration:none;white-space:nowrap}
+.u26-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.u26-two .u26-card{grid-column:auto}
+.u26-quote{margin:10px 0 0;padding:9px 10px;border-left:2px solid var(--brand-line);background:var(--bg-inset);font-size:12px;line-height:1.6;color:var(--ink-mid);overflow-wrap:anywhere}
+.u26-list{display:grid;gap:6px;margin:10px 0 0}
+.u26-list div{display:grid;grid-template-columns:26px 1fr;gap:8px;font-size:12px;line-height:1.55;color:var(--ink-mid)}
+.u26-list b{color:var(--cyan);font-variant-numeric:tabular-nums}
+.u26-map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:2px 0 14px}
+.u26-lane{padding:12px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,var(--bg-panel),var(--bg-inset))}
+.u26-lane>b{display:block;font-size:12px;letter-spacing:.06em;color:var(--cyan)}
+.u26-lane>span{display:block;margin:3px 0 9px;font-size:11px;line-height:1.5;color:var(--ink-faint)}
+.u26-lane a{display:grid;grid-template-columns:48px 1fr;gap:8px;padding:6px 0;border-top:1px dashed var(--line);font-size:11px;line-height:1.5;color:var(--ink-mid)}
+.u26-lane a time{color:var(--ink-faint);font-variant-numeric:tabular-nums}
+.u26-lane a:hover{color:var(--ink)}
+.u26-chain{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 14px;counter-reset:step}
+.u26-chain div{position:relative;padding:11px 10px 10px;border:1px solid var(--line);border-radius:12px;background:var(--bg-panel)}
+.u26-chain div:not(:last-child)::after{content:"→";position:absolute;right:-11px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--ink-faint)}
+.u26-chain b{display:block;font-size:11px;letter-spacing:.05em;color:var(--cyan)}
+.u26-chain span{display:block;margin-top:4px;font-size:13px;line-height:1.4;color:var(--ink)}
+.nf-grid{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:clamp(24px,5vw,56px);align-items:center}
+.nf-art{opacity:.95}
+.nf-art svg{display:block;width:100%;height:auto}
+@media(max-width:900px){.u26-card{grid-column:span 12}.u26-two{grid-template-columns:1fr}.u26-row{grid-template-columns:70px 1fr}.u26-row a{display:none}.u26-map{grid-template-columns:1fr}.u26-chain{grid-template-columns:1fr 1fr}.u26-chain div:nth-child(2)::after{content:none}.nf-grid{grid-template-columns:1fr}.nf-art{max-width:200px;margin:8px auto 0}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Eight 2026 specs, with capacity, bandwidth and…","description":"MN-Core L2000, Titania, Rubin, B300, MI455X, MI450X, TPU7x and Helios. They are often flattened into “how many TOPS”; this page separates per-GPU…","url":"https://hardware.specul.com/en/2026.html","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://hardware.specul.com/en/2026.html"}}</script>
+<meta content="Eight 2026 specs, with capacity, bandwidth and…" name="twitter:title"/><meta content="MN-Core L2000, Titania, Rubin, B300, MI455X, MI450X, TPU7x and Helios. They are often flattened into “how many TOPS”; this page separates per-GPU…" name="twitter:description"/><link href="https://hardware.specul.com/2026.html" hreflang="zh-CN" rel="alternate"/><link href="https://hardware.specul.com/en/2026.html" hreflang="en" rel="alternate"/><link href="https://hardware.specul.com/2026.html" hreflang="x-default" rel="alternate"/></head>
+<!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
+     同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
+     而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
+     完全无效：vg 的引擎名在亮色主题下一直是 1.62:1 的金色，就是因为这条内联。
+     现在只保留头部那一处 —— 单一真相源，且可被主题覆盖。
+     ⚠ 这段注释里**不能出现反引号**：它在模板字符串内部，反引号会提前结束模板
+     （写这段时踩了第 4 次；pitfalls 里早有记录）。 -->
+<body class="brand-ambient has-tabbar has-tabbar-1row">
+<a class="t-skip" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="container site-bar">
+<a class="brand" href="https://specul.com/en/" title="投机取巧">
+<span aria-hidden="true" class="brand-dot"></span>
+<span class="brand-text">
+<span class="brand-name" id="markName">Speculative Speculation</span>
+<span class="brand-sub" id="markSub"></span>
+</span>
+</a>
+<nav aria-label="站点导航" class="nav-links">
+<a href="https://specul.com/en/">Home</a>
+<a href="https://learn.specul.com/en/">Learn</a>
+<a href="https://tools.specul.com/en/">Tools</a>
+<a href="https://models.specul.com/en/">Models</a>
+<a href="https://demos.specul.com/en/">Playground</a>
+<a href="https://oss.specul.com/en/">OSS</a>
+<a aria-current="page" href="https://hardware.specul.com/en/">Compute</a>
+<a href="https://papers.specul.com/en/">AI Papers</a>
+<a href="https://chain.specul.com/en/">Chain</a>
+<a href="https://nav.specul.com/en/">AI Directory</a>
+</nav>
+<!-- 2026-10-10：.nav-tools 从 nav 元素**内部**移到外面，与 .nav-links 平级。
+           放里面时窄屏下它会跟着链接一起换行：链接占满整行 → 按钮被挤到第三条
+           （实测顶栏 134px、按钮组孤零零一行）。移出来后它与品牌同行，
+           链接独占第二行居中 —— 这才是下面注释里方案 B 想要的样子。 -->
+<span class="nav-tools">
+<a aria-label="Search" class="icon-btn" href="https://specul.com/en/search.html" title="Search all sites"><span aria-hidden="true">⌕</span></a>
+<button aria-label="切换明暗主题" class="icon-btn" id="themeBtn" title="切换明暗主题" type="button">☾</button>
+<a aria-label="切换到中文" class="icon-btn" href="/2026.html" hreflang="zh-CN" id="langBtn" lang="zh-CN" title="切换到中文">中文</a>
+</span>
+<!-- B6（2026-10-09）：窄屏（≤900px）下 .nav-links 会隐藏，这个汉堡是替代入口。
+           行为在共享 brand.js 里（一处实现、十站共用），样式在共享 brand.css。
+           无脚本时 CSS 不会显示它，而是把 .nav-links 在窄屏放出来 —— 不会出现
+           「导航被藏进一个点了没反应的按钮」。 -->
+<button aria-controls="navDrawer" aria-expanded="false" aria-label="打开菜单" class="nav-burger" type="button">
+<i></i><i></i><i></i>
+</button>
+</div>
+</header>
+<div class="nav-scrim"></div>
+<aside aria-hidden="true" aria-label="站点导航" class="nav-drawer" id="navDrawer">
+<div class="nav-drawer-h">
+<span class="brand-name">Speculative Speculation</span>
+<span class="brand-sub"></span>
+<button aria-label="关闭" class="nav-dclose" type="button">×</button>
+</div>
+<nav class="nav-drawer-list">
+<a href="https://specul.com/en/"><span>Home</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://learn.specul.com/en/"><span>Learn</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://tools.specul.com/en/"><span>Tools</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://models.specul.com/en/"><span>Models</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://demos.specul.com/en/"><span>Playground</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://oss.specul.com/en/"><span>OSS</span><span aria-hidden="true" class="ar">→</span></a>
+<a aria-current="page" class="nav-group-start" href="https://hardware.specul.com/en/"><span>Compute</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://papers.specul.com/en/"><span>AI Papers</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://chain.specul.com/en/"><span>Chain</span><span aria-hidden="true" class="ar">→</span></a>
+<a class="nav-group-start" data-nav-group="external" href="https://nav.specul.com/en/"><span>AI Directory</span><span aria-hidden="true" class="ar">↗</span></a>
+</nav>
+<div class="nav-drawer-foot">
+<p>Content sites cover learn, use, choose and run; AI Directory is a catalogue of off-site AI sites.</p>
+<nav><a href="https://specul.com/en/legal.html">Legal terms</a></nav>
+</div>
+</aside>
+<main id="main">
+<section class="u26-hero"><div class="container">
+<p class="u26-kicker">Hardware · 2026 additions · 2026-11-24</p>
+<h1 class="u26-h1">Eight 2026 specs,<br/>with capacity, bandwidth and interconnect kept apart</h1>
+<p class="u26-lede">MN-Core L2000, Titania, Rubin, B300, MI455X, MI450X, TPU7x and Helios. They are often flattened into “how many TOPS”; this page separates per-GPU capacity, bandwidth, interconnect, rack and development stage.</p>
+<p class="u26-note">Vendor spec pages only; peaks are not measurements, and design targets are not production. NVFP4 and MXFP4 are not cross-compared, and per-GPU is not mixed with rack.</p>
+</div></section>
+<section class="u26-section"><div class="container">
+<figure class="u26-figure"><svg aria-label="Timeline" class="vz-svg" role="img" viewbox="0 0 760 402" xmlns="http://www.w3.org/2000/svg">
+<text class="vz-t-dim" text-anchor="end" x="104" y="27">2026-11-17</text>
+<line class="vz-axis" x1="120" x2="120" y1="10" y2="54"></line>
+<circle cx="120" cy="22" r="6" style="fill:var(--cat-rose)"></circle>
+<text class="vz-t-strong" x="140" y="27">PFN MN-Core L2000</text>
+<text class="vz-t-dim" x="140" y="47">推理 ASIC / 研发</text>
+<text class="vz-t-dim" text-anchor="end" x="104" y="75">2026-11-12</text>
+<line class="vz-axis" x1="120" x2="120" y1="58" y2="102"></line>
+<circle cx="120" cy="70" r="6" style="fill:var(--cat-rose)"></circle>
+<text class="vz-t-strong" x="140" y="75">Axelera Titania</text>
+<text class="vz-t-dim" x="140" y="95">推理加速 / 芯粒</text>
+<text class="vz-t-dim" text-anchor="end" x="104" y="123">2026-11-12</text>
+<line class="vz-axis" x1="120" x2="120" y1="106" y2="150"></line>
+<circle cx="120" cy="118" r="6" style="fill:var(--cat-rose)"></circle>
+<text class="vz-t-strong" x="140" y="123">AMD MI450X</text>
+<text class="vz-t-dim" x="140" y="143">加速卡</text>
+<text class="vz-t-dim" text-anchor="end" x="104" y="171">2026-07-23</text>
+<line class="vz-axis" x1="120" x2="120" y1="154" y2="198"></line>
+<circle cx="120" cy="166" r="6" style="fill:var(--cat-rose)"></circle>
+<text class="vz-t-strong" x="140" y="171">AMD MI455X</text>
+<text class="vz-t-dim" x="140" y="191">加速卡</text>
+<text class="vz-t-dim" text-anchor="end" x="104" y="219">2026-04-22</text>
+<line class="vz-axis" x1="120" x2="120" y1="202" y2="246"></line>
+<circle cx="120" cy="214" r="6" style="fill:var(--cat-rose)"></circle>
+<text class="vz-t-strong" x="140" y="219">Google TPU7x（Ironwood）</text>
+<text class="vz-t-dim" x="140" y="239">加速卡 / ASIC</text>
+<text class="vz-t-dim" text-anchor="end" x="104" y="267">2026</text>
+<line class="vz-axis" x1="120" x2="120" y1="250" y2="294"></line>
+<circle cx="120" cy="262" r="6" style="fill:var(--cat-rose)"></circle>
+<text class="vz-t-strong" x="140" y="267">NVIDIA Rubin</text>
+<text class="vz-t-dim" x="140" y="287">加速卡</text>
+<text class="vz-t-dim" text-anchor="end" x="104" y="315">2026</text>
+<line class="vz-axis" x1="120" x2="120" y1="298" y2="342"></line>
+<circle cx="120" cy="310" r="6" style="fill:var(--cat-rose)"></circle>
+<text class="vz-t-strong" x="140" y="315">NVIDIA B300</text>
+<text class="vz-t-dim" x="140" y="335">加速卡</text>
+<text class="vz-t-dim" text-anchor="end" x="104" y="363">2026</text>
+<line class="vz-axis" x1="120" x2="120" y1="346" y2="390"></line>
+<circle cx="120" cy="358" r="6" style="fill:var(--cat-rose)"></circle>
+<text class="vz-t-strong" x="140" y="363">AMD Helios</text>
+<text class="vz-t-dim" x="140" y="383">整机 / 机架</text></svg><figcaption>By release / launch date, newest first; Helios is a rack entry and PFN L2000 is a development milestone.</figcaption></figure>
+<div class="u26-grid"><article class="u26-card" id="pfn-mn-core-l2000">
+<div class="u26-meta"><span class="u26-badge">2026-11-17</span><span class="u26-tag">Inference ASIC / development</span></div>
+<h2>PFN MN-Core L2000: targeting double the memory bandwidth</h2>
+<p class="u26-p">PFN and SEMIFIVE are co-developing the L2000 series, the next generation of AI inference chips, targeting more than twice the memory bandwidth of L1000. It continues the 3D-stacked logic + DRAM route, with tape-out planned for Q1 2027. It is not a shipping product; L1000 itself is planned for 2027.</p>
+<dl class="u26-dl"><dt>Approach</dt><dd>3D 堆叠逻辑芯片 + DRAM；内存带宽优先</dd><dt>Target</dt><dd>内存带宽 &gt; MN-Core L1000 两倍</dd><dt>Status</dt><dd>2027Q1 tape-out；尚未流片 / 上市</dd><dt>Partner</dt><dd>PFN + SEMIFIVE；逻辑芯片由三星代工</dd></dl>
+<div class="u26-block"><b>Why it matters</b><p>Inference is shifting from compute to memory bandwidth; PFN makes “double bandwidth” the first goal of L2000 rather than pushing TOPS. It is a useful architecture sample for non-GPU inference, 3D stacking and efficiency — but tape-out is in 2027, so it cannot inform a 2026 procurement decision.</p></div>
+<div class="u26-block u26-boundary"><b>Boundary / what it does not claim</b><p>“Double bandwidth” is a design target, not a measurement; tape-out is not volume production, and volume production is not a software ecosystem. PFN has not published TOPS, power, price or system specs. It does not claim to replace GPUs or to be purchasable in 2026.</p></div>
+<p class="u26-src">Sources：<a href="https://www.preferred.jp/en/news/pr20261116" rel="noopener" target="_blank">PFN official news (EN)</a> · <a href="https://www.preferred.jp/ja/news/pr20261116" rel="noopener" target="_blank">PFN official news (JP)</a></p>
+</article><article class="u26-card" id="axelera-titania">
+<div class="u26-meta"><span class="u26-badge">2026-11-12</span><span class="u26-tag">Inference / chiplet</span></div>
+<h2>Axelera Titania: 2.5 PF FP8 / 128GB LPDDR6</h2>
+<p class="u26-p">A datacenter-class AIPU: two third-generation D-IMC chiplets in one SiP, 400W, 2.5 PFLOPS FP8; 128GB LPDDR6 at 2.45TB/s with 128MB shared SRAM; 32 RISC-V cores and multi-format codecs. Volume production is targeted for Q3 2027, with over $300M in orders claimed.</p>
+<dl class="u26-dl"><dt>Form</dt><dd>2 chiplet / 1 SiP；PCIe AIC 或 OCP OAM</dd><dt>Compute</dt><dd>2.5 PFLOPS FP8；MXFP4 / MXFP8</dd><dt>Memory</dt><dd>128GB LPDDR6；2.45TB/s；128MB 共享 SRAM</dd><dt>Power</dt><dd>400W 设计功耗</dd><dt>Status</dt><dd>2027Q3 量产目标；2026 仅发布架构</dd></dl>
+<div class="u26-block"><b>Why it matters</b><p>It fits 128GB per card and a 1.6T MoE into an air-cooled 4U eight-card server rather than a liquid-cooled rack; for teams with constrained facilities that still want a large local MoE, it is a different cost/power route from GPUs.</p></div>
+<div class="u26-block u26-boundary"><b>Boundary / what it does not claim</b><p>2.5 PF is FP8 peak while the 1.6T MoE figure is a capacity claim at FP4; they cannot be mixed. Orders and per-watt/TCO claims are vendor figures without independent measurement. In 2026 only the architecture is announced; silicon is targeted for Q3 2027, and software/model coverage remains unproven. It does not claim current availability or a general GPU replacement.</p></div>
+<p class="u26-src">Sources：<a href="https://axelera.ai/news/axelera-ai-unveils-titania-architecture-hpc-class-ai-responsiveness-without-liquid-cooled-racks-targeting-110b-underserved-market" rel="noopener" target="_blank">Axelera official announcement</a> · <a href="https://axelera.ai/" rel="noopener" target="_blank">Axelera product page</a></p>
+</article><article class="u26-card" id="amd-mi450x">
+<div class="u26-meta"><span class="u26-badge">2026-11-12</span><span class="u26-tag">Accelerator</span></div>
+<h2>AMD MI450X: 288GB HBM4 / 23.3TB/s</h2>
+<p class="u26-p">Same CDNA5 and 23.3TB/s as MI455X, but 288GB (eight HBM4 stacks); MXFP4 40.3 PFLOPS; launched 2026-11-12.</p>
+<dl class="u26-dl"><dt>HBM</dt><dd>288GB HBM4（8 stacks）</dd><dt>BW</dt><dd>23.3TB/s</dd><dt>MXFP4</dt><dd>40.3 PFLOPS</dd><dt>launch</dt><dd>2026-11-12</dd></dl>
+<div class="u26-block"><b>Why it matters</b><p>It keeps MI455X bandwidth/compute at the 288GB tier, a more realistic capacity point for clusters that do not need 432GB; the difference is capacity, not architecture generation.</p></div>
+<div class="u26-block u26-boundary"><b>Boundary / what it does not claim</b><p>Do not assume MI455X is stronger just because the number is higher; per-GPU memory and rack configurations differ. MXFP4 and NVFP4 are not directly comparable.</p></div>
+<p class="u26-src">Sources：<a href="https://www.amd.com/en/products/accelerators/instinct/mi400/mi450x.html" rel="noopener" target="_blank">AMD MI450X spec page</a></p>
+</article><article class="u26-card" id="amd-mi455x">
+<div class="u26-meta"><span class="u26-badge">2026-07-23</span><span class="u26-tag">Accelerator</span></div>
+<h2>AMD MI455X: 432GB HBM4 / 23.3TB/s</h2>
+<p class="u26-p">Per GPU: 432GB HBM4 (12 stacks), 23.3TB/s, 320B transistors; OCP MXFP4 40.3 PFLOPS, FP8 20.1 PFLOPS; UALoE 3.6TB/s; direct liquid cooling.</p>
+<dl class="u26-dl"><dt>HBM</dt><dd>432GB HBM4</dd><dt>BW</dt><dd>23.3TB/s</dd><dt>MXFP4</dt><dd>40.3 PFLOPS</dd><dt>scale-up</dt><dd>UALoE 3.6TB/s</dd><dt>cooling</dt><dd>DLC</dd></dl>
+<div class="u26-block"><b>Why it matters</b><p>432GB is the largest publicly documented per-GPU capacity here; for keeping a very large model or long KV cache on one card, capacity decides feasibility before peak compute.</p></div>
+<div class="u26-block u26-boundary"><b>Boundary / what it does not claim</b><p>40.3 PF is OCP MXFP4 peak, not measured; it is not directly comparable with NVIDIA NVFP4. DLC means an air-cooled facility cannot simply take it.</p></div>
+<p class="u26-src">Sources：<a href="https://www.amd.com/en/products/accelerators/instinct/mi400/mi455x.html" rel="noopener" target="_blank">AMD MI455X spec page</a></p>
+</article><article class="u26-card" id="google-tpu7x">
+<div class="u26-meta"><span class="u26-badge">2026-04-22</span><span class="u26-tag">Accelerator / ASIC</span></div>
+<h2>Google TPU7x (Ironwood): 192GiB / 7.38TB/s</h2>
+<p class="u26-p">Seventh-generation TPU: 192GiB HBM3E per chip, about 7.38TB/s, 4614 TFLOPS FP8 / 2307 TFLOPS BF16; 9,216 chips per pod; ICI 1.2TB/s; JAX / PyTorch supported, TensorFlow not.</p>
+<dl class="u26-dl"><dt>chip</dt><dd>192GiB HBM3E</dd><dt>BW</dt><dd>约 7.38TB/s</dd><dt>FP8</dt><dd>4614 TFLOPS</dd><dt>Pod</dt><dd>9,216 chips</dd><dt>frameworks</dt><dd>JAX / PyTorch</dd></dl>
+<div class="u26-block"><b>Why it matters</b><p>The most complete non-GPU option: per-chip capacity, pod scale and interconnect are public. For large-scale training with a JAX/PyTorch stack, it is a real alternative to GPUs.</p></div>
+<div class="u26-block u26-boundary"><b>Boundary / what it does not claim</b><p>Pod scale is not per-card throughput; 4614 TF is FP8 peak. The docs explicitly say TensorFlow is unsupported, so migration cost is separate. TPUs and GPUs cannot be compared through the same CUDA-ecosystem logic.</p></div>
+<p class="u26-src">Sources：<a href="https://docs.cloud.google.cn/tpu/docs/tpu7x" rel="noopener" target="_blank">Google Cloud TPU7x docs</a></p>
+</article><article class="u26-card" id="nvidia-rubin">
+<div class="u26-meta"><span class="u26-badge">2026</span><span class="u26-tag">Accelerator</span></div>
+<h2>NVIDIA Rubin: 288GB HBM4 / 22TB/s</h2>
+<p class="u26-p">Per GPU: 288GB HBM4 (12-Hi stacks), 22TB/s, 336B transistors, 224 SM / 896 Tensor Cores; up to 50 PFLOPS NVFP4 inference; NVLink 6 at 3.6TB/s.</p>
+<dl class="u26-dl"><dt>HBM</dt><dd>288GB HBM4</dd><dt>BW</dt><dd>22TB/s</dd><dt>NVFP4</dt><dd>50 PFLOPS（inference）</dd><dt>NVLink 6</dt><dd>3.6TB/s</dd><dt>transistors</dt><dd>336B</dd></dl>
+<div class="u26-block"><b>Why it matters</b><p>It lifts per-GPU bandwidth from 8TB/s to 22TB/s, a hard ceiling change for long-context and high-concurrency inference. It shares 288GB with B300 but differs in HBM generation and interconnect.</p></div>
+<div class="u26-block u26-boundary"><b>Boundary / what it does not claim</b><p>50 PF is NVFP4 inference, not every precision; it is not directly comparable with AMD MXFP4. It is a per-GPU figure, not the Vera Rubin NVL72 rack.</p></div>
+<p class="u26-src">Sources：<a href="https://developer.nvidia.com/blog/inside-nvidia-rubin-gpu-architecture-powering-the-era-of-agentic-ai" rel="noopener" target="_blank">NVIDIA Rubin architecture blog</a></p>
+</article><article class="u26-card" id="nvidia-b300">
+<div class="u26-meta"><span class="u26-badge">2026</span><span class="u26-tag">Accelerator</span></div>
+<h2>NVIDIA B300: 288GB HBM3e / 8TB/s</h2>
+<p class="u26-p">Blackwell Ultra per GPU: 288GB HBM3e, 8TB/s, 15 PFLOPS dense NVFP4, 160 SM / 640 Tensor Cores, up to 1,400W.</p>
+<dl class="u26-dl"><dt>HBM</dt><dd>288GB HBM3e</dd><dt>BW</dt><dd>8TB/s</dd><dt>NVFP4 dense</dt><dd>15 PFLOPS</dd><dt>TGP</dt><dd>最高 1,400W</dd></dl>
+<div class="u26-block"><b>Why it matters</b><p>It is the “previous generation but mature” option still shipping in 2026; it shares 288GB with Rubin but differs in HBM generation, bandwidth and NVFP4 compute — a practical choice driven by supply and cost.</p></div>
+<div class="u26-block u26-boundary"><b>Boundary / what it does not claim</b><p>15 PF is dense NVFP4 and cannot be compared directly with Rubin’s 50 PF inference figure. 1,400W is max TGP; real power varies with workload.</p></div>
+<p class="u26-src">Sources：<a href="https://developer.nvidia.com/blog/inside-nvidia-blackwell-ultra-the-chip-powering-the-ai-factory-era" rel="noopener" target="_blank">NVIDIA Blackwell Ultra blog</a></p>
+</article><article class="u26-card" id="amd-helios">
+<div class="u26-meta"><span class="u26-badge">2026</span><span class="u26-tag">System / rack</span></div>
+<h2>AMD Helios: 72× MI455X, 31TB HBM4</h2>
+<p class="u26-p">Rack-scale system: 72 MI455X or MI450X GPUs, 31TB HBM4, 1.4 EF FP8 / 2.9 EF FP4; not a per-GPU spec.</p>
+<dl class="u26-dl"><dt>GPU</dt><dd>72× MI455X / MI450X</dd><dt>total HBM</dt><dd>31TB HBM4</dd><dt>FP8</dt><dd>1.4 EFLOPS</dd><dt>FP4</dt><dd>2.9 EFLOPS</dd></dl>
+<div class="u26-block"><b>Why it matters</b><p>It answers how much HBM and compute one rack holds, the unit for cluster procurement and facility planning; kept separate from per-GPU entries so rack numbers are not mistaken for card numbers.</p></div>
+<div class="u26-block u26-boundary"><b>Boundary / what it does not claim</b><p>31TB is the sum of 72 cards; 1.4 EF FP8 and 2.9 EF FP4 are rack-level too. Power, cooling and facility conditions are separate; buying the rack is not a guarantee of peak runtime.</p></div>
+<p class="u26-src">Sources：<a href="https://www.amd.com/en/products/accelerators/instinct/mi400.html" rel="noopener" target="_blank">AMD Instinct MI400 series page</a></p>
+</article></div>
+<p class="u26-note"><b>Next：</b><a href="https://hardware.specul.com/en/">Back to all hardware entries →</a></p>
+</div></section>
+</main>
+<footer class="site-footer foot-single">
+<div class="container foot-line">
+<div class="foot-brand">
+<span class="foot-brand-main">
+<span aria-hidden="true" class="brand-dot"></span>
+<span class="foot-copy">Specul · specul.com</span>
+</span>
+<span class="foot-license"><a href="https://specul.com/LICENSE-CONTENT.txt">Content CC BY 4.0</a><span aria-hidden="true" class="sep">·</span><a href="https://specul.com/LICENSE.txt">Code MIT</a><span aria-hidden="true" class="sep">·</span><a class="foot-source" href="https://github.com/speculcom/ai-handbook" rel="noopener" target="_blank">Source</a></span>
+</div>
+<nav aria-label="Footer site links" class="foot-sites">
+<a class="site-link" href="https://specul.com/en/">Home</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://learn.specul.com/en/">Learn</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://tools.specul.com/en/">Tools</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://models.specul.com/en/">Models</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://demos.specul.com/en/">Demos</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://oss.specul.com/en/">OSS</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://hardware.specul.com/en/">Compute</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://papers.specul.com/en/">Papers</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://chain.specul.com/en/">Chain</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://nav.specul.com/en/">Directory</a>
+</nav>
+<nav aria-label="Legal and corrections" class="foot-legal">
+<a href="https://specul.com/en/legal.html">Legal</a><span aria-hidden="true" class="sep">·</span>
+<a href="https://specul.com/en/legal.html#s8">Privacy</a><span aria-hidden="true" class="sep">·</span>
+<a href="https://specul.com/en/correct.html">Corrections</a>
+</nav>
+</div>
+</footer>
+<nav aria-label="快捷导航" class="nav-tabbar nav-tabbar-1row">
+<a href="https://specul.com/en/"><span aria-hidden="true" class="ti">◎</span>Home</a>
+<a href="https://learn.specul.com/en/"><span aria-hidden="true" class="ti">▤</span>Learn</a>
+<a href="https://tools.specul.com/en/"><span aria-hidden="true" class="ti">◈</span>Tools</a>
+<a href="https://models.specul.com/en/"><span aria-hidden="true" class="ti">▦</span>Models</a>
+<a href="https://demos.specul.com/en/"><span aria-hidden="true" class="ti">▷</span>Demos</a>
+<a href="https://oss.specul.com/en/"><span aria-hidden="true" class="ti">▧</span>OSS</a>
+<a aria-current="page" href="https://hardware.specul.com/en/"><span aria-hidden="true" class="ti">▣</span>Chips</a>
+<a href="https://papers.specul.com/en/"><span aria-hidden="true" class="ti">▥</span>Papers</a>
+<a href="https://chain.specul.com/en/"><span aria-hidden="true" class="ti">◇</span>Chain</a>
+<a data-nav-group="external" href="https://nav.specul.com/en/"><span aria-hidden="true" class="ti">↗</span>Nav</a>
+</nav>
+</body>
+</html>

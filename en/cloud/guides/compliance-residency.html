@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html data-lang="en" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Compliance and data residency: decide where data may go |…</title>
+<meta content="Compliance and data residency: decide where data may go" name="description"/>
+<link href="https://hardware.specul.com/en/cloud/guides/compliance-residency.html" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Compute" property="og:site_name"/>
+<meta content="https://hardware.specul.com/en/cloud/guides/compliance-residency.html" property="og:url"/>
+<meta content="Compliance and data residency: decide where data may go |…" property="og:title"/>
+<meta content="Compliance and data residency: decide where data may go" property="og:description"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="zh_CN" property="og:locale:alternate"/>
+<meta content="#16121f" name="theme-color"/>
+<link href="/assets/brand/dandelion-favicon-site.png" rel="icon" type="image/png"/>
+<link href="/assets/brand/dandelion-apple-touch-site.png" rel="apple-touch-icon"/>
+<script src="/brand.js"></script>
+<link href="/brand.css" rel="stylesheet"/>
+<link href="/site.css" rel="stylesheet"/>
+<style>:root { --accent: #f59e0b; }</style>
+<link href="/sections.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Compliance and data residency: decide where data may go |…","description":"Compliance and data residency: decide where data may go","url":"https://hardware.specul.com/en/cloud/guides/compliance-residency.html","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://hardware.specul.com/en/cloud/guides/compliance-residency.html"}}</script>
+<meta content="Compliance and data residency: decide where data may go |…" name="twitter:title"/><meta content="Compliance and data residency: decide where data may go" name="twitter:description"/><meta content="noindex,follow" name="robots"/></head>
+<!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
+     同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
+     而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
+     完全无效：vg 的引擎名在亮色主题下一直是 1.62:1 的金色，就是因为这条内联。
+     现在只保留头部那一处 —— 单一真相源，且可被主题覆盖。
+     ⚠ 这段注释里**不能出现反引号**：它在模板字符串内部，反引号会提前结束模板
+     （写这段时踩了第 4 次；pitfalls 里早有记录）。 -->
+<body class="brand-ambient has-tabbar has-tabbar-1row">
+<a class="t-skip" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="container site-bar">
+<a class="brand" href="https://specul.com/en/" title="投机取巧">
+<span aria-hidden="true" class="brand-dot"></span>
+<span class="brand-text">
+<span class="brand-name" id="markName">Speculative Speculation</span>
+<span class="brand-sub" id="markSub"></span>
+</span>
+</a>
+<nav aria-label="站点导航" class="nav-links">
+<a href="https://specul.com/en/">Home</a>
+<a href="https://learn.specul.com/en/">Learn</a>
+<a href="https://tools.specul.com/en/">Tools</a>
+<a href="https://models.specul.com/en/">Models</a>
+<a href="https://demos.specul.com/en/">Playground</a>
+<a href="https://oss.specul.com/en/">OSS</a>
+<a aria-current="page" href="https://hardware.specul.com/en/">Compute</a>
+<a href="https://papers.specul.com/en/">AI Papers</a>
+<a href="https://chain.specul.com/en/">Chain</a>
+<a href="https://nav.specul.com/en/">AI Directory</a>
+</nav>
+<!-- 2026-10-10：.nav-tools 从 nav 元素**内部**移到外面，与 .nav-links 平级。
+           放里面时窄屏下它会跟着链接一起换行：链接占满整行 → 按钮被挤到第三条
+           （实测顶栏 134px、按钮组孤零零一行）。移出来后它与品牌同行，
+           链接独占第二行居中 —— 这才是下面注释里方案 B 想要的样子。 -->
+<span class="nav-tools">
+<a aria-label="Search" class="icon-btn" href="https://specul.com/en/search.html" title="Search all sites"><span aria-hidden="true">⌕</span></a>
+<button aria-label="切换明暗主题" class="icon-btn" id="themeBtn" title="切换明暗主题" type="button">☾</button>
+<a aria-label="切换到中文" class="icon-btn" href="/cloud/guides/compliance-residency.html" hreflang="zh-CN" id="langBtn" lang="zh-CN" title="切换到中文">中文</a>
+</span>
+<!-- B6（2026-10-09）：窄屏（≤900px）下 .nav-links 会隐藏，这个汉堡是替代入口。
+           行为在共享 brand.js 里（一处实现、十站共用），样式在共享 brand.css。
+           无脚本时 CSS 不会显示它，而是把 .nav-links 在窄屏放出来 —— 不会出现
+           「导航被藏进一个点了没反应的按钮」。 -->
+<button aria-controls="navDrawer" aria-expanded="false" aria-label="打开菜单" class="nav-burger" type="button">
+<i></i><i></i><i></i>
+</button>
+</div>
+</header>
+<div class="nav-scrim"></div>
+<aside aria-hidden="true" aria-label="站点导航" class="nav-drawer" id="navDrawer">
+<div class="nav-drawer-h">
+<span class="brand-name">Speculative Speculation</span>
+<span class="brand-sub"></span>
+<button aria-label="关闭" class="nav-dclose" type="button">×</button>
+</div>
+<nav class="nav-drawer-list">
+<a href="https://specul.com/en/"><span>Home</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://learn.specul.com/en/"><span>Learn</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://tools.specul.com/en/"><span>Tools</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://models.specul.com/en/"><span>Models</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://demos.specul.com/en/"><span>Playground</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://oss.specul.com/en/"><span>OSS</span><span aria-hidden="true" class="ar">→</span></a>
+<a aria-current="page" class="nav-group-start" href="https://hardware.specul.com/en/"><span>Compute</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://papers.specul.com/en/"><span>AI Papers</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://chain.specul.com/en/"><span>Chain</span><span aria-hidden="true" class="ar">→</span></a>
+<a class="nav-group-start" data-nav-group="external" href="https://nav.specul.com/en/"><span>AI Directory</span><span aria-hidden="true" class="ar">↗</span></a>
+</nav>
+<div class="nav-drawer-foot">
+<p>Content sites cover learn, use, choose and run; AI Directory is a catalogue of off-site AI sites.</p>
+<nav><a href="https://specul.com/en/legal.html">Legal terms</a></nav>
+</div>
+</aside>
+<main id="main">
+<div class="container">
+<header class="sec-detail">
+<p class="eyebrow">Compute · Cloud · Guide</p>
+<h1>Compliance and data residency: decide where data may go</h1>
+<p class="sub">云 GPU 选型不只是价格。数据能不能出境、能不能给第三方处理、出了事谁负责，要在签合同前写清。</p>
+</header>
+<div class="sec-nav"><a href="../index.html">← 全部云算力</a><a href="../../index.html">硬件站</a></div>
+<div class="sec-body">
+<h2>先分类数据</h2><p>公开数据、内部数据、个人信息、客户数据、敏感行业数据，处理要求不同。个人信息要看收集目的、告知同意、跨境传输与删除机制；客户数据要看合同里的处理者条款。</p><p>把“训练数据 / 推理输入 / 日志 / 模型权重”分开看。日志里可能含 prompt 与用户数据，不能当成普通运维日志。</p>
+<h2>数据驻留与跨境</h2><p>确认服务商在哪个区域存数据、备份到哪、技术支持能看到什么。跨区域复制、灾备、日志汇聚都可能构成跨境传输。</p><p>国内业务优先选境内区域与等保合规；跨境业务要评估目标国家/地区的法律与合同要求，不能只看服务商全球覆盖。</p>
+<h2>合同里要写的五件事</h2><p>数据处理者角色、允许的处理目的、子处理者清单、数据删除与返还、泄露通知时限。还有：服务商能否用你的数据训练自己的模型。</p><p>如果服务商把“匿名化/聚合数据”用于改进服务，要确认匿名化标准与再识别风险；不能默认同意。</p>
+<h2>技术侧的最小动作</h2><p>训练与推理环境隔离；密钥与数据分离；日志脱敏；访问最小权限；出网白名单；模型权重与数据集加密。</p><p>上线前做一次数据流图：数据从哪来、存哪、经过谁、去哪、多久删。数据流图比合规口号有用。</p>
+</div>
+<div class="sec-sources">参考：<a href="https://aws.amazon.com/compliance/" rel="noopener" target="_blank">AWS 合规中心</a> · <a href="https://learn.microsoft.com/azure/compliance/" rel="noopener" target="_blank">Azure 合规文档</a> · <a href="https://www.aliyun.com/product/security/compliance" rel="noopener" target="_blank">阿里云安全合规</a></div>
+</div>
+</main>
+<footer class="site-footer foot-single">
+<div class="container foot-line">
+<div class="foot-brand">
+<span class="foot-brand-main">
+<span aria-hidden="true" class="brand-dot"></span>
+<span class="foot-copy">Specul · specul.com</span>
+</span>
+<span class="foot-license"><a href="https://specul.com/LICENSE-CONTENT.txt">Content CC BY 4.0</a><span aria-hidden="true" class="sep">·</span><a href="https://specul.com/LICENSE.txt">Code MIT</a><span aria-hidden="true" class="sep">·</span><a class="foot-source" href="https://github.com/speculcom/ai-handbook" rel="noopener" target="_blank">Source</a></span>
+</div>
+<nav aria-label="Footer site links" class="foot-sites">
+<a class="site-link" href="https://specul.com/en/">Home</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://learn.specul.com/en/">Learn</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://tools.specul.com/en/">Tools</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://models.specul.com/en/">Models</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://demos.specul.com/en/">Demos</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://oss.specul.com/en/">OSS</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://hardware.specul.com/en/">Compute</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://papers.specul.com/en/">Papers</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://chain.specul.com/en/">Chain</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://nav.specul.com/en/">Directory</a>
+</nav>
+<nav aria-label="Legal and corrections" class="foot-legal">
+<a href="https://specul.com/en/legal.html">Legal</a><span aria-hidden="true" class="sep">·</span>
+<a href="https://specul.com/en/legal.html#s8">Privacy</a><span aria-hidden="true" class="sep">·</span>
+<a href="https://specul.com/en/correct.html">Corrections</a>
+</nav>
+</div>
+</footer>
+<nav aria-label="快捷导航" class="nav-tabbar nav-tabbar-1row">
+<a href="https://specul.com/en/"><span aria-hidden="true" class="ti">◎</span>Home</a>
+<a href="https://learn.specul.com/en/"><span aria-hidden="true" class="ti">▤</span>Learn</a>
+<a href="https://tools.specul.com/en/"><span aria-hidden="true" class="ti">◈</span>Tools</a>
+<a href="https://models.specul.com/en/"><span aria-hidden="true" class="ti">▦</span>Models</a>
+<a href="https://demos.specul.com/en/"><span aria-hidden="true" class="ti">▷</span>Demos</a>
+<a href="https://oss.specul.com/en/"><span aria-hidden="true" class="ti">▧</span>OSS</a>
+<a aria-current="page" href="https://hardware.specul.com/en/"><span aria-hidden="true" class="ti">▣</span>Chips</a>
+<a href="https://papers.specul.com/en/"><span aria-hidden="true" class="ti">▥</span>Papers</a>
+<a href="https://chain.specul.com/en/"><span aria-hidden="true" class="ti">◇</span>Chain</a>
+<a data-nav-group="external" href="https://nav.specul.com/en/"><span aria-hidden="true" class="ti">↗</span>Nav</a>
+</nav>
+</body>
+</html>

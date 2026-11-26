@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html data-lang="en" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Find hardware by use case | Compute</title>
+<meta content="One part can belong to several use cases. These groups start from what you intend to do; open an entry to see specs and the price basis." name="description"/>
+<link href="https://hardware.specul.com/en/use-cases.html" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Compute" property="og:site_name"/>
+<meta content="https://hardware.specul.com/en/use-cases.html" property="og:url"/>
+<meta content="Find hardware by use case | Compute" property="og:title"/>
+<meta content="One part can belong to several use cases. These groups start from what you intend to do; open an entry to see specs and the price basis." property="og:description"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="zh_CN" property="og:locale:alternate"/>
+<meta content="#16121f" name="theme-color"/>
+<link href="/assets/brand/dandelion-favicon-site.png" rel="icon" type="image/png"/>
+<link href="/assets/brand/dandelion-apple-touch-site.png" rel="apple-touch-icon"/>
+<script src="/brand.js"></script>
+<link href="/brand.css" rel="stylesheet"/>
+<link href="/site.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Find hardware by use case | Compute","description":"One part can belong to several use cases. These groups start from what you intend to do; open an entry to see specs and the price basis.","url":"https://hardware.specul.com/en/use-cases.html","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://hardware.specul.com/en/use-cases.html"}}</script>
+<meta content="Find hardware by use case | Compute" name="twitter:title"/><meta content="One part can belong to several use cases. These groups start from what you intend to do; open an entry to see specs and the price basis." name="twitter:description"/><link href="https://hardware.specul.com/use-cases.html" hreflang="zh-CN" rel="alternate"/><link href="https://hardware.specul.com/en/use-cases.html" hreflang="en" rel="alternate"/><link href="https://hardware.specul.com/use-cases.html" hreflang="x-default" rel="alternate"/></head>
+<!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
+     同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
+     而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
+     完全无效：vg 的引擎名在亮色主题下一直是 1.62:1 的金色，就是因为这条内联。
+     现在只保留头部那一处 —— 单一真相源，且可被主题覆盖。
+     ⚠ 这段注释里**不能出现反引号**：它在模板字符串内部，反引号会提前结束模板
+     （写这段时踩了第 4 次；pitfalls 里早有记录）。 -->
+<body class="brand-ambient has-tabbar has-tabbar-1row">
+<a class="t-skip" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="container site-bar">
+<a class="brand" href="https://specul.com/en/" title="投机取巧">
+<span aria-hidden="true" class="brand-dot"></span>
+<span class="brand-text">
+<span class="brand-name" id="markName">Speculative Speculation</span>
+<span class="brand-sub" id="markSub"></span>
+</span>
+</a>
+<nav aria-label="站点导航" class="nav-links">
+<a href="https://specul.com/en/">Home</a>
+<a href="https://learn.specul.com/en/">Learn</a>
+<a href="https://tools.specul.com/en/">Tools</a>
+<a href="https://models.specul.com/en/">Models</a>
+<a href="https://demos.specul.com/en/">Playground</a>
+<a href="https://oss.specul.com/en/">OSS</a>
+<a aria-current="page" href="https://hardware.specul.com/en/">Compute</a>
+<a href="https://papers.specul.com/en/">AI Papers</a>
+<a href="https://chain.specul.com/en/">Chain</a>
+<a href="https://nav.specul.com/en/">AI Directory</a>
+</nav>
+<!-- 2026-10-10：.nav-tools 从 nav 元素**内部**移到外面，与 .nav-links 平级。
+           放里面时窄屏下它会跟着链接一起换行：链接占满整行 → 按钮被挤到第三条
+           （实测顶栏 134px、按钮组孤零零一行）。移出来后它与品牌同行，
+           链接独占第二行居中 —— 这才是下面注释里方案 B 想要的样子。 -->
+<span class="nav-tools">
+<a aria-label="Search" class="icon-btn" href="https://specul.com/en/search.html" title="Search all sites"><span aria-hidden="true">⌕</span></a>
+<button aria-label="切换明暗主题" class="icon-btn" id="themeBtn" title="切换明暗主题" type="button">☾</button>
+<a aria-label="切换到中文" class="icon-btn" href="/use-cases.html" hreflang="zh-CN" id="langBtn" lang="zh-CN" title="切换到中文">中文</a>
+</span>
+<!-- B6（2026-10-09）：窄屏（≤900px）下 .nav-links 会隐藏，这个汉堡是替代入口。
+           行为在共享 brand.js 里（一处实现、十站共用），样式在共享 brand.css。
+           无脚本时 CSS 不会显示它，而是把 .nav-links 在窄屏放出来 —— 不会出现
+           「导航被藏进一个点了没反应的按钮」。 -->
+<button aria-controls="navDrawer" aria-expanded="false" aria-label="打开菜单" class="nav-burger" type="button">
+<i></i><i></i><i></i>
+</button>
+</div>
+</header>
+<div class="nav-scrim"></div>
+<aside aria-hidden="true" aria-label="站点导航" class="nav-drawer" id="navDrawer">
+<div class="nav-drawer-h">
+<span class="brand-name">Speculative Speculation</span>
+<span class="brand-sub"></span>
+<button aria-label="关闭" class="nav-dclose" type="button">×</button>
+</div>
+<nav class="nav-drawer-list">
+<a href="https://specul.com/en/"><span>Home</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://learn.specul.com/en/"><span>Learn</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://tools.specul.com/en/"><span>Tools</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://models.specul.com/en/"><span>Models</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://demos.specul.com/en/"><span>Playground</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://oss.specul.com/en/"><span>OSS</span><span aria-hidden="true" class="ar">→</span></a>
+<a aria-current="page" class="nav-group-start" href="https://hardware.specul.com/en/"><span>Compute</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://papers.specul.com/en/"><span>AI Papers</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://chain.specul.com/en/"><span>Chain</span><span aria-hidden="true" class="ar">→</span></a>
+<a class="nav-group-start" data-nav-group="external" href="https://nav.specul.com/en/"><span>AI Directory</span><span aria-hidden="true" class="ar">↗</span></a>
+</nav>
+<div class="nav-drawer-foot">
+<p>Content sites cover learn, use, choose and run; AI Directory is a catalogue of off-site AI sites.</p>
+<nav><a href="https://specul.com/en/legal.html">Legal terms</a></nav>
+</div>
+</aside>
+<main id="main">
+<div class="container ms-page">
+<p class="fx-crumb"><a href="index.html">← Back to hardware</a></p>
+<h1>Find hardware by use case</h1>
+<p>One part can belong to several use cases. These groups start from what you intend to do; open an entry to see specs and the price basis.</p>
+<section class="fx-entry-sec" id="serving"><h2>Serving <span class="t-sm">23</span></h2><ul class="fx-list"><li><a href="index.html#amd-instinct-mi210">AMD Instinct MI210</a></li><li><a href="index.html#amd-instinct-mi300x">AMD Instinct MI300X</a></li><li><a href="index.html#amd-instinct-mi325x">AMD Instinct MI325X</a></li><li><a href="index.html#amd-instinct-mi440x">AMD Instinct MI440X</a></li><li><a href="index.html#aws-inferentia2">AWS Inferentia2</a></li><li><a href="index.html#google-tpu-8i">Google TPU 8i（推理）</a></li><li><a href="index.html#google-tpu-8i-max">Google TPU 8i Max（超大上下文）</a></li><li><a href="index.html#google-tpu-8tx">Google TPU 8tx（机密推理）</a></li><li><a href="index.html#google-tpu-v5e">Google TPU v5e</a></li><li><a href="index.html#google-tpu-v6e">Google TPU v6e（Trillium）</a></li><li><a href="index.html#groq-lpu">Groq LPU / LPX</a></li><li><a href="index.html#intel-gaudi3">Intel Gaudi 3</a></li><li><a href="index.html#intel-gpu-d270">Intel GPU D270（Crescent Island）</a></li><li><a href="index.html#nvidia-h100-nvl">NVIDIA H100 NVL</a></li><li><a href="index.html#nvidia-h100-sxm">NVIDIA H100 SXM</a></li><li><a href="index.html#nvidia-h200-nvl">NVIDIA H200 NVL</a></li><li><a href="index.html#nvidia-h200-sxm">NVIDIA H200 SXM</a></li><li><a href="index.html#nvidia-l40s">NVIDIA L40S</a></li><li><a href="index.html#nvidia-rubin">NVIDIA Rubin</a></li><li><a href="index.html#nvidia-rubin-cpx">NVIDIA Rubin CPX</a></li><li><a href="index.html#openai-jalapeno">OpenAI Jalapeño（首款自研推理芯片）</a></li><li><a href="index.html#axelera-titania">Axelera Titania</a></li><li><a href="index.html#memryx-mx3-plus">MemryX MX3+</a></li></ul></section>
+<section class="fx-entry-sec" id="training"><h2>Training <span class="t-sm">21</span></h2><ul class="fx-list"><li><a href="index.html#amd-instinct-mi210">AMD Instinct MI210</a></li><li><a href="index.html#amd-instinct-mi300x">AMD Instinct MI300X</a></li><li><a href="index.html#amd-instinct-mi325x">AMD Instinct MI325X</a></li><li><a href="index.html#amd-instinct-mi440x">AMD Instinct MI440X</a></li><li><a href="index.html#amd-instinct-mi450x">AMD Instinct MI450X</a></li><li><a href="index.html#amd-instinct-mi455x">AMD Instinct MI455X</a></li><li><a href="index.html#cerebras-wse3t">Cerebras WSE-3T（晶圆级）</a></li><li><a href="index.html#google-tpu-8t">Google TPU 8t（训练）</a></li><li><a href="index.html#google-tpu-v6e">Google TPU v6e（Trillium）</a></li><li><a href="index.html#google-tpu7x">Google TPU7x（Ironwood）</a></li><li><a href="index.html#intel-gaudi3">Intel Gaudi 3</a></li><li><a href="index.html#meta-mtia-300-500">Meta MTIA 300–500（路线）</a></li><li><a href="index.html#microsoft-maia-200">Microsoft Maia 200（推理）</a></li><li><a href="index.html#nvidia-a100-80gb-sxm">NVIDIA A100 80GB SXM</a></li><li><a href="index.html#nvidia-b300">NVIDIA B300（Blackwell Ultra）</a></li><li><a href="index.html#nvidia-h100-sxm">NVIDIA H100 SXM</a></li><li><a href="index.html#nvidia-h200-sxm">NVIDIA H200 SXM</a></li><li><a href="index.html#nvidia-rubin">NVIDIA Rubin</a></li><li><a href="index.html#nvidia-rubin-hpc">NVIDIA Rubin HPC（科学计算 GPU）</a></li><li><a href="index.html#aws-trainium2">AWS Trainium2（Trn2）</a></li><li><a href="index.html#aws-trainium3">AWS Trainium3</a></li></ul></section>
+<section class="fx-entry-sec" id="local-inference"><h2>Local inference <span class="t-sm">19</span></h2><ul class="fx-list"><li><a href="index.html#amd-radeon-rx-9060-xt-16gb">AMD Radeon RX 9060 XT 16GB</a> · $349</li><li><a href="index.html#amd-radeon-rx-9070-xt">AMD Radeon RX 9070 XT</a> · $599</li><li><a href="index.html#nvidia-geforce-rtx-4090">NVIDIA GeForce RTX 4090</a></li><li><a href="index.html#nvidia-geforce-rtx-5060-ti-16gb">NVIDIA GeForce RTX 5060 Ti 16GB</a> · $429</li><li><a href="index.html#nvidia-geforce-rtx-5070">NVIDIA GeForce RTX 5070</a> · $549</li><li><a href="index.html#nvidia-geforce-rtx-5070-ti">NVIDIA GeForce RTX 5070 Ti</a> · $749</li><li><a href="index.html#nvidia-geforce-rtx-5080">NVIDIA GeForce RTX 5080</a> · $999</li><li><a href="index.html#nvidia-geforce-rtx-5090">NVIDIA GeForce RTX 5090</a> · $1,999</li><li><a href="index.html#nvidia-rtx-6000-ada">NVIDIA RTX 6000 Ada</a></li><li><a href="index.html#nvidia-rtx-pro-6000-blackwell">NVIDIA RTX PRO 6000 Blackwell（工作站）</a></li><li><a href="index.html#amd-ryzen-ai-max-plus-395">AMD Ryzen AI Max+ 395（Ryzen AI Halo）</a></li><li><a href="index.html#apple-m5-ultra">Apple M5 Ultra</a></li><li><a href="index.html#hailo-8">Hailo-8 边缘加速模块</a></li><li><a href="index.html#nvidia-jetson-agx-orin-64gb">NVIDIA Jetson AGX Orin 64GB</a> · $1,999</li><li><a href="index.html#nvidia-jetson-agx-thor">NVIDIA Jetson AGX Thor</a> · $3,499</li><li><a href="index.html#nvidia-jetson-orin-nx-16gb">NVIDIA Jetson Orin NX 16GB</a></li><li><a href="index.html#raspberry-pi-5">Raspberry Pi 5</a> · $50</li><li><a href="index.html#nvidia-dgx-spark">NVIDIA DGX Spark</a> · $3,999</li><li><a href="index.html#nvidia-rtx-spark">NVIDIA RTX Spark 紧凑桌面</a></li></ul></section>
+<section class="fx-entry-sec" id="cluster"><h2>Cluster <span class="t-sm">10</span></h2><ul class="fx-list"><li><a href="index.html#nvidia-rubin-hpc">NVIDIA Rubin HPC（科学计算 GPU）</a></li><li><a href="index.html#amd-helios">AMD Helios 机架</a></li><li><a href="index.html#nvidia-dgx-b200">NVIDIA DGX B200</a></li><li><a href="index.html#nvidia-dgx-spark">NVIDIA DGX Spark</a> · $3,999</li><li><a href="index.html#nvidia-dgx-spark-hpc-kit">NVIDIA DGX Spark HPC Developer Kit</a></li><li><a href="index.html#nvidia-gb200-nvl72">NVIDIA GB200 NVL72</a></li><li><a href="index.html#nvidia-gb300-nvl72">NVIDIA GB300 NVL72</a></li><li><a href="index.html#nvidia-rtx-spark">NVIDIA RTX Spark 紧凑桌面</a></li><li><a href="index.html#nvidia-vera-rubin-nvl72">NVIDIA Vera Rubin NVL72（整机柜）</a></li><li><a href="index.html#axelera-titania">Axelera Titania</a></li></ul></section>
+<section class="fx-entry-sec" id="finetune"><h2>Fine-tuning <span class="t-sm">8</span></h2><ul class="fx-list"><li><a href="index.html#google-tpu-8tx">Google TPU 8tx（机密推理）</a></li><li><a href="index.html#google-tpu-v5e">Google TPU v5e</a></li><li><a href="index.html#nvidia-a100-80gb-sxm">NVIDIA A100 80GB SXM</a></li><li><a href="index.html#nvidia-geforce-rtx-4090">NVIDIA GeForce RTX 4090</a></li><li><a href="index.html#nvidia-geforce-rtx-5090">NVIDIA GeForce RTX 5090</a> · $1,999</li><li><a href="index.html#nvidia-h100-sxm">NVIDIA H100 SXM</a></li><li><a href="index.html#nvidia-h200-sxm">NVIDIA H200 SXM</a></li><li><a href="index.html#nvidia-rtx-pro-6000-blackwell">NVIDIA RTX PRO 6000 Blackwell（工作站）</a></li></ul></section>
+<section class="fx-entry-sec" id="rent"><h2>Rent <span class="t-sm">8</span></h2><ul class="fx-list"><li><a href="index.html#aws-ec2-p5-48xlarge">AWS EC2 p5.48xlarge</a></li><li><a href="index.html#aws-ec2-p5-4xlarge">AWS EC2 p5.4xlarge</a></li><li><a href="index.html#aws-ec2-p6-b200">AWS EC2 P6-B200</a></li><li><a href="index.html#aws-ec2-p6e-gb200">AWS EC2 P6e-GB200 UltraServer</a></li><li><a href="index.html#aws-trainium2">AWS Trainium2（Trn2）</a></li><li><a href="index.html#aws-trainium3">AWS Trainium3</a></li><li><a href="index.html#azure-nd-gb200-v6">Azure ND GB200 v6</a></li><li><a href="index.html#azure-nd-h100-v5">Azure ND H100 v5</a></li></ul></section>
+<section class="fx-entry-sec" id="edge"><h2>Edge <span class="t-sm">8</span></h2><ul class="fx-list"><li><a href="index.html#amd-ryzen-ai-max-plus-395">AMD Ryzen AI Max+ 395（Ryzen AI Halo）</a></li><li><a href="index.html#apple-m5-ultra">Apple M5 Ultra</a></li><li><a href="index.html#hailo-8">Hailo-8 边缘加速模块</a></li><li><a href="index.html#nvidia-jetson-agx-orin-64gb">NVIDIA Jetson AGX Orin 64GB</a> · $1,999</li><li><a href="index.html#nvidia-jetson-agx-thor">NVIDIA Jetson AGX Thor</a> · $3,499</li><li><a href="index.html#nvidia-jetson-orin-nx-16gb">NVIDIA Jetson Orin NX 16GB</a></li><li><a href="index.html#raspberry-pi-5">Raspberry Pi 5</a> · $50</li><li><a href="index.html#memryx-mx3-plus">MemryX MX3+</a></li></ul></section>
+<section class="fx-entry-sec" id="workstation"><h2>Workstation <span class="t-sm">4</span></h2><ul class="fx-list"><li><a href="index.html#nvidia-l40s">NVIDIA L40S</a></li><li><a href="index.html#nvidia-rtx-6000-ada">NVIDIA RTX 6000 Ada</a></li><li><a href="index.html#nvidia-rtx-pro-6000-blackwell">NVIDIA RTX PRO 6000 Blackwell（工作站）</a></li><li><a href="index.html#apple-m5-ultra">Apple M5 Ultra</a></li></ul></section>
+<section class="fx-entry-sec" id="robot"><h2>Robot <span class="t-sm">3</span></h2><ul class="fx-list"><li><a href="index.html#boston-dynamics-spot">Boston Dynamics Spot</a></li><li><a href="index.html#unitree-g1">宇树 G1 人形机器人</a></li><li><a href="index.html#unitree-go2">宇树 Go2 四足机器人</a></li></ul></section>
+<section class="fx-entry-sec" id="perception"><h2>Perception <span class="t-sm">3</span></h2><ul class="fx-list"><li><a href="index.html#orbbec-gemini-335">Orbbec Gemini 335 深度相机</a></li><li><a href="index.html#ouster-os1">Ouster OS1 激光雷达</a></li><li><a href="index.html#realsense-d455">Intel RealSense D455 深度相机</a></li></ul></section>
+</div>
+</main>
+<footer class="site-footer foot-single">
+<div class="container foot-line">
+<div class="foot-brand">
+<span class="foot-brand-main">
+<span aria-hidden="true" class="brand-dot"></span>
+<span class="foot-copy">Specul · specul.com</span>
+</span>
+<span class="foot-license"><a href="https://specul.com/LICENSE-CONTENT.txt">Content CC BY 4.0</a><span aria-hidden="true" class="sep">·</span><a href="https://specul.com/LICENSE.txt">Code MIT</a><span aria-hidden="true" class="sep">·</span><a class="foot-source" href="https://github.com/speculcom/ai-handbook" rel="noopener" target="_blank">Source</a></span>
+</div>
+<nav aria-label="Footer site links" class="foot-sites">
+<a class="site-link" href="https://specul.com/en/">Home</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://learn.specul.com/en/">Learn</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://tools.specul.com/en/">Tools</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://models.specul.com/en/">Models</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://demos.specul.com/en/">Demos</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://oss.specul.com/en/">OSS</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://hardware.specul.com/en/">Compute</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://papers.specul.com/en/">Papers</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://chain.specul.com/en/">Chain</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://nav.specul.com/en/">Directory</a>
+</nav>
+<nav aria-label="Legal and corrections" class="foot-legal">
+<a href="https://specul.com/en/legal.html">Legal</a><span aria-hidden="true" class="sep">·</span>
+<a href="https://specul.com/en/legal.html#s8">Privacy</a><span aria-hidden="true" class="sep">·</span>
+<a href="https://specul.com/en/correct.html">Corrections</a>
+</nav>
+</div>
+</footer>
+<nav aria-label="快捷导航" class="nav-tabbar nav-tabbar-1row">
+<a href="https://specul.com/en/"><span aria-hidden="true" class="ti">◎</span>Home</a>
+<a href="https://learn.specul.com/en/"><span aria-hidden="true" class="ti">▤</span>Learn</a>
+<a href="https://tools.specul.com/en/"><span aria-hidden="true" class="ti">◈</span>Tools</a>
+<a href="https://models.specul.com/en/"><span aria-hidden="true" class="ti">▦</span>Models</a>
+<a href="https://demos.specul.com/en/"><span aria-hidden="true" class="ti">▷</span>Demos</a>
+<a href="https://oss.specul.com/en/"><span aria-hidden="true" class="ti">▧</span>OSS</a>
+<a aria-current="page" href="https://hardware.specul.com/en/"><span aria-hidden="true" class="ti">▣</span>Chips</a>
+<a href="https://papers.specul.com/en/"><span aria-hidden="true" class="ti">▥</span>Papers</a>
+<a href="https://chain.specul.com/en/"><span aria-hidden="true" class="ti">◇</span>Chain</a>
+<a data-nav-group="external" href="https://nav.specul.com/en/"><span aria-hidden="true" class="ti">↗</span>Nav</a>
+</nav>
+</body>
+</html>
