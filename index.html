@@ -16,11 +16,12 @@
 <meta content="#16121f" name="theme-color"/>
 <link href="assets/brand/dandelion-favicon-site.png" rel="icon" type="image/png"/>
 <link href="assets/brand/dandelion-apple-touch-site.png" rel="apple-touch-icon"/>
-<script src="brand.js?v=37d1072be69b"></script>
-<link href="brand.css?v=37d1072be69b" rel="stylesheet"/>
+<script src="brand.js?v=046c4db1cda5"></script>
+<link href="brand.css?v=046c4db1cda5" rel="stylesheet"/>
 <link href="site.css" rel="stylesheet"/>
 <link href="hardware.css" rel="stylesheet"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"硬件算力 · Specul","description":"买卡还是租云？按显存、带宽、功耗和总价挑加速卡、整机与云服务；每条写清适用场景、数字口径与核验来源。","url":"https://hardware.specul.com/","inLanguage":"zh-CN","isPartOf":{"@type":"WebSite","name":"Specul","url":"https://specul.com/"}}</script>
+<link href="sections.css" rel="stylesheet"/>
 <link href="https://hardware.specul.com/" hreflang="zh-CN" rel="alternate"/><link href="https://hardware.specul.com/en/" hreflang="en" rel="alternate"/><link href="https://hardware.specul.com/" hreflang="x-default" rel="alternate"/></head>
 <!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
      同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
@@ -98,8 +99,26 @@
 <div class="container">
 <header class="site-hero">
 <h1><span data-zh="">硬件算力</span><span data-en="">Compute</span></h1>
-<p class="site-hero-deck"><span data-zh="">72 条加速卡、整机、云算力与边缘设备，按显存和预算挑。</span><span data-en="">72 accelerators, systems, cloud options and edge devices, chosen by VRAM and budget.</span></p>
+<p class="site-hero-deck"><span data-zh="">74 条加速卡、整机、云算力与边缘设备，按显存和预算挑。</span><span data-en="">74 accelerators, systems, cloud options and edge devices, chosen by VRAM and budget.</span></p>
 </header>
+<!-- sec-cloud:start -->
+<div class="container">
+<div class="sec-doors">
+<a class="sec-door" href="cloud/index.html">
+<span class="k">Compute · Cloud</span>
+<h2>云算力：租 GPU 还是买卡</h2>
+<p>26 家服务商，按通用云、GPU 专营、Serverless、国内云四类。先算总成本，再选按需、包月或预留。</p>
+<span class="more">看云算力 →</span>
+</a>
+<a class="sec-door" href="path.html">
+<span class="k">Compute · Path</span>
+<h2>硬件选型路径：先定预算与模型</h2>
+<p>从模型大小、上下文、并发与预算倒推整机或云实例；按步骤核对显存、带宽、功耗与总拥有成本。</p>
+<span class="more">走选型路径 →</span>
+</a>
+</div>
+</div>
+<!-- sec-cloud:end -->
 <section class="vz-section" id="silicon">
 <div class="container">
 <div class="vz-head">
@@ -182,9 +201,9 @@
 <section aria-labelledby="ms-filter-title" class="fx-bar" id="ms-filter">
 <div class="fx-head">
 <span class="fx-title" id="ms-filter-title"><span data-zh="">想看哪一类？</span><span data-en="">What are you looking for?</span></span>
-<span aria-live="polite" class="fx-count"><b id="ms-filter-count">72</b> <span data-zh="">条</span><span data-en="">shown</span></span>
+<span aria-live="polite" class="fx-count"><b id="ms-filter-count">74</b> <span data-zh="">条</span><span data-en="">shown</span></span>
 </div>
-<div class="fx-chips" role="group"><button aria-pressed="true" class="fx-chip" data-filter-cat="all" type="button"><span class="fx-dot"></span><span data-zh="">全部</span><span data-en="">All</span><em class="fx-n">72</em></button><button aria-pressed="false" class="fx-chip" data-cat="accelerator" data-filter-cat="accelerator" type="button"><span class="fx-dot"></span><span data-zh="">加速卡</span><span data-en="">Accelerators</span><em class="fx-n">42</em></button><button aria-pressed="false" class="fx-chip" data-cat="cloud" data-filter-cat="cloud" type="button"><span class="fx-dot"></span><span data-zh="">云算力</span><span data-en="">Cloud compute</span><em class="fx-n">8</em></button><button aria-pressed="false" class="fx-chip" data-cat="edge" data-filter-cat="edge" type="button"><span class="fx-dot"></span><span data-zh="">边缘设备</span><span data-en="">Edge devices</span><em class="fx-n">8</em></button><button aria-pressed="false" class="fx-chip" data-cat="robot-body" data-filter-cat="robot-body" type="button"><span class="fx-dot"></span><span data-zh="">机器人本体</span><span data-en="">Robot bodies</span><em class="fx-n">3</em></button><button aria-pressed="false" class="fx-chip" data-cat="sensor" data-filter-cat="sensor" type="button"><span class="fx-dot"></span><span data-zh="">传感器</span><span data-en="">Sensors</span><em class="fx-n">3</em></button><button aria-pressed="false" class="fx-chip" data-cat="system" data-filter-cat="system" type="button"><span class="fx-dot"></span><span data-zh="">整机</span><span data-en="">Systems</span><em class="fx-n">8</em></button></div>
+<div class="fx-chips" role="group"><button aria-pressed="true" class="fx-chip" data-filter-cat="all" type="button"><span class="fx-dot"></span><span data-zh="">全部</span><span data-en="">All</span><em class="fx-n">74</em></button><button aria-pressed="false" class="fx-chip" data-cat="accelerator" data-filter-cat="accelerator" type="button"><span class="fx-dot"></span><span data-zh="">加速卡</span><span data-en="">Accelerators</span><em class="fx-n">42</em></button><button aria-pressed="false" class="fx-chip" data-cat="cloud" data-filter-cat="cloud" type="button"><span class="fx-dot"></span><span data-zh="">云算力</span><span data-en="">Cloud compute</span><em class="fx-n">8</em></button><button aria-pressed="false" class="fx-chip" data-cat="edge" data-filter-cat="edge" type="button"><span class="fx-dot"></span><span data-zh="">边缘设备</span><span data-en="">Edge devices</span><em class="fx-n">8</em></button><button aria-pressed="false" class="fx-chip" data-cat="robot-body" data-filter-cat="robot-body" type="button"><span class="fx-dot"></span><span data-zh="">机器人本体</span><span data-en="">Robot bodies</span><em class="fx-n">3</em></button><button aria-pressed="false" class="fx-chip" data-cat="sensor" data-filter-cat="sensor" type="button"><span class="fx-dot"></span><span data-zh="">传感器</span><span data-en="">Sensors</span><em class="fx-n">3</em></button><button aria-pressed="false" class="fx-chip" data-cat="system" data-filter-cat="system" type="button"><span class="fx-dot"></span><span data-zh="">整机</span><span data-en="">Systems</span><em class="fx-n">10</em></button></div>
 </section>
 <div class="fx-grid"> <article class="fx-card" data-cat="accelerator" id="amd-instinct-mi210">
 <div class="fx-top"><span class="fx-badge"><span data-zh="">加速卡</span><span data-en="">Accelerators</span></span><span class="fx-badge"><span data-zh="">未公布单价</span><span data-en="">No public price</span></span></div>
@@ -833,6 +852,24 @@
 <p class="fx-uses"><span class="fx-badge"><span data-zh="">边缘</span><span data-en="">Edge</span></span> <span class="fx-badge"><span data-zh="">在线服务</span><span data-en="">Serving</span></span></p>
 <div class="fx-meta"><span><span class="fx-key"><span data-zh="">许可</span><span data-en="">Licence</span></span> official-release</span><span class="fx-sep"></span><span><span class="fx-key"><span data-zh="">类目</span><span data-en="">Category</span></span> <span data-zh="">边缘设备</span><span data-en="">Edge devices</span></span><span class="fx-sep"></span><span><span class="fx-key"><span data-zh="">状态</span><span data-en="">Status</span></span> <span data-zh="">已发布 / 未出货</span><span data-en="">Announced</span></span></div>
 <div class="fx-card-links"><a class="fx-source" href="memryx-mx3-plus.html"><span data-zh="">看详情</span><span data-en="">Open entry</span> →</a><a class="fx-source" href="https://memryx.ai/news/memryx-ai-unveils-mx3-scaling-ai-inference-beyond-1-pops/" rel="noopener"><span data-zh="">去官网</span><span data-en="">Official page</span> →</a></div>
+</article>
+<article class="fx-card" data-cat="system" id="weiyun-1000pro">
+<div class="fx-top"><span class="fx-badge"><span data-zh="">整机</span><span data-en="">Systems</span></span><span class="fx-badge"><span data-zh="">未公布单价</span><span data-en="">No public price</span></span></div>
+<h3><a href="weiyun-1000pro.html" rel="noopener">威云 1000Pro<span class="fx-sub"> / Weiyun 1000Pro</span></a></h3>
+<p><span data-zh="">回答「企业要在本地跑 800B 级模型，2U 机箱够不够」。官方口径：选配 GPU 后最高 13 PFLOPS、1.28 TB 显存、推理功耗低于 1 kW、2U；单机最高 800B 全参数，多机可扩。注意 13 PFLOPS 是选配后的峰值，不是实测吞吐；800B 是容量口径，KV cache、并发和框架都会改变实际可跑规模；价格与交付未公开。</span><span data-en="">Answers whether a 2U box can run an 800B-class model locally. Official figures: up to 13 PFLOPS with optional GPUs, 1.28 TB memory, under 1 kW inference power, 2U; up to 800B parameters on one machine, expandable across machines. Note that 13 PFLOPS is a configured peak, not measured throughput; 800B is a capacity figure, and KV cache, concurrency and framework change what actually runs. Price and delivery are not public.</span></p>
+<dl class="fx-specs"><div><dt>peak compute</dt><dd>13 PFLOPS (with optional GPU)</dd></div><div><dt>memory</dt><dd>1.28 TB</dd></div><div><dt>inference power</dt><dd>&lt;1 kW</dd></div><div><dt>form factor</dt><dd>2U</dd></div><div><dt>single-machine model size</dt><dd>up to 800B parameters</dd></div><div><dt>scale-out</dt><dd>multi-machine interconnect</dd></div></dl>
+<p class="fx-uses"><span class="fx-badge"><span data-zh="">训练</span><span data-en="">Training</span></span> <span class="fx-badge"><span data-zh="">在线服务</span><span data-en="">Serving</span></span></p>
+<div class="fx-meta"><span><span class="fx-key"><span data-zh="">许可</span><span data-en="">Licence</span></span> official-spec-page</span><span class="fx-sep"></span><span><span class="fx-key"><span data-zh="">类目</span><span data-en="">Category</span></span> <span data-zh="">整机</span><span data-en="">Systems</span></span><span class="fx-sep"></span><span><span class="fx-key"><span data-zh="">状态</span><span data-en="">Status</span></span> <span data-zh="">已发布 / 未出货</span><span data-en="">Announced</span></span></div>
+<div class="fx-card-links"><a class="fx-source" href="weiyun-1000pro.html"><span data-zh="">看详情</span><span data-en="">Open entry</span> →</a><a class="fx-source" href="https://weiyuncreation.com/zh-CN/products/server/wy1000-pro" rel="noopener"><span data-zh="">去官网</span><span data-en="">Official page</span> →</a></div>
+</article>
+<article class="fx-card" data-cat="system" id="weiyun-1000ultra">
+<div class="fx-top"><span class="fx-badge"><span data-zh="">整机</span><span data-en="">Systems</span></span><span class="fx-badge"><span data-zh="">未公布单价</span><span data-en="">No public price</span></span></div>
+<h3><a href="weiyun-1000ultra.html" rel="noopener">威云 1000Ultra<span class="fx-sub"> / Weiyun 1000Ultra</span></a></h3>
+<p><span data-zh="">回答「3.2T 级模型能不能单机全参数跑」。官方口径：选配 GPU 后最高 47.5 PFLOPS、4.66 TB 显存、8U/12U；单机最高 3.2T 全参数，多机可扩。注意 47.5 PFLOPS 是选配后的峰值，不是实测吞吐；3.2T 是容量上限，实际上下文长度、并发与 KV cache 会显著压缩可服务规模；价格与交付未公开。</span><span data-en="">Answers whether a 3.2T-class model can run fully parameter-resident on one machine. Official figures: up to 47.5 PFLOPS with optional GPUs, 4.66 TB memory, 8U/12U; up to 3.2T parameters on one machine, expandable across machines. Note that 47.5 PFLOPS is a configured peak, not measured throughput; 3.2T is a capacity ceiling, and context length, concurrency and KV cache significantly reduce the servable scale. Price and delivery are not public.</span></p>
+<dl class="fx-specs"><div><dt>peak compute</dt><dd>47.5 PFLOPS (with optional GPU)</dd></div><div><dt>memory</dt><dd>4.66 TB</dd></div><div><dt>form factor</dt><dd>8U/12U</dd></div><div><dt>single-machine model size</dt><dd>up to 3.2T parameters</dd></div><div><dt>scale-out</dt><dd>multi-machine interconnect</dd></div><div><dt>optional accelerators</dt><dd>GPU and FPGA cards</dd></div></dl>
+<p class="fx-uses"><span class="fx-badge"><span data-zh="">训练</span><span data-en="">Training</span></span> <span class="fx-badge"><span data-zh="">在线服务</span><span data-en="">Serving</span></span></p>
+<div class="fx-meta"><span><span class="fx-key"><span data-zh="">许可</span><span data-en="">Licence</span></span> official-spec-page</span><span class="fx-sep"></span><span><span class="fx-key"><span data-zh="">类目</span><span data-en="">Category</span></span> <span data-zh="">整机</span><span data-en="">Systems</span></span><span class="fx-sep"></span><span><span class="fx-key"><span data-zh="">状态</span><span data-en="">Status</span></span> <span data-zh="">已发布 / 未出货</span><span data-en="">Announced</span></span></div>
+<div class="fx-card-links"><a class="fx-source" href="weiyun-1000ultra.html"><span data-zh="">看详情</span><span data-en="">Open entry</span> →</a><a class="fx-source" href="https://weiyuncreation.com/zh-CN/products/server/wy1000-ultra" rel="noopener"><span data-zh="">去官网</span><span data-en="">Official page</span> →</a></div>
 </article></div>
 <noscript><p class="t-sm"><span data-zh="">未开启脚本：筛选不可用，全部条目已列出。</span><span data-en="">Without JavaScript the filter is unavailable; all entries are listed.</span></p></noscript>
 <p><a href="about.html"><span data-zh="">怎么用这个站</span><span data-en="">How to use this site</span></a></p>
