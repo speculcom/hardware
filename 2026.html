@@ -156,9 +156,9 @@
 </aside>
 <main id="main">
 <section class="u26-hero"><div class="container">
-<p class="u26-kicker"><span data-zh="">硬件算力 · 2026 增补 · 2026-11-24</span><span data-en="">Hardware · 2026 additions · 2026-11-24</span></p>
-<h1 class="u26-h1"><span data-zh="">八条 2026 规格，<br/>容量、带宽、互联分开看</span><span data-en="">Eight 2026 specs,<br/>with capacity, bandwidth and interconnect kept apart</span></h1>
-<p class="u26-lede"><span data-zh="">MN-Core L2000、Titania、Rubin、B300、MI455X、MI450X、TPU7x、Helios。它们经常被压成一句「多少 TOPS」，这一页把单卡容量、带宽、互联、整机架、研发阶段分开写。</span><span data-en="">MN-Core L2000, Titania, Rubin, B300, MI455X, MI450X, TPU7x and Helios. They are often flattened into “how many TOPS”; this page separates per-GPU capacity, bandwidth, interconnect, rack and development stage.</span></p>
+<p class="u26-kicker"><span data-zh="">硬件算力 · 2026 增补 · 2026-11-26</span><span data-en="">Hardware · 2026 additions · 2026-11-26</span></p>
+<h1 class="u26-h1"><span data-zh="">十条 2026 规格，<br/>容量、带宽、互联分开看</span><span data-en="">Ten 2026 specs,<br/>with capacity, bandwidth and interconnect kept apart</span></h1>
+<p class="u26-lede"><span data-zh="">MN-Core L2000、Titania、Rubin、B300、MI455X、MI450X、TPU7x、Helios，以及威云 1000Pro / 1000Ultra。它们经常被压成一句「多少 TOPS」，这一页把单卡容量、带宽、互联、整机架、研发阶段分开写。</span><span data-en="">MN-Core L2000, Titania, Rubin, B300, MI455X, MI450X, TPU7x, Helios and Weiyun 1000Pro / 1000Ultra. They are often flattened into “how many TOPS”; this page separates per-GPU capacity, bandwidth, interconnect, rack and development stage.</span></p>
 <p class="u26-note"><span data-zh="">只取厂商官方规格页；峰值不是实测，设计目标不是量产。NVFP4 与 MXFP4 不直接横比，单卡与整机架也不混。</span><span data-en="">Vendor spec pages only; peaks are not measurements, and design targets are not production. NVFP4 and MXFP4 are not cross-compared, and per-GPU is not mixed with rack.</span></p>
 </div></section>
 <section class="u26-section"><div class="container">
@@ -203,7 +203,13 @@
 <circle cx="120" cy="358" r="6" style="fill:var(--cat-rose)"></circle>
 <text class="vz-t-strong" x="140" y="363">AMD Helios</text>
 <text class="vz-t-dim" x="140" y="383">整机 / 机架</text></svg><figcaption><span data-zh="">按发布 / 上市日期，最新在上；Helios 为整机架条目，PFN L2000 为研发节点。</span><span data-en="">By release / launch date, newest first; Helios is a rack entry and PFN L2000 is a development milestone.</span></figcaption></figure>
-<div class="u26-grid"><article class="u26-card" id="pfn-mn-core-l2000">
+<div class="u26-grid"><article class="u26-card" id="weiyun-1000pro">
+<div class="u26-meta"><span class="u26-badge">2026-11-26</span><span class="u26-tag"><span data-zh="">整机 / 推理</span><span data-en="">System / inference</span></span></div>
+<h2><span data-zh="">威云 1000Pro / 1000Ultra：单机 800B / 3.2T</span><span data-en="">Weiyun 1000Pro / 1000Ultra: 800B / 3.2T on one machine</span></h2>
+<p class="u26-p"><span data-zh="">官方产品页已可核验：1000Pro 选配 GPU 后最高 13 PFLOPS、1.28 TB 显存、推理功耗低于 1 kW、2U，单机最高 800B 全参数；1000Ultra 最高 47.5 PFLOPS、4.66 TB 显存、8U/12U，单机最高 3.2T。价格与交付未公布，媒体报价不写入。</span><span data-en="">Official product pages are live: 1000Pro reaches up to 13 PFLOPS with optional GPUs, 1.28 TB memory, under 1 kW inference power, 2U, up to 800B parameters on one machine; 1000Ultra reaches up to 47.5 PFLOPS, 4.66 TB memory, 8U/12U, up to 3.2T parameters on one machine. Price and delivery are not published; launch-report prices are omitted.</span></p>
+<dl class="u26-dl"><dt><span data-zh="">形态 / form</span><span data-en="">Form</span></dt><dd>2U / 8U–12U 整机</dd><dt><span data-zh="">峰值 / peak</span><span data-en="">Peak</span></dt><dd>13 / 47.5 PFLOPS（选配 GPU）</dd><dt><span data-zh="">显存 / memory</span><span data-en="">Memory</span></dt><dd>1.28 TB / 4.66 TB</dd><dt><span data-zh="">单机容量 / capacity</span><span data-en="">Per-machine</span></dt><dd>800B / 3.2T 全参数</dd></dl>
+<p class="u26-src"><span data-zh="">来源</span><span data-en="">Sources</span>：<a href="https://weiyuncreation.com/zh-CN/products/server/wy1000-pro" rel="noopener" target="_blank">威云 1000Pro</a> · <a href="https://weiyuncreation.com/zh-CN/products/server/wy1000-ultra" rel="noopener" target="_blank">威云 1000Ultra</a> · <a href="https://hardware.specul.com/weiyun-1000pro.html"><span data-zh="">站内档案</span><span data-en="">site profile</span></a></p>
+</article><article class="u26-card" id="pfn-mn-core-l2000">
 <div class="u26-meta"><span class="u26-badge">2026-11-17</span><span class="u26-tag"><span data-zh="">推理 ASIC / 研发</span><span data-en="">Inference ASIC / development</span></span></div>
 <h2><span data-zh="">PFN MN-Core L2000：内存带宽目标翻倍</span><span data-en="">PFN MN-Core L2000: targeting double the memory bandwidth</span></h2>
 <p class="u26-p"><span data-zh="">PFN 与 SEMIFIVE 合作开发下一代 AI 推理芯片 L2000 系列，目标是内存带宽超过 L1000 的两倍；延续 3D 堆叠逻辑芯片 + DRAM 的路线，计划 2027Q1 tape-out。它不是已上市产品，L1000 本身也计划 2027 年才发售。</span><span data-en="">PFN and SEMIFIVE are co-developing the L2000 series, the next generation of AI inference chips, targeting more than twice the memory bandwidth of L1000. It continues the 3D-stacked logic + DRAM route, with tape-out planned for Q1 2027. It is not a shipping product; L1000 itself is planned for 2027.</span></p>
