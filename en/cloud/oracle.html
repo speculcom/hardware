@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html data-lang="en" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <title>Oracle Cloud | Compute</title>
-<meta content="Oracle Cloud" name="description"/>
+<meta content="Oracle Cloud: OCI Compute GPU (H100 / A100 / B200, depending on region). Billing, regions, storage, egress, compliance and verified pricing entry points." name="description"/>
 <link href="https://hardware.specul.com/en/cloud/oracle.html" rel="canonical"/>
 <meta content="website" property="og:type"/>
 <meta content="Compute" property="og:site_name"/>
@@ -22,7 +23,7 @@
 <style>:root { --accent: #f59e0b; }</style>
 <link href="/sections.css" rel="stylesheet"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Oracle Cloud | Compute","description":"Oracle Cloud","url":"https://hardware.specul.com/en/cloud/oracle.html","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://hardware.specul.com/en/cloud/oracle.html"}}</script>
-<meta content="Oracle Cloud | Compute" name="twitter:title"/><meta content="Oracle Cloud" name="twitter:description"/><meta content="noindex,follow" name="robots"/></head>
+<meta content="Oracle Cloud | Compute" name="twitter:title"/><meta content="Oracle Cloud" name="twitter:description"/><meta content="index,follow" name="robots"/><link href="https://hardware.specul.com/en/cloud/oracle.html" hreflang="en" rel="alternate"/><link href="https://hardware.specul.com/cloud/oracle.html" hreflang="zh-CN" rel="alternate"/><link href="https://hardware.specul.com/cloud/oracle.html" hreflang="x-default" rel="alternate"/></head>
 <!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
      同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
      而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
@@ -95,41 +96,21 @@
 <nav><a href="https://specul.com/en/legal.html">Legal terms</a></nav>
 </div>
 </aside>
-<main id="main">
-<div class="container">
-<header class="sec-detail">
-<p class="eyebrow">Compute · Cloud · General clouds</p>
-<h1>Oracle Cloud</h1>
-<p class="sub">OCI Compute GPU（H100 / A100 / B200，视区域）</p>
-</header>
-<div class="sec-nav"><a href="index.html">← All cloud compute</a><a href="/en/cloud/general.html">General clouds</a><a href="../index.html">Compute</a></div>
-<table class="sec-table">
-<tr><th>卡型</th><td>OCI Compute GPU（H100 / A100 / B200，视区域）</td></tr>
-<tr><th>计费</th><td>按小时计费，整机起租</td></tr>
-<tr><th>价格口径</th><td>按需与预留；GPU 多以整机或固定规格提供。以官网价目为准（2026-11-19 核验入口）。</td></tr>
-<tr><th>区域</th><td>全球多区域</td></tr>
-<tr><th>存储 / 出网</th><td>Block / File / Object Storage；出网按量</td></tr>
-<tr><th>合规</th><td>SOC 2、ISO 27001 等，视区域与服务而定</td></tr>
-<tr><th>最低消费</th><td>无最低消费；预留容量有承诺期</td></tr>
-<tr><th>核验日</th><td>2026-11-19</td></tr>
-</table>
+<main id="main"><div class="container">
+<header class="sec-detail"><p class="eyebrow">Compute · Cloud · General cloud</p><h1>Oracle Cloud</h1><p class="sub">OCI Compute GPU (H100 / A100 / B200, depending on region)</p></header>
+<div class="sec-nav"><a href="index.html">← All cloud compute</a><a href="/en/cloud/general.html">General cloud</a><a href="../index.html">Compute</a></div>
+<table class="sec-table"><tr><th>GPU types</th><td>OCI Compute GPU (H100 / A100 / B200, depending on region)</td></tr><tr><th>Billing</th><td>Hourly billing; whole-machine reservation</td></tr><tr><th>Price basis</th><td>List prices are usually on-demand, reserved or committed-use. H100-class capacity is often billed per whole machine; regional and enterprise-contract prices differ. Verify the official price page (snapshot 2026-11-19).</td></tr><tr><th>Regions</th><td>Global, multiple regions</td></tr><tr><th>Storage / egress</th><td>Block / file / object storage; egress metered</td></tr><tr><th>Compliance</th><td>SOC 2, ISO 27001 and others, depending on region and service</td></tr><tr><th>Minimum spend</th><td>No minimum; reserved capacity carries a commitment term</td></tr><tr><th>Verified</th><td>2026-11-19</td></tr></table>
 <div class="sec-body">
-<h2>怎么用这张卡</h2>
-<p>价格常有竞争力，但卡型与区域覆盖要逐区确认；适合有 Oracle 合同的团队。</p>
-<h2>适合什么、不适合什么</h2>
-<p><b>适合：</b>已有 Oracle 合同、价格敏感，且能逐区确认卡型覆盖。</p>
-<p><b>不适合：</b>需要广泛区域即时可用，或不愿逐区核对卡型与合同条款时。</p>
-<p class="sec-next"><a href="https://tools.specul.com/en/finder/">按任务筛 3 个候选 →</a>　·　<a href="https://tools.specul.com/en/guides/">看任务手册 →</a></p>
-<h2>下一步</h2>
-<ul>
-<li>打开官方价格页，按你的任务算“总成本”：卡时 + 存储 + 出网 + 冷启动 + 重跑。</li>
-<li>先用目标卡型跑一轮真实负载，再决定按需、包月还是预留。</li>
-<li>读 <a href="/en/cloud/guides/compare-gpu-price.html">云 GPU 怎么比价</a> / <a href="/en/cloud/guides/storage-egress.html">存储与出网</a>。</li>
-</ul>
+<h2>How to use this provider</h2>
+<p>Oracle Cloud fits teams that already run identity, networking and compliance on this cloud. Price the whole machine, storage and egress together; the GPU-hour headline is rarely the final unit cost.</p>
+<h2>What to check before renting</h2>
+<p>Start with the job shape: short experiments, steady inference and long training need different billing models. Then calculate the total cost — GPU hours plus storage, egress, cold starts, reruns and staff time. A low GPU-hour rate can lose to a higher rate with better availability and cheaper egress.</p>
+<p>Ask for the exact GPU model, whole-machine or per-GPU billing, minimum billing unit, region, interconnect and capacity guarantee. If the workload is sensitive, verify compliance scope for the specific region and service, not the provider's general certificate list.</p>
+<h2>Sources</h2>
+<p><a href="https://www.oracle.com/cloud/price-list/" rel="noopener" target="_blank">Official price page</a> · <a href="https://docs.oracle.com/en-us/iaas/Content/Compute/home.htm" rel="noopener" target="_blank">Documentation</a> · snapshot 2026-11-19.</p>
 </div>
-<div class="sec-sources">价格与规格入口：<a href="https://www.oracle.com/cloud/price-list/" rel="noopener" target="_blank">https://www.oracle.com/cloud/price-list/</a> · 文档：<a href="https://docs.oracle.com/en-us/iaas/Content/Compute/home.htm" rel="noopener" target="_blank">https://docs.oracle.com/en-us/iaas/Content/Compute/home.htm</a> · 核验日 2026-11-19</div>
-</div>
-</main>
+<div class="sec-sources">Price and specification entry points: <a href="https://www.oracle.com/cloud/price-list/" rel="noopener" target="_blank">https://www.oracle.com/cloud/price-list/</a> · docs: <a href="https://docs.oracle.com/en-us/iaas/Content/Compute/home.htm" rel="noopener" target="_blank">https://docs.oracle.com/en-us/iaas/Content/Compute/home.htm</a> · verified 2026-11-19.</div>
+</div></main>
 <footer class="site-footer foot-single">
 <div class="container foot-line">
 <div class="foot-brand">

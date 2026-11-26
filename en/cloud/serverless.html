@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html data-lang="en" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <title>Serverless &amp; hosted inference | Compute</title>
-<meta content="Serverless &amp; hosted inference" name="description"/>
+<meta content="Serverless GPU GPU providers compared by billing, region, storage, egress and compliance." name="description"/>
 <link href="https://hardware.specul.com/en/cloud/serverless.html" rel="canonical"/>
 <meta content="website" property="og:type"/>
 <meta content="Compute" property="og:site_name"/>
@@ -22,7 +23,7 @@
 <style>:root { --accent: #f59e0b; }</style>
 <link href="/sections.css" rel="stylesheet"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Serverless & hosted inference | Compute","description":"Serverless & hosted inference","url":"https://hardware.specul.com/en/cloud/serverless.html","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://hardware.specul.com/en/cloud/serverless.html"}}</script>
-<meta content="Serverless &amp; hosted inference | Compute" name="twitter:title"/><meta content="Serverless &amp; hosted inference" name="twitter:description"/><meta content="noindex,follow" name="robots"/></head>
+<meta content="Serverless &amp; hosted inference | Compute" name="twitter:title"/><meta content="Serverless &amp; hosted inference" name="twitter:description"/><meta content="index,follow" name="robots"/><link href="https://hardware.specul.com/en/cloud/serverless.html" hreflang="en" rel="alternate"/><link href="https://hardware.specul.com/cloud/serverless.html" hreflang="zh-CN" rel="alternate"/><link href="https://hardware.specul.com/cloud/serverless.html" hreflang="x-default" rel="alternate"/></head>
 <!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
      同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
      而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
@@ -95,77 +96,73 @@
 <nav><a href="https://specul.com/en/legal.html">Legal terms</a></nav>
 </div>
 </aside>
-<main id="main">
-<div class="container">
-<header class="sec-head">
-<p class="eyebrow">Compute · Cloud · Serverless &amp; hosted inference</p>
-<h1>Serverless &amp; hosted inference</h1>
-<p class="lede">按秒或按 token 计费，冷启动与并发要实测；适合突发与 API 化。 这一页收 5 家；点进单卡看计费、区域、存储出网、合规与核验入口。</p>
-</header>
-<div class="sec-nav"><a href="index.html">← 全部云算力</a><a href="../index.html">硬件站</a></div>
-<div class="sec-grid"><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
+<main id="main"><div class="container">
+<header class="sec-head"><p class="eyebrow">Compute · Cloud · Serverless GPU</p><h1>Serverless GPU</h1><p class="lede">Per-second or per-token GPU platforms for bursty and event-driven work. Test cold starts and minimum billing units on your own job.</p></header>
+<div class="sec-nav"><a href="index.html">← All cloud compute</a><a href="../index.html">Hardware home</a></div>
+<div class="home-stats"><div><b>5</b><span>providers</span></div><div><b>4</b><span>categories</span></div><div><b>4</b><span>buying guides</span></div></div>
+<div class="sec-note"><b>Normalize first:</b> per-GPU-hour, per-whole-machine-hour, per-token and monthly/contract quotes are not directly comparable. Add storage, egress, cold starts, reruns and compliance to the total cost before choosing on-demand or reserved capacity.</div>
+<h2>Providers</h2><div class="sec-grid"><article class="sec-card">
+<div class="sec-card-top"><span class="sec-tag">Serverless GPU</span><span class="sec-badge">Modal</span></div>
 <h3><a href="/en/cloud/modal.html">Modal</a></h3>
 <p>H100 / A100 / L40S / T4</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按秒计费</dd></div>
-<div><dt>区域</dt><dd>美国、欧洲</dd></div>
-<div><dt>最低消费</dt><dd>无最低消费，按用量</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-second billing</dd></div>
+<div><dt>Regions</dt><dd>United States and Europe</dd></div>
+<div><dt>Minimum</dt><dd>No minimum; usage-based</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按秒计费，含冷启动；GPU 与 CPU/内存分开计。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/modal.html">看服务商卡 →</a>
+<p class="sec-caveat">Billing is per second, per token or per active replica; idle and cold-start behaviour changes the bill. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/modal.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">Serverless GPU</span><span class="sec-badge">Baseten</span></div>
 <h3><a href="/en/cloud/baseten.html">Baseten</a></h3>
-<p>H100 / A100 / L40S / 多卡</p>
+<p>H100 / A100 / L40S / multi-GPU</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按分钟/按月</dd></div>
-<div><dt>区域</dt><dd>美国为主</dd></div>
-<div><dt>最低消费</dt><dd>托管方案有月费</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-minute / monthly</dd></div>
+<div><dt>Regions</dt><dd>United States, primarily</dd></div>
+<div><dt>Minimum</dt><dd>Managed plans carry a monthly fee</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按分钟/月度托管；模型托管与专用部署两档。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/baseten.html">看服务商卡 →</a>
+<p class="sec-caveat">Billing is per second, per token or per active replica; idle and cold-start behaviour changes the bill. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/baseten.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">Serverless GPU</span><span class="sec-badge">Together AI</span></div>
 <h3><a href="/en/cloud/together.html">Together AI</a></h3>
-<p>H100 / H200 / A100 / GPU 集群</p>
+<p>H100 / H200 / A100 / GPU clusters</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按 token / 按小时</dd></div>
-<div><dt>区域</dt><dd>美国为主</dd></div>
-<div><dt>最低消费</dt><dd>按用量，无最低消费（企业合同另算）</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-token / per-hour billing</dd></div>
+<div><dt>Regions</dt><dd>United States, primarily</dd></div>
+<div><dt>Minimum</dt><dd>Usage-based, no minimum (enterprise contracts separate)</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按 token 或 GPU 小时；不同模型与上下文长度价格不同。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/together.html">看服务商卡 →</a>
+<p class="sec-caveat">Billing is per second, per token or per active replica; idle and cold-start behaviour changes the bill. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/together.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">Serverless GPU</span><span class="sec-badge">Fireworks AI</span></div>
 <h3><a href="/en/cloud/fireworks.html">Fireworks AI</a></h3>
-<p>H100 / H200 / A100 / 专用推理集群</p>
+<p>H100 / H200 / A100 / dedicated inference clusters</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按 token / 按小时</dd></div>
-<div><dt>区域</dt><dd>美国为主</dd></div>
-<div><dt>最低消费</dt><dd>按用量，无最低消费（企业合同另算）</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-token / per-hour billing</dd></div>
+<div><dt>Regions</dt><dd>United States, primarily</dd></div>
+<div><dt>Minimum</dt><dd>Usage-based, no minimum (enterprise contracts separate)</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按 token 或按 GPU 小时；模型与精度不同价格不同。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/fireworks.html">看服务商卡 →</a>
+<p class="sec-caveat">Billing is per second, per token or per active replica; idle and cold-start behaviour changes the bill. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/fireworks.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">Serverless GPU</span><span class="sec-badge">Replicate</span></div>
 <h3><a href="/en/cloud/replicate.html">Replicate</a></h3>
-<p>H100 / A100 / L40S / T4（按模型分配）</p>
+<p>H100 / A100 / L40S / T4 (allocated per model)</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按秒计费</dd></div>
-<div><dt>区域</dt><dd>美国为主</dd></div>
-<div><dt>最低消费</dt><dd>按用量，无最低消费</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-second billing</dd></div>
+<div><dt>Regions</dt><dd>United States, primarily</dd></div>
+<div><dt>Minimum</dt><dd>Usage-based, no minimum</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按秒计费，按硬件档位；冷启动与排队另计。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/replicate.html">看服务商卡 →</a>
+<p class="sec-caveat">Billing is per second, per token or per active replica; idle and cold-start behaviour changes the bill. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/replicate.html">Open provider card →</a>
 </article></div>
-</div>
-</main>
+</div></main>
 <footer class="site-footer foot-single">
 <div class="container foot-line">
 <div class="foot-brand">

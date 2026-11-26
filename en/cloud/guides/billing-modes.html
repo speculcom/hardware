@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html data-lang="en" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <title>Per-second, monthly, reserved: choosing a billing model |…</title>
-<meta content="Per-second, monthly, reserved: choosing a billing model" name="description"/>
+<meta content="Billing is a task-shape question, not a discount contest. Short jobs, steady inference and long training need different answers." name="description"/>
 <link href="https://hardware.specul.com/en/cloud/guides/billing-modes.html" rel="canonical"/>
 <meta content="website" property="og:type"/>
 <meta content="Compute" property="og:site_name"/>
@@ -22,7 +23,7 @@
 <style>:root { --accent: #f59e0b; }</style>
 <link href="/sections.css" rel="stylesheet"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Per-second, monthly, reserved: choosing a billing model |…","description":"Per-second, monthly, reserved: choosing a billing model","url":"https://hardware.specul.com/en/cloud/guides/billing-modes.html","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://hardware.specul.com/en/cloud/guides/billing-modes.html"}}</script>
-<meta content="Per-second, monthly, reserved: choosing a billing model |…" name="twitter:title"/><meta content="Per-second, monthly, reserved: choosing a billing model" name="twitter:description"/><meta content="noindex,follow" name="robots"/></head>
+<meta content="Per-second, monthly, reserved: choosing a billing model |…" name="twitter:title"/><meta content="Per-second, monthly, reserved: choosing a billing model" name="twitter:description"/><meta content="index,follow" name="robots"/><link href="https://hardware.specul.com/en/cloud/guides/billing-modes.html" hreflang="en" rel="alternate"/><link href="https://hardware.specul.com/cloud/guides/billing-modes.html" hreflang="zh-CN" rel="alternate"/><link href="https://hardware.specul.com/cloud/guides/billing-modes.html" hreflang="x-default" rel="alternate"/></head>
 <!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
      同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
      而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
@@ -95,23 +96,12 @@
 <nav><a href="https://specul.com/en/legal.html">Legal terms</a></nav>
 </div>
 </aside>
-<main id="main">
-<div class="container">
-<header class="sec-detail">
-<p class="eyebrow">Compute · Cloud · Guide</p>
-<h1>Per-second, monthly, reserved: choosing a billing model</h1>
-<p class="sub">计费方式不是折扣问题，是任务形态问题。短任务、稳定推理、长期训练的答案不一样。</p>
-</header>
-<div class="sec-nav"><a href="../index.html">← 全部云算力</a><a href="../../index.html">硬件站</a></div>
-<div class="sec-body">
-<h2>按秒/按小时：适合不确定时长的任务</h2><p>实验、批处理、突发推理、冷启动多的 Serverless 适合按秒。优点是随停随付，缺点是单价通常高于预留，且可能受排队与供给影响。</p><p>注意最小计费单位：有的按秒，有的按 10 秒、1 分钟或 1 小时；短任务会被最小单位放大。</p>
-<h2>包月/订阅：适合稳定但不满载的推理</h2><p>每天都有稳定请求、但 GPU 利用率不到 60% 时，包月可能比按量便宜。要把闲置成本算进去：包月不是“无限用”，超出通常限速或加价。</p><p>先看月费包含什么：GPU 型号、显存、并发、存储、出网、支持。不要只看“每月几美元起”。</p>
-<h2>预留/合同：适合可预测的长期训练</h2><p>能预测未来 3–12 个月的卡时，预留通常最便宜，但承诺期长、退订难。合同要写清卡型、区域、可用性、价格调整机制与违约条款。</p><p>不要把全部容量压在一个区域或一家；保留 10–20% 按需弹性，处理峰值与故障。</p>
-<h2>一个简单的决策顺序</h2><p>先问任务会不会中断、能不能排队、数据能不能出境、是否需要固定卡型。再问每月可预测的卡时。最后比较“按需总价 / 包月总价 / 预留总价”，把存储、出网、重跑与运维人力加进去。</p><p>如果三种口径算下来差距不到 15%，优先选迁移成本低、可用性好的方案，不要为小折扣锁长期合同。</p>
-</div>
-<div class="sec-sources">参考：<a href="https://modal.com/pricing" rel="noopener" target="_blank">Modal 价格</a> · <a href="https://lambda.ai/pricing" rel="noopener" target="_blank">Lambda 价格</a> · <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/" rel="noopener" target="_blank">Azure 虚拟机价格</a></div>
-</div>
-</main>
+<main id="main"><div class="container"><header class="sec-detail"><p class="eyebrow">Compute · Cloud · Guide</p><h1>Per-second, monthly, reserved: choosing a billing model</h1><p class="sub">Billing is a task-shape question, not a discount contest. Short jobs, steady inference and long training need different answers.</p></header><div class="sec-nav"><a href="../index.html">← All cloud compute</a><a href="../../index.html">Hardware home</a></div><div class="sec-body">
+<h2>Per-second / per-hour: for uncertain duration</h2><p>Experiments, batch jobs, bursty inference and serverless workloads fit per-second billing. You pay for what you use, but the unit rate is usually higher than reserved capacity and supply or queueing can affect availability.</p><p>Check the minimum billing unit: some providers bill per second, others per 10 seconds, per minute or per hour. A short job can be multiplied by the minimum unit.</p>
+<h2>Monthly subscription: for steady but not fully utilized inference</h2><p>If requests arrive every day but GPU utilization stays below about 60%, a monthly plan can beat on-demand. Include idle cost: a monthly plan is not unlimited; overage is usually throttled or charged.</p><p>Read what the monthly fee includes: GPU model, memory, concurrency, storage, egress and support. Do not compare only the “starting at” number.</p>
+<h2>Reserved / contract: for predictable long training</h2><p>If you can forecast GPU hours for the next 3–12 months, reserved capacity is usually the cheapest option, but the commitment is long and exit is hard. The contract should state GPU model, region, availability, price-adjustment mechanism and termination terms.</p><p>Do not put all capacity in one region or one provider. Keep 10–20% on-demand elasticity for peaks and failures.</p>
+<h2>A simple decision order</h2><p>First ask whether the job can be interrupted, queued, kept in a specific region and run on a fixed GPU model. Then estimate predictable monthly GPU hours. Finally compare on-demand, monthly and reserved totals with storage, egress, reruns and staff time included.</p><p>If the three totals are within about 15%, choose the option with lower migration cost and better availability; do not lock a long contract for a small discount.</p>
+</div><div class="sec-sources">Reference entry points: <a href="https://modal.com/pricing" rel="noopener" target="_blank">Modal pricing</a> · <a href="https://lambda.ai/pricing" rel="noopener" target="_blank">Lambda pricing</a> · <a href="https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/" rel="noopener" target="_blank">Azure Linux VM pricing</a>.</div></div></main>
 <footer class="site-footer foot-single">
 <div class="container foot-line">
 <div class="foot-brand">

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html data-lang="en" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <title>Storage and egress: the two costs people forget | Compute</title>
-<meta content="Storage and egress: the two costs people forget" name="description"/>
+<meta content="Model weights, checkpoints, datasets and logs can cost more than the GPU hours if you move them carelessly." name="description"/>
 <link href="https://hardware.specul.com/en/cloud/guides/storage-egress.html" rel="canonical"/>
 <meta content="website" property="og:type"/>
 <meta content="Compute" property="og:site_name"/>
@@ -22,7 +23,7 @@
 <style>:root { --accent: #f59e0b; }</style>
 <link href="/sections.css" rel="stylesheet"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Storage and egress: the two costs people forget | Compute","description":"Storage and egress: the two costs people forget","url":"https://hardware.specul.com/en/cloud/guides/storage-egress.html","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://hardware.specul.com/en/cloud/guides/storage-egress.html"}}</script>
-<meta content="Storage and egress: the two costs people forget | Compute" name="twitter:title"/><meta content="Storage and egress: the two costs people forget" name="twitter:description"/><meta content="noindex,follow" name="robots"/></head>
+<meta content="Storage and egress: the two costs people forget | Compute" name="twitter:title"/><meta content="Storage and egress: the two costs people forget" name="twitter:description"/><meta content="index,follow" name="robots"/><link href="https://hardware.specul.com/en/cloud/guides/storage-egress.html" hreflang="en" rel="alternate"/><link href="https://hardware.specul.com/cloud/guides/storage-egress.html" hreflang="zh-CN" rel="alternate"/><link href="https://hardware.specul.com/cloud/guides/storage-egress.html" hreflang="x-default" rel="alternate"/></head>
 <!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
      同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
      而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
@@ -95,23 +96,12 @@
 <nav><a href="https://specul.com/en/legal.html">Legal terms</a></nav>
 </div>
 </aside>
-<main id="main">
-<div class="container">
-<header class="sec-detail">
-<p class="eyebrow">Compute · Cloud · Guide</p>
-<h1>Storage and egress: the two costs people forget</h1>
-<p class="sub">GPU 小时价只是账单的一部分。模型权重、数据集、日志、镜像和出网流量，常常在月末把预算翻一倍。</p>
-</header>
-<div class="sec-nav"><a href="../index.html">← 全部云算力</a><a href="../../index.html">硬件站</a></div>
-<div class="sec-body">
-<h2>存储要按“热/温/冷”分层</h2><p>训练中的数据集与容器镜像要热存储；旧版本权重、日志、备份可以转冷。热存储贵但读写快，冷存储便宜但取回有延迟与请求费。</p><p>先算容量与增长：一个 70B 模型全精度权重约 140GB，LoRA 与优化器状态另算；多版本保留会迅速堆高。</p>
-<h2>出网费要看流向</h2><p>同区域、同云内网通常便宜或免费；跨区、跨云、公网出网通常按 GB 计。把数据拉回本地、把生成结果传给用户、跨云备份，都会产生出网。</p><p>训练任务尽量把数据放在 GPU 同区域；推理服务尽量把结果缓存在边缘或同区域，减少重复出网。</p>
-<h2>别把对象存储当本地盘</h2><p>对象存储适合大文件与冷数据，不适合高频随机读写；训练时直接读对象存储可能拖慢数据加载。用本地 NVMe 或高性能文件系统做缓存。</p><p>如果平台按请求数计费，小文件多、频繁 LIST 会产生额外费用；把数据集打包成 shard，减少请求数。</p>
-<h2>账单核对清单</h2><p>GPU 小时、CPU/内存、存储容量、存储请求、出网 GB、跨区流量、快照、镜像仓库、负载均衡、日志。逐项对照价目表，确认没有“默认开启”的收费项。</p><p>设置预算告警与每日账单；训练任务打标签，按项目分摊。</p>
-</div>
-<div class="sec-sources">参考：<a href="https://aws.amazon.com/s3/pricing/" rel="noopener" target="_blank">AWS S3 定价</a> · <a href="https://cloud.google.com/vpc/network-pricing" rel="noopener" target="_blank">GCP 网络出网定价</a> · <a href="https://www.aliyun.com/price/product#/oss/detail" rel="noopener" target="_blank">阿里云 OSS 定价</a></div>
-</div>
-</main>
+<main id="main"><div class="container"><header class="sec-detail"><p class="eyebrow">Compute · Cloud · Guide</p><h1>Storage and egress: the costs that arrive after the GPU</h1><p class="sub">Model weights, checkpoints, datasets and logs can cost more than the GPU hours if you move them carelessly.</p></header><div class="sec-nav"><a href="../index.html">← All cloud compute</a><a href="../../index.html">Hardware home</a></div><div class="sec-body">
+<h2>Map the data path</h2><p>Where does the dataset live before the job, where is it cached during the job, where do checkpoints go, and where are logs and outputs read? Each hop can add storage, request or egress charges.</p>
+<h2>Keep compute near data</h2><p>Put the GPU in the same region as the dataset and output store when possible. Cross-region traffic is often billed separately and can dominate a short job.</p><h2>Plan for checkpoints</h2><p>Long training writes checkpoints repeatedly. Estimate checkpoint size, frequency and retention. Use object storage with lifecycle rules; do not keep every checkpoint forever on expensive block storage.</p>
+<h2>Watch egress twice</h2><p>Public egress is usually metered; cross-region and cross-cloud traffic may be metered again. If the output is large, compare “compute here, download there” with “move the data first”.</p>
+<h2>Budget line items</h2><p>Add persistent disk, object storage, requests, egress, backup and deletion. For inference, add model download and cold-start caching. A provider with cheap GPU hours and expensive egress may lose on a data-heavy job.</p>
+</div><div class="sec-sources">Use each provider card's storage/egress row and official price page; rates vary by region and service.</div></div></main>
 <footer class="site-footer foot-single">
 <div class="container foot-line">
 <div class="foot-brand">

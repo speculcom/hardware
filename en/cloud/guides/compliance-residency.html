@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html data-lang="en" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <title>Compliance and data residency: decide where data may go |…</title>
-<meta content="Compliance and data residency: decide where data may go" name="description"/>
+<meta content="A provider's general certificate list is not proof that your specific service, region and data flow are covered." name="description"/>
 <link href="https://hardware.specul.com/en/cloud/guides/compliance-residency.html" rel="canonical"/>
 <meta content="website" property="og:type"/>
 <meta content="Compute" property="og:site_name"/>
@@ -22,7 +23,7 @@
 <style>:root { --accent: #f59e0b; }</style>
 <link href="/sections.css" rel="stylesheet"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Compliance and data residency: decide where data may go |…","description":"Compliance and data residency: decide where data may go","url":"https://hardware.specul.com/en/cloud/guides/compliance-residency.html","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://hardware.specul.com/en/cloud/guides/compliance-residency.html"}}</script>
-<meta content="Compliance and data residency: decide where data may go |…" name="twitter:title"/><meta content="Compliance and data residency: decide where data may go" name="twitter:description"/><meta content="noindex,follow" name="robots"/></head>
+<meta content="Compliance and data residency: decide where data may go |…" name="twitter:title"/><meta content="Compliance and data residency: decide where data may go" name="twitter:description"/><meta content="index,follow" name="robots"/><link href="https://hardware.specul.com/en/cloud/guides/compliance-residency.html" hreflang="en" rel="alternate"/><link href="https://hardware.specul.com/cloud/guides/compliance-residency.html" hreflang="zh-CN" rel="alternate"/><link href="https://hardware.specul.com/cloud/guides/compliance-residency.html" hreflang="x-default" rel="alternate"/></head>
 <!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
      同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
      而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
@@ -95,23 +96,13 @@
 <nav><a href="https://specul.com/en/legal.html">Legal terms</a></nav>
 </div>
 </aside>
-<main id="main">
-<div class="container">
-<header class="sec-detail">
-<p class="eyebrow">Compute · Cloud · Guide</p>
-<h1>Compliance and data residency: decide where data may go</h1>
-<p class="sub">云 GPU 选型不只是价格。数据能不能出境、能不能给第三方处理、出了事谁负责，要在签合同前写清。</p>
-</header>
-<div class="sec-nav"><a href="../index.html">← 全部云算力</a><a href="../../index.html">硬件站</a></div>
-<div class="sec-body">
-<h2>先分类数据</h2><p>公开数据、内部数据、个人信息、客户数据、敏感行业数据，处理要求不同。个人信息要看收集目的、告知同意、跨境传输与删除机制；客户数据要看合同里的处理者条款。</p><p>把“训练数据 / 推理输入 / 日志 / 模型权重”分开看。日志里可能含 prompt 与用户数据，不能当成普通运维日志。</p>
-<h2>数据驻留与跨境</h2><p>确认服务商在哪个区域存数据、备份到哪、技术支持能看到什么。跨区域复制、灾备、日志汇聚都可能构成跨境传输。</p><p>国内业务优先选境内区域与等保合规；跨境业务要评估目标国家/地区的法律与合同要求，不能只看服务商全球覆盖。</p>
-<h2>合同里要写的五件事</h2><p>数据处理者角色、允许的处理目的、子处理者清单、数据删除与返还、泄露通知时限。还有：服务商能否用你的数据训练自己的模型。</p><p>如果服务商把“匿名化/聚合数据”用于改进服务，要确认匿名化标准与再识别风险；不能默认同意。</p>
-<h2>技术侧的最小动作</h2><p>训练与推理环境隔离；密钥与数据分离；日志脱敏；访问最小权限；出网白名单；模型权重与数据集加密。</p><p>上线前做一次数据流图：数据从哪来、存哪、经过谁、去哪、多久删。数据流图比合规口号有用。</p>
-</div>
-<div class="sec-sources">参考：<a href="https://aws.amazon.com/compliance/" rel="noopener" target="_blank">AWS 合规中心</a> · <a href="https://learn.microsoft.com/azure/compliance/" rel="noopener" target="_blank">Azure 合规文档</a> · <a href="https://www.aliyun.com/product/security/compliance" rel="noopener" target="_blank">阿里云安全合规</a></div>
-</div>
-</main>
+<main id="main"><div class="container"><header class="sec-detail"><p class="eyebrow">Compute · Cloud · Guide</p><h1>Compliance and data residency: what to verify before renting</h1><p class="sub">A provider's general certificate list is not proof that your specific service, region and data flow are covered.</p></header><div class="sec-nav"><a href="../index.html">← All cloud compute</a><a href="../../index.html">Hardware home</a></div><div class="sec-body">
+<h2>Start with the data, not the logo</h2><p>List what data enters the job: prompts, training data, checkpoints, logs, backups and support tickets. Mark personal data, sensitive business data and data subject to export control. Then map where each item is stored and processed.</p>
+<h2>Check region and service scope</h2><p>Ask which region hosts the GPU, storage and control plane; whether support staff can access the data; and which certificates apply to that exact service. A provider may have SOC 2 for one product but not for the GPU cluster you rent.</p>
+<h2>Contract terms that matter</h2><p>Look for data-retention periods, deletion proof, subprocessors, breach notification, government-access terms and cross-border transfer clauses. If data cannot leave a jurisdiction, confirm that backups and disaster recovery stay inside it too.</p>
+<h2>China-specific checks</h2><p>For mainland workloads, verify CAC filing where applicable, cross-border data rules, local invoicing and whether the GPU provider is a reseller or the operator. “Direct access” from a mainland network is a reachability observation, not a compliance conclusion.</p>
+<h2>Keep an evidence file</h2><p>Store the official certificate, its scope, the region, the contract clause and the verification date. Re-check when the service, region or contract changes; compliance is a moving target.</p>
+</div><div class="sec-sources">This is a buying checklist, not legal advice. Confirm with your compliance team and the provider's current attestations.</div></div></main>
 <footer class="site-footer foot-single">
 <div class="container foot-line">
 <div class="foot-brand">

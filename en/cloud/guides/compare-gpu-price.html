@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html data-lang="en" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <title>Comparing cloud GPUs: align the units first | Compute</title>
-<meta content="Comparing cloud GPUs: align the units first" name="description"/>
+<meta content="The headline GPU-hour rate is one line of the bill. Compare total cost for the same job, region and contract." name="description"/>
 <link href="https://hardware.specul.com/en/cloud/guides/compare-gpu-price.html" rel="canonical"/>
 <meta content="website" property="og:type"/>
 <meta content="Compute" property="og:site_name"/>
@@ -22,7 +23,7 @@
 <style>:root { --accent: #f59e0b; }</style>
 <link href="/sections.css" rel="stylesheet"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Comparing cloud GPUs: align the units first | Compute","description":"Comparing cloud GPUs: align the units first","url":"https://hardware.specul.com/en/cloud/guides/compare-gpu-price.html","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://hardware.specul.com/en/cloud/guides/compare-gpu-price.html"}}</script>
-<meta content="Comparing cloud GPUs: align the units first | Compute" name="twitter:title"/><meta content="Comparing cloud GPUs: align the units first" name="twitter:description"/><meta content="noindex,follow" name="robots"/></head>
+<meta content="Comparing cloud GPUs: align the units first | Compute" name="twitter:title"/><meta content="Comparing cloud GPUs: align the units first" name="twitter:description"/><meta content="index,follow" name="robots"/><link href="https://hardware.specul.com/en/cloud/guides/compare-gpu-price.html" hreflang="en" rel="alternate"/><link href="https://hardware.specul.com/cloud/guides/compare-gpu-price.html" hreflang="zh-CN" rel="alternate"/><link href="https://hardware.specul.com/cloud/guides/compare-gpu-price.html" hreflang="x-default" rel="alternate"/></head>
 <!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
      同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
      而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
@@ -95,23 +96,13 @@
 <nav><a href="https://specul.com/en/legal.html">Legal terms</a></nav>
 </div>
 </aside>
-<main id="main">
-<div class="container">
-<header class="sec-detail">
-<p class="eyebrow">Compute · Cloud · Guide</p>
-<h1>Comparing cloud GPUs: align the units first</h1>
-<p class="sub">不要拿“每卡每小时”直接横比。整机起租、存储、出网、冷启动、可用性和合同期，都会把真实单价抬高或压低。</p>
-</header>
-<div class="sec-nav"><a href="../index.html">← 全部云算力</a><a href="../../index.html">硬件站</a></div>
-<div class="sec-body">
-<h2>先分清四种报价口径</h2><p>按卡小时：常见于 GPU 专营云，适合估算训练。按整机小时：通用云常按 8 卡整机起租，单卡价要除以卡数再算。按 token：托管推理按输入/输出 token 计费，适合 API 调用。按月/合同：预留容量，单价低但有承诺期。</p><p>四种口径不能直接比。先把你的任务换算成同一口径：训练看 GPU 小时，推理看每百万 token 或每千次请求，实验看按秒。</p>
-<h2>把隐藏成本加进去</h2><p>存储：模型权重、数据集、容器镜像要占空间；有些平台按容量月费，有些按读写。出网：把结果拉回本地或传给用户，可能按 GB 计费。冷启动：Serverless 的冷启动会拖长尾延迟，也会增加计费秒数。</p><p>可用性：便宜的主机可能排队或中断；训练中断一次，重跑成本可能超过省下的租金。合规：敏感数据要选有 SOC 2 / 等保的区域，不能只看价格。</p>
-<h2>用一张表做同口径对比</h2><p>列：服务商、卡型、单卡显存、报价口径、单卡小时价、整机起租、存储/月、出网/GB、冷启动、最低消费、合同期、可用区、合规、核验日。</p><p>先按“任务总成本”算，不要按标价算。训练任务：卡时 × 数量 × 预计时长 + 存储 + 重跑余量；推理任务：每千次请求的 GPU 秒 + 冷启动 + 出网。</p>
-<h2>先小规模实测，再签长期</h2><p>用 1 台目标卡型跑一轮真实负载：启动时间、吞吐、显存占用、网络、存储读写、故障恢复。把实测数据回填到对比表，再决定按需还是预留。</p><p>合同前确认：卡型是否锁量、价格是否随市场调、超额怎么计、退订规则、数据迁出费用。</p>
-</div>
-<div class="sec-sources">参考：<a href="https://aws.amazon.com/ec2/pricing/on-demand/" rel="noopener" target="_blank">AWS EC2 GPU 价格</a> · <a href="https://cloud.google.com/compute/gpus-pricing" rel="noopener" target="_blank">GCP GPU 价格</a> · <a href="https://www.coreweave.com/pricing" rel="noopener" target="_blank">CoreWeave 价格</a> · <a href="https://www.runpod.io/pricing" rel="noopener" target="_blank">RunPod 价格</a></div>
-</div>
-</main>
+<main id="main"><div class="container"><header class="sec-detail"><p class="eyebrow">Compute · Cloud · Guide</p><h1>How to compare cloud GPU prices without fooling yourself</h1><p class="sub">The headline GPU-hour rate is one line of the bill. Compare total cost for the same job, region and contract.</p></header><div class="sec-nav"><a href="../index.html">← All cloud compute</a><a href="../../index.html">Hardware home</a></div><div class="sec-body">
+<h2>Fix the job before comparing prices</h2><p>Write down GPU model, GPU count, memory, runtime, batch size, storage, egress, expected queue time and rerun rate. A quote for a different job shape is not a comparison.</p>
+<h2>Use the same billing unit</h2><p>Per-GPU-hour, per-whole-machine-hour, per-token and monthly subscription are different units. Convert all quotes to “cost for this job” rather than “cost for one hour of one card”.</p>
+<h2>Add the lines that scale</h2><p>Add persistent storage, object storage, public egress, cross-region traffic, cold starts, failed runs, idle replicas and staff time. For inference, include tokens per second and utilization; for training, include interconnect and checkpoint storage.</p>
+<h2>Separate list price from contract price</h2><p>Committed contracts, enterprise discounts, reserved capacity and spot markets can change the effective rate. Ask what availability guarantee comes with the discount, and whether the commitment can be moved across regions or GPU models.</p>
+<h2>Run a small real test</h2><p>Before signing, run one real workload on the target GPU and region. Measure startup, throughput, egress and failure recovery. A provider that is 10% cheaper on paper but 30% slower on your job is not cheaper.</p>
+</div><div class="sec-sources">Use the provider cards in this section for official price and documentation entry points; each card records a verification date.</div></div></main>
 <footer class="site-footer foot-single">
 <div class="container foot-line">
 <div class="foot-brand">

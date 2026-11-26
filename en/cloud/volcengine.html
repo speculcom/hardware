@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html data-lang="en" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <title>Volcano Engine | Compute</title>
-<meta content="Volcano Engine" name="description"/>
+<meta content="Volcano Engine: GPU cloud servers / machine-learning platform. Billing, regions, storage, egress, compliance and verified pricing entry points." name="description"/>
 <link href="https://hardware.specul.com/en/cloud/volcengine.html" rel="canonical"/>
 <meta content="website" property="og:type"/>
 <meta content="Compute" property="og:site_name"/>
@@ -22,7 +23,7 @@
 <style>:root { --accent: #f59e0b; }</style>
 <link href="/sections.css" rel="stylesheet"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Volcano Engine | Compute","description":"Volcano Engine","url":"https://hardware.specul.com/en/cloud/volcengine.html","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://hardware.specul.com/en/cloud/volcengine.html"}}</script>
-<meta content="Volcano Engine | Compute" name="twitter:title"/><meta content="Volcano Engine" name="twitter:description"/><meta content="noindex,follow" name="robots"/></head>
+<meta content="Volcano Engine | Compute" name="twitter:title"/><meta content="Volcano Engine" name="twitter:description"/><meta content="index,follow" name="robots"/><link href="https://hardware.specul.com/en/cloud/volcengine.html" hreflang="en" rel="alternate"/><link href="https://hardware.specul.com/cloud/volcengine.html" hreflang="zh-CN" rel="alternate"/><link href="https://hardware.specul.com/cloud/volcengine.html" hreflang="x-default" rel="alternate"/></head>
 <!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
      同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
      而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
@@ -95,41 +96,21 @@
 <nav><a href="https://specul.com/en/legal.html">Legal terms</a></nav>
 </div>
 </aside>
-<main id="main">
-<div class="container">
-<header class="sec-detail">
-<p class="eyebrow">Compute · Cloud · China clouds</p>
-<h1>Volcano Engine</h1>
-<p class="sub">GPU 云服务器 / 机器学习平台</p>
-</header>
-<div class="sec-nav"><a href="index.html">← All cloud compute</a><a href="/en/cloud/china.html">China clouds</a><a href="../index.html">Compute</a></div>
-<table class="sec-table">
-<tr><th>卡型</th><td>GPU 云服务器 / 机器学习平台</td></tr>
-<tr><th>计费</th><td>按量/包月</td></tr>
-<tr><th>价格口径</th><td>按量/包月；GPU 实例与托管训练两种口径。以购买页为准（2026-11-19 核验入口）。</td></tr>
-<tr><th>区域</th><td>中国大陆与海外部分区域</td></tr>
-<tr><th>存储 / 出网</th><td>云盘 / TOS；公网出网按量</td></tr>
-<tr><th>合规</th><td>等保、ISO 等，视区域与服务而定</td></tr>
-<tr><th>最低消费</th><td>按量无最低消费；包月有折扣</td></tr>
-<tr><th>核验日</th><td>2026-11-19</td></tr>
-</table>
+<main id="main"><div class="container">
+<header class="sec-detail"><p class="eyebrow">Compute · Cloud · China cloud</p><h1>Volcano Engine</h1><p class="sub">GPU cloud servers / machine-learning platform</p></header>
+<div class="sec-nav"><a href="index.html">← All cloud compute</a><a href="/en/cloud/china.html">China cloud</a><a href="../index.html">Compute</a></div>
+<table class="sec-table"><tr><th>GPU types</th><td>GPU cloud servers / machine-learning platform</td></tr><tr><th>Billing</th><td>Usage-based / monthly</td></tr><tr><th>Price basis</th><td>Prices are usually quoted per GPU-hour or monthly subscription; region, supply and contract terms matter. Verify the official price page (snapshot 2026-11-19).</td></tr><tr><th>Regions</th><td>Mainland China and selected overseas regions</td></tr><tr><th>Storage / egress</th><td>Cloud disks / TOS; public egress metered</td></tr><tr><th>Compliance</th><td>MLPS, ISO and others, depending on region and service</td></tr><tr><th>Minimum spend</th><td>Usage-based, no minimum; monthly plans carry discounts</td></tr><tr><th>Verified</th><td>2026-11-19</td></tr></table>
 <div class="sec-body">
-<h2>怎么用这张卡</h2>
-<p>适合国内推理与字节生态；先确认卡型、配额与网络。</p>
-<h2>适合什么、不适合什么</h2>
-<p><b>适合：</b>国内推理、字节生态，卡型、配额与网络能对上。</p>
-<p><b>不适合：</b>需要海外区域，或依赖非字节生态的特定工具链时。</p>
-<p class="sec-next"><a href="https://tools.specul.com/en/finder/">按任务筛 3 个候选 →</a>　·　<a href="https://tools.specul.com/en/guides/">看任务手册 →</a></p>
-<h2>下一步</h2>
-<ul>
-<li>打开官方价格页，按你的任务算“总成本”：卡时 + 存储 + 出网 + 冷启动 + 重跑。</li>
-<li>先用目标卡型跑一轮真实负载，再决定按需、包月还是预留。</li>
-<li>读 <a href="/en/cloud/guides/compare-gpu-price.html">云 GPU 怎么比价</a> / <a href="/en/cloud/guides/storage-egress.html">存储与出网</a>。</li>
-</ul>
+<h2>How to use this provider</h2>
+<p>Volcano Engine fits mainland data-residency and local-invoicing requirements. Check CAC filing, cross-border data rules and export-control constraints before moving sensitive workloads.</p>
+<h2>What to check before renting</h2>
+<p>Start with the job shape: short experiments, steady inference and long training need different billing models. Then calculate the total cost — GPU hours plus storage, egress, cold starts, reruns and staff time. A low GPU-hour rate can lose to a higher rate with better availability and cheaper egress.</p>
+<p>Ask for the exact GPU model, whole-machine or per-GPU billing, minimum billing unit, region, interconnect and capacity guarantee. If the workload is sensitive, verify compliance scope for the specific region and service, not the provider's general certificate list.</p>
+<h2>Sources</h2>
+<p><a href="https://www.volcengine.com/pricing" rel="noopener" target="_blank">Official price page</a> · <a href="https://www.volcengine.com/docs/" rel="noopener" target="_blank">Documentation</a> · snapshot 2026-11-19.</p>
 </div>
-<div class="sec-sources">价格与规格入口：<a href="https://www.volcengine.com/pricing" rel="noopener" target="_blank">https://www.volcengine.com/pricing</a> · 文档：<a href="https://www.volcengine.com/docs/" rel="noopener" target="_blank">https://www.volcengine.com/docs/</a> · 核验日 2026-11-19</div>
-</div>
-</main>
+<div class="sec-sources">Price and specification entry points: <a href="https://www.volcengine.com/pricing" rel="noopener" target="_blank">https://www.volcengine.com/pricing</a> · docs: <a href="https://www.volcengine.com/docs/" rel="noopener" target="_blank">https://www.volcengine.com/docs/</a> · verified 2026-11-19.</div>
+</div></main>
 <footer class="site-footer foot-single">
 <div class="container foot-line">
 <div class="foot-brand">

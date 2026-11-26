@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html data-lang="en" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <title>Cloud GPU compute: providers compared by billing, region and egress</title>
-<meta content="25 cloud GPU providers grouped by general cloud, GPU specialist, serverless and China cloud; billing, region, storage, egress and compliance." name="description"/>
+<meta content="Cloud GPU providers grouped by general cloud, GPU specialist, serverless and China cloud; billing, region, storage, egress and compliance." name="description"/>
 <link href="https://hardware.specul.com/en/cloud/" rel="canonical"/>
 <meta content="website" property="og:type"/>
 <meta content="Compute" property="og:site_name"/>
@@ -22,7 +23,7 @@
 <style>:root { --accent: #f59e0b; }</style>
 <link href="/sections.css" rel="stylesheet"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Cloud GPU compute: providers compared by billing, region and egress","description":"25 cloud GPU providers grouped by general cloud, GPU specialist, serverless and China cloud; billing, region, storage, egress and compliance.","url":"https://hardware.specul.com/en/cloud/","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://hardware.specul.com/en/cloud/"}}</script>
-<meta content="Cloud GPU compute: providers compared by billing, region and egress" name="twitter:title"/><meta content="25 cloud GPU providers grouped by general cloud, GPU specialist, serverless and China cloud; billing, region, storage, egress and compliance." name="twitter:description"/><meta content="noindex,follow" name="robots"/></head>
+<meta content="Cloud GPU compute: providers compared by billing, region and egress" name="twitter:title"/><meta content="25 cloud GPU providers grouped by general cloud, GPU specialist, serverless and China cloud; billing, region, storage, egress and compliance." name="twitter:description"/><meta content="index,follow" name="robots"/><link href="https://hardware.specul.com/en/cloud/" hreflang="en" rel="alternate"/><link href="https://hardware.specul.com/cloud/" hreflang="zh-CN" rel="alternate"/><link href="https://hardware.specul.com/cloud/" hreflang="x-default" rel="alternate"/></head>
 <!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
      同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
      而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
@@ -95,340 +96,325 @@
 <nav><a href="https://specul.com/en/legal.html">Legal terms</a></nav>
 </div>
 </aside>
-<main id="main">
-<div class="container">
-<header class="sec-head">
-<p class="eyebrow">Compute · Cloud</p>
-<h1>Cloud compute</h1>
-<p class="lede">租 GPU 不是只看“每卡每小时”。整机起租、存储、出网、冷启动、可用性与合同期，都会改变真实单价。这里收 26 家服务商，按通用云、GPU 专营、Serverless、国内云四类放；价格只写口径与核验入口，不写死数字。</p>
-</header>
-<div class="sec-nav"><a href="../index.html">← 回硬件站</a><a href="/en/path.html">硬件选型路径 →</a></div>
-<div class="home-stats">
-<div><b>26</b><span>家服务商</span></div>
-<div><b>4</b><span>个类别</span></div>
-<div><b>4</b><span>篇比价指南</span></div>
-</div>
-<div class="sec-note"><b>先统一口径：</b>按卡小时、整机小时、按 token、按月/合同，四种报价不能直接横比。把存储、出网、冷启动、重跑与合规加进总成本，再决定按需还是预留。</div>
-<h2>通用云</h2><p>大厂公有云，卡型多、区域广、合规体系完整；常按整机起租。</p><div class="sec-grid"><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">通用云</span><span class="sec-badge">P5（H100）</span></div>
+<main id="main"><div class="container">
+<header class="sec-head"><p class="eyebrow">Compute · Cloud</p><h1>Cloud GPU compute</h1><p class="lede">Renting a GPU is not just a per-card hourly rate. Whole-machine minimums, storage, egress, cold starts, availability and contract length all change the real unit cost. This page groups 26 providers into general cloud, GPU specialist, serverless and China cloud; prices are stated as billing bases and verification entry points, not hard-coded numbers.</p></header>
+<div class="sec-nav"><a href="../index.html">← Hardware home</a><a href="/en/path.html">Hardware selection path →</a></div>
+<div class="home-stats"><div><b>26</b><span>providers</span></div><div><b>4</b><span>categories</span></div><div><b>4</b><span>buying guides</span></div></div>
+<div class="sec-note"><b>Normalize first:</b> per-GPU-hour, per-whole-machine-hour, per-token and monthly/contract quotes are not directly comparable. Add storage, egress, cold starts, reruns and compliance to the total cost, then decide on-demand versus reserved.</div>
+<h2>General cloud <small>4 providers</small></h2><div class="sec-grid"><article class="sec-card">
+<div class="sec-card-top"><span class="sec-tag">General cloud</span><span class="sec-badge">AWS</span></div>
 <h3><a href="/en/cloud/aws.html">AWS</a></h3>
-<p>P5（H100）/ P4（A100）/ G6（L4、A10G）</p>
+<p>P5 (H100)/ P4 (A100)/ G6 (L4, A10G)</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>Linux 按秒计费，整机起租</dd></div>
-<div><dt>区域</dt><dd>全球多区域</dd></div>
-<div><dt>最低消费</dt><dd>无最低消费；整机与预留承诺另算</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-second Linux billing; whole-machine reservation</dd></div>
+<div><dt>Regions</dt><dd>Global, multiple regions</dd></div>
+<div><dt>Minimum</dt><dd>No minimum; whole-machine and reserved commitments priced separately</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需、预留、节省计划三种口径；H100 多以 8 卡整机计费，区域与合同价差异大。具体以官网价目为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/aws.html">看服务商卡 →</a>
+<p class="sec-caveat">List prices are usually on-demand, reserved or committed-use. H100-class capacity is often billed per whole machine; regional and enterprise-contract prices differ. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/aws.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">通用云</span><span class="sec-badge">A3（H100）</span></div>
+<div class="sec-card-top"><span class="sec-tag">General cloud</span><span class="sec-badge">Google Cloud</span></div>
 <h3><a href="/en/cloud/gcp.html">Google Cloud</a></h3>
-<p>A3（H100）/ A2（A100）/ G2（L4）</p>
+<p>A3 (H100)/ A2 (A100)/ G2 (L4)</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按秒计费，整机起租</dd></div>
-<div><dt>区域</dt><dd>全球多区域</dd></div>
-<div><dt>最低消费</dt><dd>无最低消费；承诺使用折扣有期限</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-second billing; whole-machine reservation</dd></div>
+<div><dt>Regions</dt><dd>Global, multiple regions</dd></div>
+<div><dt>Minimum</dt><dd>No minimum; committed-use discounts have a term</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需与承诺使用折扣；H100 按整机或按卡，区域差异明显。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/gcp.html">看服务商卡 →</a>
+<p class="sec-caveat">List prices are usually on-demand, reserved or committed-use. H100-class capacity is often billed per whole machine; regional and enterprise-contract prices differ. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/gcp.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">通用云</span><span class="sec-badge">ND H100 v5 </span></div>
+<div class="sec-card-top"><span class="sec-tag">General cloud</span><span class="sec-badge">Microsoft Azure</span></div>
 <h3><a href="/en/cloud/azure.html">Microsoft Azure</a></h3>
 <p>ND H100 v5 / NC H100 / ND A100 v4</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按分钟/小时计费，整机起租</dd></div>
-<div><dt>区域</dt><dd>全球多区域</dd></div>
-<div><dt>最低消费</dt><dd>无最低消费；预留实例有承诺期</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-minute/hour billing; whole-machine reservation</dd></div>
+<div><dt>Regions</dt><dd>Global, multiple regions</dd></div>
+<div><dt>Minimum</dt><dd>No minimum; reserved instances carry a commitment term</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需与预留；企业协议价另算。H100 以整机规格为主，区域差异大。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/azure.html">看服务商卡 →</a>
+<p class="sec-caveat">List prices are usually on-demand, reserved or committed-use. H100-class capacity is often billed per whole machine; regional and enterprise-contract prices differ. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/azure.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">通用云</span><span class="sec-badge">OCI Compute GPU（H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">General cloud</span><span class="sec-badge">Oracle Cloud</span></div>
 <h3><a href="/en/cloud/oracle.html">Oracle Cloud</a></h3>
-<p>OCI Compute GPU（H100 / A100 / B200，视区域）</p>
+<p>OCI Compute GPU (H100 / A100 / B200, depending on region)</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按小时计费，整机起租</dd></div>
-<div><dt>区域</dt><dd>全球多区域</dd></div>
-<div><dt>最低消费</dt><dd>无最低消费；预留容量有承诺期</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Hourly billing; whole-machine reservation</dd></div>
+<div><dt>Regions</dt><dd>Global, multiple regions</dd></div>
+<div><dt>Minimum</dt><dd>No minimum; reserved capacity carries a commitment term</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需与预留；GPU 多以整机或固定规格提供。以官网价目为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/oracle.html">看服务商卡 →</a>
-</article></div>
-<h2>GPU 专营</h2><p>以 GPU 容量为主，按卡/按小时或合同报价；适合训练与大规模推理。</p><div class="sec-grid"><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">GPU 专营</span><span class="sec-badge">HGX H100 </span></div>
+<p class="sec-caveat">List prices are usually on-demand, reserved or committed-use. H100-class capacity is often billed per whole machine; regional and enterprise-contract prices differ. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/oracle.html">Open provider card →</a>
+</article></div><h2>GPU specialist <small>13 providers</small></h2><div class="sec-grid"><article class="sec-card">
+<div class="sec-card-top"><span class="sec-tag">GPU specialist</span><span class="sec-badge">CoreWeave</span></div>
 <h3><a href="/en/cloud/coreweave.html">CoreWeave</a></h3>
 <p>HGX H100 / H200 / B200 / A100</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按小时/合同计费</dd></div>
-<div><dt>区域</dt><dd>美国、欧洲多区域</dd></div>
-<div><dt>最低消费</dt><dd>预留合同有最低承诺</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Hourly / contract billing</dd></div>
+<div><dt>Regions</dt><dd>United States and Europe, multiple regions</dd></div>
+<div><dt>Minimum</dt><dd>Reserved contracts carry a minimum commitment</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需与预留合同；H100 按卡小时报价，长期合同另算。以官网报价为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/coreweave.html">看服务商卡 →</a>
+<p class="sec-caveat">Capacity is usually contracted per cluster or per GPU-hour. Availability, contract length and egress change the effective price. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/coreweave.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">GPU 专营</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">GPU specialist</span><span class="sec-badge">Lambda</span></div>
 <h3><a href="/en/cloud/lambda.html">Lambda</a></h3>
 <p>H100 / H200 / B200 / A100 / A10</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按小时计费</dd></div>
-<div><dt>区域</dt><dd>美国为主</dd></div>
-<div><dt>最低消费</dt><dd>按需无最低消费；预留有承诺期</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Hourly billing</dd></div>
+<div><dt>Regions</dt><dd>United States, primarily</dd></div>
+<div><dt>Minimum</dt><dd>No minimum on demand; reservations carry a commitment term</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需与预留；H100 起价公开，长期合同另算。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/lambda.html">看服务商卡 →</a>
+<p class="sec-caveat">Capacity is usually contracted per cluster or per GPU-hour. Availability, contract length and egress change the effective price. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/lambda.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">GPU 专营</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">GPU specialist</span><span class="sec-badge">RunPod</span></div>
 <h3><a href="/en/cloud/runpod.html">RunPod</a></h3>
 <p>H100 / H200 / A100 / RTX 4090 / L40S</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按秒计费</dd></div>
-<div><dt>区域</dt><dd>美国、欧洲、亚太部分区域</dd></div>
-<div><dt>最低消费</dt><dd>无最低消费</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-second billing</dd></div>
+<div><dt>Regions</dt><dd>United States, Europe and selected Asia-Pacific regions</dd></div>
+<div><dt>Minimum</dt><dd>No minimum spend</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按秒/按小时；社区云与安全云两档，价格随供给波动。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/runpod.html">看服务商卡 →</a>
+<p class="sec-caveat">Capacity is usually contracted per cluster or per GPU-hour. Availability, contract length and egress change the effective price. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/runpod.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">GPU 专营</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">GPU specialist</span><span class="sec-badge">Vast.ai</span></div>
 <h3><a href="/en/cloud/vast-ai.html">Vast.ai</a></h3>
-<p>H100 / A100 / RTX 4090 / 多卡主机</p>
+<p>H100 / A100 / RTX 4090 / multi-GPU hosts</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按小时/按需</dd></div>
-<div><dt>区域</dt><dd>全球多区域（主机分布）</dd></div>
-<div><dt>最低消费</dt><dd>无最低消费；按主机起租</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Hourly / on-demand</dd></div>
+<div><dt>Regions</dt><dd>Global; hosts distributed across regions</dd></div>
+<div><dt>Minimum</dt><dd>No minimum; billed per host</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">竞价市场，价格随供给与主机报价波动；同一卡型不同主机差异大。以下单页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/vast-ai.html">看服务商卡 →</a>
+<p class="sec-caveat">Capacity is usually contracted per cluster or per GPU-hour. Availability, contract length and egress change the effective price. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/vast-ai.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">GPU 专营</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">GPU specialist</span><span class="sec-badge">Paperspace</span></div>
 <h3><a href="/en/cloud/paperspace.html">Paperspace</a></h3>
-<p>H100 / A100 / L40S / RTX 4000 系列</p>
+<p>H100 / A100 / L40S / RTX 4000 series</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按小时/按月订阅</dd></div>
-<div><dt>区域</dt><dd>美国、欧洲</dd></div>
-<div><dt>最低消费</dt><dd>订阅有月费；按需无最低消费</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Hourly / monthly subscription</dd></div>
+<div><dt>Regions</dt><dd>United States and Europe</dd></div>
+<div><dt>Minimum</dt><dd>Subscription has a monthly fee; on-demand has no minimum</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需与订阅；团队套餐另算。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/paperspace.html">看服务商卡 →</a>
+<p class="sec-caveat">Capacity is usually contracted per cluster or per GPU-hour. Availability, contract length and egress change the effective price. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/paperspace.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">GPU 专营</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">GPU specialist</span><span class="sec-badge">Nebius</span></div>
 <h3><a href="/en/cloud/nebius.html">Nebius</a></h3>
-<p>H100 / H200 / GB200 等，按集群与合同</p>
+<p>H100 / H200 / GB200 etc.</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按小时 / 合同</dd></div>
-<div><dt>区域</dt><dd>欧洲、美国等，按官网可用区</dd></div>
-<div><dt>最低消费</dt><dd>无公开最低消费；整机/预留承诺另算</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Hourly / contract</dd></div>
+<div><dt>Regions</dt><dd>Europe, United States and others; see official availability zones</dd></div>
+<div><dt>Minimum</dt><dd>No public minimum; whole-machine or reserved commitments priced separately</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需与预留/合同报价；官网不公开统一单价，本站不采数字。</p>
-<a class="sec-link" href="/en/cloud/nebius.html">看服务商卡 →</a>
+<p class="sec-caveat">Capacity is usually contracted per cluster or per GPU-hour. Availability, contract length and egress change the effective price. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/nebius.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">GPU 专营</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">GPU specialist</span><span class="sec-badge">Crusoe</span></div>
 <h3><a href="/en/cloud/crusoe.html">Crusoe</a></h3>
-<p>H100 / H200 / GB200 等，按集群与合同</p>
+<p>H100 / H200 / GB200 etc.</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按小时 / 合同</dd></div>
-<div><dt>区域</dt><dd>美国等，按官网可用区</dd></div>
-<div><dt>最低消费</dt><dd>无公开最低消费；整机/合同另算</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Hourly / contract</dd></div>
+<div><dt>Regions</dt><dd>United States and others; see official availability zones</dd></div>
+<div><dt>Minimum</dt><dd>No public minimum; whole-machine or contract commitments priced separately</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需与预留/合同报价；具体以官网与销售报价为准，本站不采数字。</p>
-<a class="sec-link" href="/en/cloud/crusoe.html">看服务商卡 →</a>
+<p class="sec-caveat">Capacity is usually contracted per cluster or per GPU-hour. Availability, contract length and egress change the effective price. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/crusoe.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">GPU 专营</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">GPU specialist</span><span class="sec-badge">Fluidstack</span></div>
 <h3><a href="/en/cloud/fluidstack.html">Fluidstack</a></h3>
-<p>H100 / H200 / GB200 等，按集群与合同</p>
+<p>H100 / H200 / GB200 etc.</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>合同 / 预留</dd></div>
-<div><dt>区域</dt><dd>美国、欧洲等，按官网</dd></div>
-<div><dt>最低消费</dt><dd>以合同为准；无公开最低消费</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Contract / reserved</dd></div>
+<div><dt>Regions</dt><dd>United States, Europe and others; see official list</dd></div>
+<div><dt>Minimum</dt><dd>Contract-based; no public minimum</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">以合同/集群报价为主；官网不公开统一单价，本站不采数字。</p>
-<a class="sec-link" href="/en/cloud/fluidstack.html">看服务商卡 →</a>
+<p class="sec-caveat">Capacity is usually contracted per cluster or per GPU-hour. Availability, contract length and egress change the effective price. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/fluidstack.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">GPU 专营</span><span class="sec-badge">AMD Instinct MI300X </span></div>
+<div class="sec-card-top"><span class="sec-tag">GPU specialist</span><span class="sec-badge">TensorWave</span></div>
 <h3><a href="/en/cloud/tensorwave.html">TensorWave</a></h3>
-<p>AMD Instinct MI300X / MI325X 等</p>
+<p>AMD Instinct MI300X / MI325X etc.</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按小时 / 合同</dd></div>
-<div><dt>区域</dt><dd>美国等，按官网</dd></div>
-<div><dt>最低消费</dt><dd>无公开最低消费；整机/合同另算</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Hourly / contract</dd></div>
+<div><dt>Regions</dt><dd>United States and others; see official region list</dd></div>
+<div><dt>Minimum</dt><dd>No public minimum; whole-machine or contract commitments priced separately</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需/合同报价；官网不公开统一单价，本站不采数字。</p>
-<a class="sec-link" href="/en/cloud/tensorwave.html">看服务商卡 →</a>
+<p class="sec-caveat">Capacity is usually contracted per cluster or per GPU-hour. Availability, contract length and egress change the effective price. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/tensorwave.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">GPU 专营</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">GPU specialist</span><span class="sec-badge">Nscale</span></div>
 <h3><a href="/en/cloud/nscale.html">Nscale</a></h3>
-<p>H100 / H200 / GB200 等，按集群与合同</p>
+<p>H100 / H200 / GB200 etc.</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按小时 / 合同</dd></div>
-<div><dt>区域</dt><dd>欧洲、美国等，按官网</dd></div>
-<div><dt>最低消费</dt><dd>无公开最低消费；整机/合同另算</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Hourly / contract</dd></div>
+<div><dt>Regions</dt><dd>Europe, United States and others; see official region list</dd></div>
+<div><dt>Minimum</dt><dd>No public minimum; whole-machine or contract commitments priced separately</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需/合同报价；官网不公开统一单价，本站不采数字。</p>
-<a class="sec-link" href="/en/cloud/nscale.html">看服务商卡 →</a>
+<p class="sec-caveat">Capacity is usually contracted per cluster or per GPU-hour. Availability, contract length and egress change the effective price. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/nscale.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">GPU 专营</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">GPU specialist</span><span class="sec-badge">Voltage Park</span></div>
 <h3><a href="/en/cloud/voltage-park.html">Voltage Park</a></h3>
-<p>H100 / H200 等，按集群与合同</p>
+<p>H100 / H200 etc.</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按小时 / 预留</dd></div>
-<div><dt>区域</dt><dd>美国等，按官网</dd></div>
-<div><dt>最低消费</dt><dd>无公开最低消费；预留/合同另算</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Hourly / reserved</dd></div>
+<div><dt>Regions</dt><dd>United States and others; see official region list</dd></div>
+<div><dt>Minimum</dt><dd>No public minimum; reserved or contract commitments priced separately</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需/预留报价；官网不公开统一单价，本站不采数字。</p>
-<a class="sec-link" href="/en/cloud/voltage-park.html">看服务商卡 →</a>
+<p class="sec-caveat">Capacity is usually contracted per cluster or per GPU-hour. Availability, contract length and egress change the effective price. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/voltage-park.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">GPU 专营</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">GPU specialist</span><span class="sec-badge">Sesterce</span></div>
 <h3><a href="/en/cloud/sesterce.html">Sesterce</a></h3>
-<p>H100 / H200 / GB200 等，按集群与合同</p>
+<p>H100 / H200 / GB200 etc.</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按小时 / 合同</dd></div>
-<div><dt>区域</dt><dd>欧洲、美国等，按官网</dd></div>
-<div><dt>最低消费</dt><dd>无公开最低消费；整机/合同另算</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Hourly / contract</dd></div>
+<div><dt>Regions</dt><dd>Europe, United States and others; see official region list</dd></div>
+<div><dt>Minimum</dt><dd>No public minimum; whole-machine or contract commitments priced separately</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需/合同报价；官网不公开统一单价，本站不采数字。</p>
-<a class="sec-link" href="/en/cloud/sesterce.html">看服务商卡 →</a>
+<p class="sec-caveat">Capacity is usually contracted per cluster or per GPU-hour. Availability, contract length and egress change the effective price. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/sesterce.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">GPU 专营</span><span class="sec-badge">分布式 GPU 市场 + 训练</span></div>
+<div class="sec-card-top"><span class="sec-tag">GPU specialist</span><span class="sec-badge">Prime Intellect</span></div>
 <h3><a href="/en/cloud/prime-intellect.html">Prime Intellect</a></h3>
-<p>分布式 GPU 市场 + 训练/推理环境</p>
+<p>distributed GPU marketplace + training/inference environment</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按卡时 / 合同</dd></div>
-<div><dt>区域</dt><dd>多区域供给，按官网</dd></div>
-<div><dt>最低消费</dt><dd>无公开最低消费；按任务/合同另算</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-GPU-hour / contract</dd></div>
+<div><dt>Regions</dt><dd>Multi-region supply; see official list</dd></div>
+<div><dt>Minimum</dt><dd>No public minimum; priced per job or contract</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按卡时/合同报价；官网聚合多方供给，价格随供给变化，本站不采数字。</p>
-<a class="sec-link" href="/en/cloud/prime-intellect.html">看服务商卡 →</a>
-</article></div>
-<h2>Serverless / 托管推理</h2><p>按秒或按 token 计费，冷启动与并发要实测；适合突发与 API 化。</p><div class="sec-grid"><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
+<p class="sec-caveat">Capacity is usually contracted per cluster or per GPU-hour. Availability, contract length and egress change the effective price. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/prime-intellect.html">Open provider card →</a>
+</article></div><h2>Serverless GPU <small>5 providers</small></h2><div class="sec-grid"><article class="sec-card">
+<div class="sec-card-top"><span class="sec-tag">Serverless GPU</span><span class="sec-badge">Modal</span></div>
 <h3><a href="/en/cloud/modal.html">Modal</a></h3>
 <p>H100 / A100 / L40S / T4</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按秒计费</dd></div>
-<div><dt>区域</dt><dd>美国、欧洲</dd></div>
-<div><dt>最低消费</dt><dd>无最低消费，按用量</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-second billing</dd></div>
+<div><dt>Regions</dt><dd>United States and Europe</dd></div>
+<div><dt>Minimum</dt><dd>No minimum; usage-based</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按秒计费，含冷启动；GPU 与 CPU/内存分开计。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/modal.html">看服务商卡 →</a>
+<p class="sec-caveat">Billing is per second, per token or per active replica; idle and cold-start behaviour changes the bill. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/modal.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">Serverless GPU</span><span class="sec-badge">Baseten</span></div>
 <h3><a href="/en/cloud/baseten.html">Baseten</a></h3>
-<p>H100 / A100 / L40S / 多卡</p>
+<p>H100 / A100 / L40S / multi-GPU</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按分钟/按月</dd></div>
-<div><dt>区域</dt><dd>美国为主</dd></div>
-<div><dt>最低消费</dt><dd>托管方案有月费</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-minute / monthly</dd></div>
+<div><dt>Regions</dt><dd>United States, primarily</dd></div>
+<div><dt>Minimum</dt><dd>Managed plans carry a monthly fee</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按分钟/月度托管；模型托管与专用部署两档。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/baseten.html">看服务商卡 →</a>
+<p class="sec-caveat">Billing is per second, per token or per active replica; idle and cold-start behaviour changes the bill. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/baseten.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">Serverless GPU</span><span class="sec-badge">Together AI</span></div>
 <h3><a href="/en/cloud/together.html">Together AI</a></h3>
-<p>H100 / H200 / A100 / GPU 集群</p>
+<p>H100 / H200 / A100 / GPU clusters</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按 token / 按小时</dd></div>
-<div><dt>区域</dt><dd>美国为主</dd></div>
-<div><dt>最低消费</dt><dd>按用量，无最低消费（企业合同另算）</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-token / per-hour billing</dd></div>
+<div><dt>Regions</dt><dd>United States, primarily</dd></div>
+<div><dt>Minimum</dt><dd>Usage-based, no minimum (enterprise contracts separate)</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按 token 或 GPU 小时；不同模型与上下文长度价格不同。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/together.html">看服务商卡 →</a>
+<p class="sec-caveat">Billing is per second, per token or per active replica; idle and cold-start behaviour changes the bill. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/together.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">Serverless GPU</span><span class="sec-badge">Fireworks AI</span></div>
 <h3><a href="/en/cloud/fireworks.html">Fireworks AI</a></h3>
-<p>H100 / H200 / A100 / 专用推理集群</p>
+<p>H100 / H200 / A100 / dedicated inference clusters</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按 token / 按小时</dd></div>
-<div><dt>区域</dt><dd>美国为主</dd></div>
-<div><dt>最低消费</dt><dd>按用量，无最低消费（企业合同另算）</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-token / per-hour billing</dd></div>
+<div><dt>Regions</dt><dd>United States, primarily</dd></div>
+<div><dt>Minimum</dt><dd>Usage-based, no minimum (enterprise contracts separate)</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按 token 或按 GPU 小时；模型与精度不同价格不同。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/fireworks.html">看服务商卡 →</a>
+<p class="sec-caveat">Billing is per second, per token or per active replica; idle and cold-start behaviour changes the bill. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/fireworks.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">Serverless / 托管推理</span><span class="sec-badge">H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">Serverless GPU</span><span class="sec-badge">Replicate</span></div>
 <h3><a href="/en/cloud/replicate.html">Replicate</a></h3>
-<p>H100 / A100 / L40S / T4（按模型分配）</p>
+<p>H100 / A100 / L40S / T4 (allocated per model)</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按秒计费</dd></div>
-<div><dt>区域</dt><dd>美国为主</dd></div>
-<div><dt>最低消费</dt><dd>按用量，无最低消费</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-second billing</dd></div>
+<div><dt>Regions</dt><dd>United States, primarily</dd></div>
+<div><dt>Minimum</dt><dd>Usage-based, no minimum</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按秒计费，按硬件档位；冷启动与排队另计。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/replicate.html">看服务商卡 →</a>
+<p class="sec-caveat">Billing is per second, per token or per active replica; idle and cold-start behaviour changes the bill. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/replicate.html">Open provider card →</a>
+</article></div><h2>China cloud <small>4 providers</small></h2><div class="sec-grid"><article class="sec-card">
+<div class="sec-card-top"><span class="sec-tag">China cloud</span><span class="sec-badge">Alibaba Cloud</span></div>
+<h3><a href="/en/cloud/aliyun.html">Alibaba Cloud</a></h3>
+<p>ECS GPU (GPU model varies by region and supply)</p>
+<dl class="sec-facts">
+<div><dt>Billing</dt><dd>Usage-based / monthly or annual subscription</dd></div>
+<div><dt>Regions</dt><dd>Mainland China and overseas regions</dd></div>
+<div><dt>Minimum</dt><dd>Usage-based, no minimum; monthly/annual plans carry discounts</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
+</dl>
+<p class="sec-caveat">Prices are usually quoted per GPU-hour or monthly subscription; region, supply and contract terms matter. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/aliyun.html">Open provider card →</a>
+</article><article class="sec-card">
+<div class="sec-card-top"><span class="sec-tag">China cloud</span><span class="sec-badge">Tencent Cloud</span></div>
+<h3><a href="/en/cloud/tencent-cloud.html">Tencent Cloud</a></h3>
+<p>GPU cloud servers (H100 / A100 / 4090 etc., depending on region)</p>
+<dl class="sec-facts">
+<div><dt>Billing</dt><dd>Usage-based / monthly or annual subscription</dd></div>
+<div><dt>Regions</dt><dd>Mainland China and overseas regions</dd></div>
+<div><dt>Minimum</dt><dd>Usage-based, no minimum; monthly/annual plans carry discounts</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
+</dl>
+<p class="sec-caveat">Prices are usually quoted per GPU-hour or monthly subscription; region, supply and contract terms matter. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/tencent-cloud.html">Open provider card →</a>
+</article><article class="sec-card">
+<div class="sec-card-top"><span class="sec-tag">China cloud</span><span class="sec-badge">Huawei Cloud</span></div>
+<h3><a href="/en/cloud/huawei-cloud.html">Huawei Cloud</a></h3>
+<p>GPU cloud servers (Ascend / NVIDIA, depending on region)</p>
+<dl class="sec-facts">
+<div><dt>Billing</dt><dd>On-demand / committed period</dd></div>
+<div><dt>Regions</dt><dd>Mainland China and overseas regions</dd></div>
+<div><dt>Minimum</dt><dd>No minimum on demand; committed periods carry discounts</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
+</dl>
+<p class="sec-caveat">Prices are usually quoted per GPU-hour or monthly subscription; region, supply and contract terms matter. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/huawei-cloud.html">Open provider card →</a>
+</article><article class="sec-card">
+<div class="sec-card-top"><span class="sec-tag">China cloud</span><span class="sec-badge">Volcano Engine</span></div>
+<h3><a href="/en/cloud/volcengine.html">Volcano Engine</a></h3>
+<p>GPU cloud servers / machine-learning platform</p>
+<dl class="sec-facts">
+<div><dt>Billing</dt><dd>Usage-based / monthly</dd></div>
+<div><dt>Regions</dt><dd>Mainland China and selected overseas regions</dd></div>
+<div><dt>Minimum</dt><dd>Usage-based, no minimum; monthly plans carry discounts</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
+</dl>
+<p class="sec-caveat">Prices are usually quoted per GPU-hour or monthly subscription; region, supply and contract terms matter. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/volcengine.html">Open provider card →</a>
 </article></div>
-<h2>国内云</h2><p>境内区域、等保与网络延迟优势；卡型与库存变化快，逐区确认。</p><div class="sec-grid"><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">国内云</span><span class="sec-badge">ECS GPU 实例（卡型随区域与供应变化）</span></div>
-<h3><a href="/en/cloud/aliyun.html">阿里云</a></h3>
-<p>ECS GPU 实例（卡型随区域与供应变化）</p>
-<dl class="sec-facts">
-<div><dt>计费</dt><dd>按量/包年包月</dd></div>
-<div><dt>区域</dt><dd>中国大陆与海外多区域</dd></div>
-<div><dt>最低消费</dt><dd>按量无最低消费；包年包月有折扣</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
-</dl>
-<p class="sec-caveat">按量/包年包月；GPU 卡型与区域供应变化快，以购买页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/aliyun.html">看服务商卡 →</a>
-</article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">国内云</span><span class="sec-badge">GPU 云服务器（H100 </span></div>
-<h3><a href="/en/cloud/tencent-cloud.html">腾讯云</a></h3>
-<p>GPU 云服务器（H100 / A100 / 4090 等，视区域）</p>
-<dl class="sec-facts">
-<div><dt>计费</dt><dd>按量/包年包月</dd></div>
-<div><dt>区域</dt><dd>中国大陆与海外多区域</dd></div>
-<div><dt>最低消费</dt><dd>按量无最低消费；包年包月有折扣</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
-</dl>
-<p class="sec-caveat">按量/包年包月；卡型与区域供应变化快，以购买页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/tencent-cloud.html">看服务商卡 →</a>
-</article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">国内云</span><span class="sec-badge">GPU 云服务器（昇腾 </span></div>
-<h3><a href="/en/cloud/huawei-cloud.html">华为云</a></h3>
-<p>GPU 云服务器（昇腾 / NVIDIA，视区域）</p>
-<dl class="sec-facts">
-<div><dt>计费</dt><dd>按需/包周期</dd></div>
-<div><dt>区域</dt><dd>中国大陆与海外多区域</dd></div>
-<div><dt>最低消费</dt><dd>按需无最低消费；包周期有折扣</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
-</dl>
-<p class="sec-caveat">按需/包周期；昇腾与 NVIDIA 两套栈，价格与可用性差异大。以购买页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/huawei-cloud.html">看服务商卡 →</a>
-</article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">国内云</span><span class="sec-badge">GPU 云服务器 </span></div>
-<h3><a href="/en/cloud/volcengine.html">火山引擎</a></h3>
-<p>GPU 云服务器 / 机器学习平台</p>
-<dl class="sec-facts">
-<div><dt>计费</dt><dd>按量/包月</dd></div>
-<div><dt>区域</dt><dd>中国大陆与海外部分区域</dd></div>
-<div><dt>最低消费</dt><dd>按量无最低消费；包月有折扣</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
-</dl>
-<p class="sec-caveat">按量/包月；GPU 实例与托管训练两种口径。以购买页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/volcengine.html">看服务商卡 →</a>
-</article></div>
-<h2>怎么比价</h2>
-<div class="sec-grid"><article class="sec-card"><div class="sec-card-top"><span class="sec-tag">指南</span></div><h3><a href="/en/cloud/guides/compare-gpu-price.html">云 GPU 怎么比价：先统一口径</a></h3><p>不要拿“每卡每小时”直接横比。整机起租、存储、出网、冷启动、可用性和合同期，都会把真实单价抬高或压低。</p><a class="sec-link" href="/en/cloud/guides/compare-gpu-price.html">读指南 →</a></article><article class="sec-card"><div class="sec-card-top"><span class="sec-tag">指南</span></div><h3><a href="/en/cloud/guides/billing-modes.html">按秒、包月、预留：怎么选计费方式</a></h3><p>计费方式不是折扣问题，是任务形态问题。短任务、稳定推理、长期训练的答案不一样。</p><a class="sec-link" href="/en/cloud/guides/billing-modes.html">读指南 →</a></article><article class="sec-card"><div class="sec-card-top"><span class="sec-tag">指南</span></div><h3><a href="/en/cloud/guides/storage-egress.html">存储与出网：最容易被忽略的两笔钱</a></h3><p>GPU 小时价只是账单的一部分。模型权重、数据集、日志、镜像和出网流量，常常在月末把预算翻一倍。</p><a class="sec-link" href="/en/cloud/guides/storage-egress.html">读指南 →</a></article><article class="sec-card"><div class="sec-card-top"><span class="sec-tag">指南</span></div><h3><a href="/en/cloud/guides/compliance-residency.html">合规与数据驻留：先定数据能去哪</a></h3><p>云 GPU 选型不只是价格。数据能不能出境、能不能给第三方处理、出了事谁负责，要在签合同前写清。</p><a class="sec-link" href="/en/cloud/guides/compliance-residency.html">读指南 →</a></article></div>
-</div>
-</main>
+</div></main>
 <footer class="site-footer foot-single">
 <div class="container foot-line">
 <div class="foot-brand">

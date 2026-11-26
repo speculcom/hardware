@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html data-lang="en" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <title>General clouds | Compute</title>
-<meta content="General clouds" name="description"/>
+<meta content="General cloud GPU providers compared by billing, region, storage, egress and compliance." name="description"/>
 <link href="https://hardware.specul.com/en/cloud/general.html" rel="canonical"/>
 <meta content="website" property="og:type"/>
 <meta content="Compute" property="og:site_name"/>
@@ -22,7 +23,7 @@
 <style>:root { --accent: #f59e0b; }</style>
 <link href="/sections.css" rel="stylesheet"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"General clouds | Compute","description":"General clouds","url":"https://hardware.specul.com/en/cloud/general.html","inLanguage":"en","isPartOf":{"@type":"WebSite","url":"https://hardware.specul.com/en/cloud/general.html"}}</script>
-<meta content="General clouds | Compute" name="twitter:title"/><meta content="General clouds" name="twitter:description"/><meta content="noindex,follow" name="robots"/></head>
+<meta content="General clouds | Compute" name="twitter:title"/><meta content="General clouds" name="twitter:description"/><meta content="index,follow" name="robots"/><link href="https://hardware.specul.com/en/cloud/general.html" hreflang="en" rel="alternate"/><link href="https://hardware.specul.com/cloud/general.html" hreflang="zh-CN" rel="alternate"/><link href="https://hardware.specul.com/cloud/general.html" hreflang="x-default" rel="alternate"/></head>
 <!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
      同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
      而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
@@ -95,65 +96,61 @@
 <nav><a href="https://specul.com/en/legal.html">Legal terms</a></nav>
 </div>
 </aside>
-<main id="main">
-<div class="container">
-<header class="sec-head">
-<p class="eyebrow">Compute · Cloud · General clouds</p>
-<h1>General clouds</h1>
-<p class="lede">大厂公有云，卡型多、区域广、合规体系完整；常按整机起租。 这一页收 4 家；点进单卡看计费、区域、存储出网、合规与核验入口。</p>
-</header>
-<div class="sec-nav"><a href="index.html">← 全部云算力</a><a href="../index.html">硬件站</a></div>
-<div class="sec-grid"><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">通用云</span><span class="sec-badge">P5（H100）</span></div>
+<main id="main"><div class="container">
+<header class="sec-head"><p class="eyebrow">Compute · Cloud · General clouds</p><h1>General clouds</h1><p class="lede">Public clouds with broad GPU portfolios, many regions and mature compliance stacks. They often bill per whole machine, so price storage and egress with the GPU.</p></header>
+<div class="sec-nav"><a href="index.html">← All cloud compute</a><a href="../index.html">Hardware home</a></div>
+<div class="home-stats"><div><b>4</b><span>providers</span></div><div><b>4</b><span>categories</span></div><div><b>4</b><span>buying guides</span></div></div>
+<div class="sec-note"><b>Normalize first:</b> per-GPU-hour, per-whole-machine-hour, per-token and monthly/contract quotes are not directly comparable. Add storage, egress, cold starts, reruns and compliance to the total cost before choosing on-demand or reserved capacity.</div>
+<h2>Providers</h2><div class="sec-grid"><article class="sec-card">
+<div class="sec-card-top"><span class="sec-tag">General cloud</span><span class="sec-badge">AWS</span></div>
 <h3><a href="/en/cloud/aws.html">AWS</a></h3>
-<p>P5（H100）/ P4（A100）/ G6（L4、A10G）</p>
+<p>P5 (H100)/ P4 (A100)/ G6 (L4, A10G)</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>Linux 按秒计费，整机起租</dd></div>
-<div><dt>区域</dt><dd>全球多区域</dd></div>
-<div><dt>最低消费</dt><dd>无最低消费；整机与预留承诺另算</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-second Linux billing; whole-machine reservation</dd></div>
+<div><dt>Regions</dt><dd>Global, multiple regions</dd></div>
+<div><dt>Minimum</dt><dd>No minimum; whole-machine and reserved commitments priced separately</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需、预留、节省计划三种口径；H100 多以 8 卡整机计费，区域与合同价差异大。具体以官网价目为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/aws.html">看服务商卡 →</a>
+<p class="sec-caveat">List prices are usually on-demand, reserved or committed-use. H100-class capacity is often billed per whole machine; regional and enterprise-contract prices differ. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/aws.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">通用云</span><span class="sec-badge">A3（H100）</span></div>
+<div class="sec-card-top"><span class="sec-tag">General cloud</span><span class="sec-badge">Google Cloud</span></div>
 <h3><a href="/en/cloud/gcp.html">Google Cloud</a></h3>
-<p>A3（H100）/ A2（A100）/ G2（L4）</p>
+<p>A3 (H100)/ A2 (A100)/ G2 (L4)</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按秒计费，整机起租</dd></div>
-<div><dt>区域</dt><dd>全球多区域</dd></div>
-<div><dt>最低消费</dt><dd>无最低消费；承诺使用折扣有期限</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-second billing; whole-machine reservation</dd></div>
+<div><dt>Regions</dt><dd>Global, multiple regions</dd></div>
+<div><dt>Minimum</dt><dd>No minimum; committed-use discounts have a term</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需与承诺使用折扣；H100 按整机或按卡，区域差异明显。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/gcp.html">看服务商卡 →</a>
+<p class="sec-caveat">List prices are usually on-demand, reserved or committed-use. H100-class capacity is often billed per whole machine; regional and enterprise-contract prices differ. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/gcp.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">通用云</span><span class="sec-badge">ND H100 v5 </span></div>
+<div class="sec-card-top"><span class="sec-tag">General cloud</span><span class="sec-badge">Microsoft Azure</span></div>
 <h3><a href="/en/cloud/azure.html">Microsoft Azure</a></h3>
 <p>ND H100 v5 / NC H100 / ND A100 v4</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按分钟/小时计费，整机起租</dd></div>
-<div><dt>区域</dt><dd>全球多区域</dd></div>
-<div><dt>最低消费</dt><dd>无最低消费；预留实例有承诺期</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Per-minute/hour billing; whole-machine reservation</dd></div>
+<div><dt>Regions</dt><dd>Global, multiple regions</dd></div>
+<div><dt>Minimum</dt><dd>No minimum; reserved instances carry a commitment term</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需与预留；企业协议价另算。H100 以整机规格为主，区域差异大。以官网价格页为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/azure.html">看服务商卡 →</a>
+<p class="sec-caveat">List prices are usually on-demand, reserved or committed-use. H100-class capacity is often billed per whole machine; regional and enterprise-contract prices differ. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/azure.html">Open provider card →</a>
 </article><article class="sec-card">
-<div class="sec-card-top"><span class="sec-tag">通用云</span><span class="sec-badge">OCI Compute GPU（H100 </span></div>
+<div class="sec-card-top"><span class="sec-tag">General cloud</span><span class="sec-badge">Oracle Cloud</span></div>
 <h3><a href="/en/cloud/oracle.html">Oracle Cloud</a></h3>
-<p>OCI Compute GPU（H100 / A100 / B200，视区域）</p>
+<p>OCI Compute GPU (H100 / A100 / B200, depending on region)</p>
 <dl class="sec-facts">
-<div><dt>计费</dt><dd>按小时计费，整机起租</dd></div>
-<div><dt>区域</dt><dd>全球多区域</dd></div>
-<div><dt>最低消费</dt><dd>无最低消费；预留容量有承诺期</dd></div>
-<div><dt>核验</dt><dd>2026-11-19</dd></div>
+<div><dt>Billing</dt><dd>Hourly billing; whole-machine reservation</dd></div>
+<div><dt>Regions</dt><dd>Global, multiple regions</dd></div>
+<div><dt>Minimum</dt><dd>No minimum; reserved capacity carries a commitment term</dd></div>
+<div><dt>Verified</dt><dd>2026-11-19</dd></div>
 </dl>
-<p class="sec-caveat">按需与预留；GPU 多以整机或固定规格提供。以官网价目为准（2026-11-19 核验入口）。</p>
-<a class="sec-link" href="/en/cloud/oracle.html">看服务商卡 →</a>
+<p class="sec-caveat">List prices are usually on-demand, reserved or committed-use. H100-class capacity is often billed per whole machine; regional and enterprise-contract prices differ. Verify the official price page (snapshot 2026-11-19).</p>
+<a class="sec-link" href="/en/cloud/oracle.html">Open provider card →</a>
 </article></div>
-</div>
-</main>
+</div></main>
 <footer class="site-footer foot-single">
 <div class="container foot-line">
 <div class="foot-brand">
